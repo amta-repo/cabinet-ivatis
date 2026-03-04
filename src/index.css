@@ -1,0 +1,207 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ZNH BTP Design System - Industrial Construction Aesthetic */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Bebas+Neue&display=swap');
+
+@layer base {
+  :root {
+    /* Warm charcoal and amber gold palette */
+    --background: 30 15% 97%;
+    --foreground: 30 10% 10%;
+
+    --card: 30 20% 99%;
+    --card-foreground: 30 10% 10%;
+
+    --popover: 30 20% 99%;
+    --popover-foreground: 30 10% 10%;
+
+    /* Amber/Gold Primary */
+    --primary: 38 92% 50%;
+    --primary-foreground: 30 10% 5%;
+
+    --secondary: 30 10% 92%;
+    --secondary-foreground: 30 10% 15%;
+
+    --muted: 30 10% 90%;
+    --muted-foreground: 30 10% 45%;
+
+    --accent: 38 85% 55%;
+    --accent-foreground: 30 10% 5%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 15% 88%;
+    --input: 30 15% 88%;
+    --ring: 38 92% 50%;
+
+    --radius: 0.5rem;
+
+    /* Custom ZNH variables */
+    --construction-dark: 220 15% 15%;
+    --construction-slate: 220 10% 25%;
+    --construction-charcoal: 220 8% 18%;
+    --amber-glow: 38 100% 55%;
+    --amber-deep: 30 90% 45%;
+    --warm-white: 40 30% 98%;
+    --warm-gray: 30 8% 60%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(38 92% 50% / 0.9), hsl(30 90% 45% / 0.95));
+    --gradient-dark: linear-gradient(180deg, hsl(220 15% 12%), hsl(220 15% 8%));
+    --gradient-overlay: linear-gradient(180deg, transparent 0%, hsl(220 15% 8% / 0.85) 100%);
+    --gradient-amber: linear-gradient(135deg, hsl(38 92% 50%), hsl(45 100% 60%));
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(30 10% 10% / 0.08);
+    --shadow-medium: 0 8px 30px -8px hsl(30 10% 10% / 0.12);
+    --shadow-strong: 0 20px 50px -15px hsl(30 10% 10% / 0.2);
+    --shadow-amber: 0 10px 40px -10px hsl(38 92% 50% / 0.3);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 15% 8%;
+    --foreground: 30 15% 95%;
+
+    --card: 220 15% 12%;
+    --card-foreground: 30 15% 95%;
+
+    --popover: 220 15% 12%;
+    --popover-foreground: 30 15% 95%;
+
+    --primary: 38 92% 50%;
+    --primary-foreground: 30 10% 5%;
+
+    --secondary: 220 10% 20%;
+    --secondary-foreground: 30 15% 90%;
+
+    --muted: 220 10% 18%;
+    --muted-foreground: 30 10% 55%;
+
+    --accent: 38 85% 55%;
+    --accent-foreground: 30 10% 5%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 10% 22%;
+    --input: 220 10% 22%;
+    --ring: 38 92% 50%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas Neue', 'Inter', sans-serif;
+    letter-spacing: 0.02em;
+  }
+}
+
+@layer components {
+  .text-gradient-amber {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(38 92% 50%), hsl(45 100% 60%));
+  }
+
+  .bg-construction-dark {
+    background-color: hsl(var(--construction-dark));
+  }
+
+  .bg-construction-charcoal {
+    background-color: hsl(var(--construction-charcoal));
+  }
+
+  .shadow-amber-glow {
+    box-shadow: var(--shadow-amber);
+  }
+
+  .hero-overlay {
+    background: var(--gradient-overlay);
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}

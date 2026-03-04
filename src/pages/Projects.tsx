@@ -15,55 +15,55 @@ import homeConstruction from "@/assets/home-construction.jpg";
 const projects = [
   {
     image: projectVilla,
-    title: "Villa Moderne Akpakpa",
-    category: "Villa de Luxe",
-    location: "Akpakpa, Cotonou",
+    title: "EIES Projet Routier National",
+    category: "Environnement",
+    location: "Abomey-Calavi",
     description:
-      "Villa contemporaine de 350 m² avec piscine, jardin tropical et finitions haut de gamme.",
+      "Étude d'impact environnemental et social pour un projet de construction routière de 25 km.",
   },
   {
     image: projectTownhouse,
-    title: "Résidence Les Palmiers",
-    category: "Logements",
-    location: "Abomey-Calavi",
+    title: "Suivi Environnemental Usine",
+    category: "Suivi",
+    location: "Cotonou",
     description:
-      "Ensemble de 12 logements modernes avec espaces communs et parking sécurisé.",
+      "Suivi environnemental et social d'un chantier industriel avec mise en œuvre du PGES.",
   },
   {
     image: projectFamilyHome,
-    title: "Maison Familiale Fidjrossè",
-    category: "Maison Individuelle",
-    location: "Fidjrossè, Cotonou",
+    title: "Levé Topographique 50 Ha",
+    category: "Topographie",
+    location: "Allada",
     description:
-      "Maison familiale de 180 m² sur deux niveaux avec terrasse et jardin privatif.",
+      "Levé topographique de précision pour un projet d'aménagement foncier de 50 hectares.",
   },
   {
     image: homeConstruction,
-    title: "Villa Cadjèhoun",
-    category: "Villa de Luxe",
-    location: "Cadjèhoun, Cotonou",
+    title: "Construction Bâtiment Administratif",
+    category: "BTP",
+    location: "Abomey-Calavi",
     description:
-      "Villa de standing avec 5 chambres, bureau, et aménagements extérieurs complets.",
+      "Construction d'un bâtiment administratif de 500 m² avec normes environnementales.",
   },
   {
     image: projectVilla,
-    title: "Duplex Godomey",
-    category: "Maison Individuelle",
-    location: "Godomey, Abomey-Calavi",
+    title: "Formation HSE Entreprise",
+    category: "Formation",
+    location: "Cotonou",
     description:
-      "Duplex moderne de 220 m² avec garage double et terrasse panoramique.",
+      "Programme de formation en hygiène, sécurité et environnement pour 50 employés.",
   },
   {
     image: projectFamilyHome,
-    title: "Maison Calavi Centre",
-    category: "Maison Individuelle",
-    location: "Abomey-Calavi",
+    title: "Audit Environnemental Industriel",
+    category: "Environnement",
+    location: "Porto-Novo",
     description:
-      "Maison de plain-pied avec 4 chambres, cuisine équipée et grand séjour lumineux.",
+      "Audit environnemental complet d'une zone industrielle avec recommandations de conformité.",
   },
 ];
 
-const categories = ["Tous", "Maison Individuelle", "Villa de Luxe", "Logements"];
+const categories = ["Tous", "Environnement", "Suivi", "Topographie", "BTP", "Formation"];
 
 const Projects = () => {
   return (
@@ -76,7 +76,7 @@ const Projects = () => {
         <div className="absolute inset-0">
           <img
             src={heroImage}
-            alt="Projets Génie Créatif BTP"
+            alt="Projets Cabinet IVATIS"
             className="w-full h-full object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-construction-charcoal via-construction-charcoal/95 to-background" />
@@ -93,11 +93,11 @@ const Projects = () => {
               Nos Réalisations
             </span>
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-foreground mb-6">
-              Maisons Construites
+              Projets Réalisés
             </h1>
             <p className="text-xl text-muted-foreground">
-              Découvrez notre portfolio de maisons qui témoignent de notre
-              savoir-faire et de notre créativité au service des familles béninoises.
+              Découvrez notre portfolio de projets en ingénierie environnementale, 
+              topographie, formation et BTP au Bénin.
             </p>
           </motion.div>
         </div>
@@ -148,11 +148,11 @@ const Projects = () => {
             viewport={{ once: true }}
           >
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
-              Votre Maison Pourrait Être la Prochaine
+              Votre Projet Pourrait Être le Prochain
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-              Confiez-nous votre projet et nous le réaliserons avec le même 
-              niveau de qualité et de créativité.
+              Confiez-nous votre projet environnemental, topographique ou de construction 
+              et bénéficiez de notre expertise.
             </p>
             <Link to="/contact">
               <Button

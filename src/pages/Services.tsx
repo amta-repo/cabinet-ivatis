@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
-  Home,
-  Building2,
-  Paintbrush,
+  Leaf,
+  ClipboardCheck,
+  GraduationCap,
+  Compass,
   HardHat,
-  Ruler,
-  Hammer,
+  FileSearch,
   ArrowRight,
   CheckCircle,
 } from "lucide-react";
@@ -19,81 +19,81 @@ import heroImage from "@/assets/hero-home.jpg";
 
 const services = [
   {
-    id: "residential",
-    icon: Home,
-    title: "Maisons Individuelles",
+    id: "environnement",
+    icon: Leaf,
+    title: "Ingénierie Environnementale & Sociale",
     description:
-      "Construction de maisons familiales personnalisées, adaptées à votre budget et à vos besoins. Du petit pavillon à la grande maison familiale.",
+      "Études d'impact environnemental et social (EIES), plans de gestion environnementale et sociale (PGES), audits environnementaux et études de conformité réglementaire.",
     features: [
-      "Plans personnalisés selon vos besoins",
-      "Choix des matériaux de qualité",
-      "Suivi de chantier transparent",
-      "Garantie décennale",
+      "Études d'Impact Environnemental et Social (EIES)",
+      "Plans de Gestion Environnementale et Sociale (PGES)",
+      "Audits environnementaux et sociaux",
+      "Études de conformité réglementaire",
     ],
   },
   {
-    id: "villas",
-    icon: Building2,
-    title: "Villas de Luxe",
+    id: "suivi",
+    icon: ClipboardCheck,
+    title: "Suivi de Projets",
     description:
-      "Réalisation de villas haut de gamme avec des finitions exceptionnelles et des équipements modernes pour un confort optimal.",
+      "Suivi environnemental et social de chantiers, contrôle de la mise en œuvre des PGES, reporting et évaluation des performances environnementales.",
     features: [
-      "Architecture contemporaine",
-      "Finitions luxueuses",
-      "Piscine et aménagements extérieurs",
-      "Domotique et sécurité",
+      "Suivi environnemental de chantiers",
+      "Contrôle de mise en œuvre des PGES",
+      "Reporting périodique",
+      "Évaluation de performance environnementale",
     ],
   },
   {
-    id: "design",
-    icon: Ruler,
-    title: "Conception Architecturale",
+    id: "formation",
+    icon: GraduationCap,
+    title: "Formation Professionnelle",
     description:
-      "Service de conception et de plans architecturaux adaptés au style de vie béninois et aux contraintes de votre terrain.",
+      "Formations en environnement, HSE, développement durable, gestion des déchets et sensibilisation communautaire.",
     features: [
-      "Étude de faisabilité",
-      "Plans 2D et modélisation 3D",
-      "Permis de construire",
-      "Conseils personnalisés",
+      "Formation en HSE et sécurité",
+      "Développement durable et environnement",
+      "Gestion des déchets et des risques",
+      "Sensibilisation communautaire",
     ],
   },
   {
-    id: "finitions",
-    icon: Paintbrush,
-    title: "Finitions Intérieures",
+    id: "topo",
+    icon: Compass,
+    title: "Topographie (TOPO)",
     description:
-      "Travaux de finitions haut de gamme : peinture, carrelage, menuiserie, plomberie et électricité pour un intérieur parfait.",
+      "Levés topographiques, bornage de terrains, implantation d'ouvrages, plans parcellaires et relevés géodésiques.",
     features: [
-      "Peinture décorative",
-      "Pose de carrelage et faïence",
-      "Menuiserie sur mesure",
-      "Installations sanitaires",
+      "Levés topographiques de précision",
+      "Bornage et délimitation de terrains",
+      "Implantation d'ouvrages",
+      "Plans parcellaires et relevés",
     ],
   },
   {
-    id: "renovation",
+    id: "btp",
     icon: HardHat,
-    title: "Rénovation",
+    title: "BTP & Génie Civil",
     description:
-      "Travaux de réhabilitation et de modernisation de votre maison existante pour lui donner une nouvelle vie.",
+      "Construction de bâtiments, travaux de génie civil, aménagements et réhabilitation d'infrastructures.",
     features: [
-      "Diagnostic de l'existant",
-      "Extension et agrandissement",
-      "Mise aux normes",
-      "Amélioration énergétique",
+      "Construction de bâtiments",
+      "Travaux de génie civil",
+      "Aménagements et VRD",
+      "Réhabilitation d'infrastructures",
     ],
   },
   {
-    id: "gros-oeuvre",
-    icon: Hammer,
-    title: "Gros Œuvre",
+    id: "etudes",
+    icon: FileSearch,
+    title: "Études & Conseil",
     description:
-      "Réalisation des travaux de structure : fondations, murs, dalles et toiture pour une construction solide et durable.",
+      "Études de faisabilité, conseil en environnement, assistance technique et appui à la maîtrise d'ouvrage.",
     features: [
-      "Fondations renforcées",
-      "Maçonnerie de qualité",
-      "Charpente et toiture",
-      "Étanchéité garantie",
+      "Études de faisabilité",
+      "Conseil en environnement",
+      "Assistance à maîtrise d'ouvrage",
+      "Appui institutionnel",
     ],
   },
 ];
@@ -109,7 +109,7 @@ const Services = () => {
         <div className="absolute inset-0">
           <img
             src={heroImage}
-            alt="Services Génie Créatif BTP"
+            alt="Services Cabinet IVATIS"
             className="w-full h-full object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-construction-charcoal via-construction-charcoal/95 to-background" />
@@ -126,11 +126,11 @@ const Services = () => {
               Nos Services
             </span>
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-foreground mb-6">
-              Construction de Maisons
+              Ingénierie Environnementale, Suivi, Formation, TOPO & BTP
             </h1>
             <p className="text-xl text-muted-foreground">
-              De la conception à la remise des clés, nous vous accompagnons 
-              dans la réalisation de votre projet de maison au Bénin.
+              Des solutions complètes et intégrées pour vos projets d'ingénierie 
+              environnementale, de construction et de développement au Bénin.
             </p>
           </motion.div>
         </div>
@@ -206,10 +206,10 @@ const Services = () => {
             viewport={{ once: true }}
           >
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
-              Un Projet de Construction ?
+              Un Projet Environnemental ou de Construction ?
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-              Contactez notre équipe pour discuter de votre projet et 
+              Contactez Cabinet IVATIS pour discuter de votre projet et 
               obtenir un devis personnalisé gratuit.
             </p>
             <Link to="/contact">

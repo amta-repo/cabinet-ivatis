@@ -1,17 +1,6 @@
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react";
-
-// TikTok icon component since lucide doesn't have it
-const TikTokIcon = ({ className }: { className?: string }) => (
-  <svg
-    className={className}
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
-  </svg>
-);
+import logoIvatis from "@/assets/logo-ivatis.jpg";
 
 const footerLinks = {
   company: [
@@ -20,9 +9,11 @@ const footerLinks = {
     { name: "Carrières", path: "/contact" },
   ],
   services: [
-    { name: "Maisons Individuelles", path: "/services#residential" },
-    { name: "Villas de Luxe", path: "/services#villas" },
-    { name: "Rénovation", path: "/services#renovation" },
+    { name: "Ingénierie Environnementale", path: "/services#environnement" },
+    { name: "Suivi de Projets", path: "/services#suivi" },
+    { name: "Formation", path: "/services#formation" },
+    { name: "Topographie", path: "/services#topo" },
+    { name: "BTP", path: "/services#btp" },
   ],
   legal: [
     { name: "Mentions Légales", path: "/legal" },
@@ -40,22 +31,28 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <Link to="/" className="inline-block mb-6">
-              <span className="font-display text-3xl tracking-wider text-primary">
-                Génie Créatif
-              </span>
-              <span className="font-display text-3xl tracking-wider text-foreground">
-                {" "}BTP
-              </span>
+            <Link to="/" className="inline-flex items-center gap-3 mb-6">
+              <img src={logoIvatis} alt="Cabinet IVATIS" className="h-10 w-auto rounded" />
+              <div>
+                <span className="font-display text-3xl tracking-wider text-primary">
+                  Cabinet
+                </span>
+                <span className="font-display text-3xl tracking-wider text-foreground">
+                  {" "}IVATIS
+                </span>
+              </div>
             </Link>
-            <p className="text-muted-foreground mb-6 leading-relaxed">
-              Spécialiste de la construction de maisons au Bénin, Génie Créatif BTP 
-              s'engage à bâtir votre foyer avec qualité et créativité.
+            <p className="text-muted-foreground mb-4 leading-relaxed">
+              Cabinet d'ingénierie environnementale et sociale, suivi de projets, 
+              formation professionnelle, topographie et BTP au Bénin.
+            </p>
+            <p className="text-muted-foreground text-sm mb-6">
+              RC RB/ABC/22B5468 — IFU: N° 3202292508230
             </p>
             {/* Social Links */}
             <div className="flex items-center gap-4">
               <a
-                href="https://facebook.com/geniecreativebtp"
+                href="https://facebook.com/cabinetivatis"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-muted/20 flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all"
@@ -64,7 +61,7 @@ export function Footer() {
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="https://instagram.com/geniecreativebtp"
+                href="https://instagram.com/cabinetivatis"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-muted/20 flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all"
@@ -73,16 +70,7 @@ export function Footer() {
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="https://tiktok.com/@geniecreativebtp"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-muted/20 flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all"
-                aria-label="TikTok"
-              >
-                <TikTokIcon className="w-5 h-5" />
-              </a>
-              <a
-                href="mailto:contact@geniecreativebtp.com"
+                href="mailto:ivatis.ivatis@gmail.com"
                 className="w-10 h-10 rounded-full bg-muted/20 flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all"
                 aria-label="Email"
               >
@@ -94,7 +82,7 @@ export function Footer() {
           {/* Links Columns */}
           <div>
             <h4 className="font-display text-xl mb-6 text-foreground">
-              Entreprise
+              Cabinet
             </h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
@@ -136,32 +124,30 @@ export function Footer() {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="tel:+22901401529 85"
+                  href="tel:+22997606098"
                   className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Phone className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                  <span>+229 01 40 15 29 85</span>
+                  <div>
+                    <span className="block">+229 97 60 60 98</span>
+                    <span className="block">+229 98 34 35 35</span>
+                  </div>
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:contact@geniecreativebtp.com"
+                  href="mailto:ivatis.ivatis@gmail.com"
                   className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Mail className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                  <span>contact@geniecreativebtp.com</span>
+                  <span>ivatis.ivatis@gmail.com</span>
                 </a>
               </li>
               <li>
-                <a
-                  href="https://www.google.com/maps/place/G%C3%A9nie+Cr%C3%A9atif+BTP/@6.3780562,2.4405404,17z"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors"
-                >
+                <div className="flex items-start gap-3 text-muted-foreground">
                   <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                  <span>9CHV+66 Cotonou, Bénin</span>
-                </a>
+                  <span>Calavi St Louis, Abomey-Calavi, Bénin<br />BP 1495 Calavi</span>
+                </div>
               </li>
             </ul>
           </div>
@@ -172,7 +158,7 @@ export function Footer() {
       <div className="border-t border-border/20">
         <div className="container-wide py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Génie Créatif BTP. Tous droits réservés.
+            © {currentYear} Cabinet IVATIS. Tous droits réservés.
           </p>
           <div className="flex items-center gap-6">
             {footerLinks.legal.map((link) => (

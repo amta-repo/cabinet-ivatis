@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import logoIvatis from "@/assets/logo-ivatis.jpg";
 
 const navLinks = [
   { name: "Accueil", path: "/" },
@@ -39,13 +40,14 @@ export function Header() {
     >
       <div className="container-wide flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-3">
+          <img src={logoIvatis} alt="Cabinet IVATIS" className="h-10 md:h-12 w-auto rounded" />
           <div className="relative">
             <span className="font-display text-2xl md:text-3xl tracking-wider text-primary">
-              Génie Créatif
+              Cabinet
             </span>
             <span className="font-display text-2xl md:text-3xl tracking-wider text-foreground">
-              {" "}BTP
+              {" "}IVATIS
             </span>
           </div>
         </Link>
@@ -76,11 +78,11 @@ export function Header() {
         {/* CTA Button */}
         <div className="hidden lg:flex items-center gap-4">
           <a
-            href="tel:+22901401529 85"
+            href="tel:+22997606098"
             className="flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
           >
             <Phone className="w-4 h-4" />
-            <span>+229 01 40 15 29 85</span>
+            <span>+229 97 60 60 98</span>
           </a>
           <Link to="/contact">
             <Button variant="default" size="sm" className="font-semibold">
@@ -128,11 +130,11 @@ export function Header() {
               ))}
               <div className="pt-4 border-t border-border/20">
                 <a
-                  href="tel:+22901401529 85"
+                  href="tel:+22997606098"
                   className="flex items-center gap-2 text-foreground/80 mb-4"
                 >
                   <Phone className="w-5 h-5" />
-                  <span>+229 01 40 15 29 85</span>
+                  <span>+229 97 60 60 98</span>
                 </a>
                 <Link to="/contact" className="block">
                   <Button variant="default" className="w-full font-semibold">

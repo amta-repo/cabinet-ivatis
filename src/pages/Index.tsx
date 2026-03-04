@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Home, Paintbrush, Ruler, HardHat } from "lucide-react";
+import { ArrowRight, Leaf, ClipboardCheck, GraduationCap, Compass, HardHat } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -17,57 +17,57 @@ import teamConstruction from "@/assets/team-construction.jpg";
 
 const services = [
   {
-    icon: Home,
-    title: "Maisons Individuelles",
+    icon: Leaf,
+    title: "Ingénierie Environnementale & Sociale",
     description:
-      "Construction de maisons familiales personnalisées selon vos besoins et votre budget.",
+      "Études d'impact environnemental et social (EIES), PGES, audits et conformité réglementaire.",
   },
   {
-    icon: Paintbrush,
-    title: "Finitions Haut de Gamme",
+    icon: ClipboardCheck,
+    title: "Suivi de Projets",
     description:
-      "Des finitions soignées et des matériaux de qualité pour un intérieur élégant et durable.",
+      "Suivi environnemental et social de chantiers, contrôle qualité et reporting.",
   },
   {
-    icon: Ruler,
-    title: "Conception sur Mesure",
+    icon: GraduationCap,
+    title: "Formation",
     description:
-      "Plans architecturaux personnalisés adaptés au style de vie béninois et à votre terrain.",
+      "Formation professionnelle en environnement, sécurité, HSE et développement durable.",
   },
   {
-    icon: HardHat,
-    title: "Rénovation",
+    icon: Compass,
+    title: "Topographie",
     description:
-      "Travaux de réhabilitation et de modernisation de votre maison existante.",
+      "Levés topographiques, bornage, implantation et plans parcellaires.",
   },
 ];
 
 const projects = [
   {
     image: projectVilla,
-    title: "Villa Moderne Akpakpa",
-    category: "Villa de Luxe",
-    location: "Akpakpa, Cotonou",
-  },
-  {
-    image: projectTownhouse,
-    title: "Résidence Les Palmiers",
-    category: "Logements",
+    title: "EIES Projet Routier Calavi",
+    category: "Environnement",
     location: "Abomey-Calavi",
   },
   {
+    image: projectTownhouse,
+    title: "Suivi Environnemental Chantier",
+    category: "Suivi",
+    location: "Cotonou",
+  },
+  {
     image: projectFamilyHome,
-    title: "Maison Familiale Fidjrossè",
-    category: "Maison Individuelle",
-    location: "Fidjrossè, Cotonou",
+    title: "Levé Topographique 50 Ha",
+    category: "Topographie",
+    location: "Allada",
   },
 ];
 
 const stats = [
   { value: "10+", label: "Années d'Expérience" },
-  { value: "150+", label: "Maisons Construites" },
-  { value: "30+", label: "Professionnels" },
-  { value: "100%", label: "Satisfaction Client" },
+  { value: "200+", label: "Projets Réalisés" },
+  { value: "50+", label: "Professionnels Formés" },
+  { value: "100%", label: "Conformité Garantie" },
 ];
 
 const Index = () => {
@@ -78,18 +78,16 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
         <div className="absolute inset-0">
           <img
             src={heroImage}
-            alt="Génie Créatif BTP - Construction de Maisons"
+            alt="Cabinet IVATIS - Ingénierie Environnementale et Sociale au Bénin"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-construction-charcoal/70" />
           <div className="absolute inset-0 hero-overlay" />
         </div>
 
-        {/* Content */}
         <div className="relative z-10 container-wide text-center pt-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -97,7 +95,7 @@ const Index = () => {
             transition={{ duration: 0.8 }}
           >
             <span className="inline-block px-4 py-2 bg-primary/20 text-primary font-semibold text-sm uppercase tracking-wider rounded-full mb-6">
-              Constructeur de Maisons au Bénin
+              Ingénierie Environnementale & Sociale · Suivi · Formation · TOPO · BTP
             </span>
           </motion.div>
 
@@ -107,9 +105,9 @@ const Index = () => {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="font-display text-5xl md:text-7xl lg:text-8xl text-foreground mb-6 leading-tight"
           >
-            Votre <span className="text-gradient-amber">Maison de Rêve</span>
+            L'Expertise <span className="text-gradient-amber">Environnementale</span>
             <br />
-            Devient Réalité
+            Au Service du Développement
           </motion.h1>
 
           <motion.p
@@ -118,8 +116,8 @@ const Index = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-10"
           >
-            Génie Créatif BTP, votre partenaire de confiance pour la construction 
-            de maisons personnalisées au Bénin.
+            Cabinet IVATIS, votre partenaire de confiance en ingénierie 
+            environnementale et sociale, topographie et BTP au Bénin.
           </motion.p>
 
           <motion.div
@@ -137,13 +135,13 @@ const Index = () => {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
-            <Link to="/projects">
+            <Link to="/services">
               <Button
                 variant="outline"
                 size="lg"
                 className="font-semibold text-lg px-8 py-6 border-foreground/30 hover:bg-foreground/10"
               >
-                Voir Nos Réalisations
+                Découvrir Nos Services
               </Button>
             </Link>
           </motion.div>
@@ -189,26 +187,26 @@ const Index = () => {
             >
               <SectionTitle
                 subtitle="À Propos de Nous"
-                title="Experts en Construction Résidentielle depuis 10 Ans"
-                description="Génie Créatif BTP est une entreprise spécialisée dans la construction de maisons au Bénin. Notre créativité et notre savoir-faire nous permettent de réaliser des projets uniques."
+                title="Experts en Ingénierie Environnementale depuis Plus de 10 Ans"
+                description="Cabinet IVATIS est un bureau d'études spécialisé en ingénierie environnementale et sociale, suivi de projets, formation, topographie et BTP au Bénin."
               />
               <div className="space-y-4 mb-8">
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2" />
                   <p className="text-muted-foreground">
-                    Équipe d'artisans qualifiés et expérimentés
+                    Études d'impact environnemental et social (EIES) conformes aux normes
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2" />
                   <p className="text-muted-foreground">
-                    Respect des délais et des budgets convenus
+                    Suivi et contrôle environnemental rigoureux de projets
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2" />
                   <p className="text-muted-foreground">
-                    Matériaux de qualité et finitions soignées
+                    Formations professionnelles et levés topographiques de précision
                   </p>
                 </div>
               </div>
@@ -230,11 +228,10 @@ const Index = () => {
               <div className="aspect-[4/3] rounded-lg overflow-hidden">
                 <img
                   src={teamConstruction}
-                  alt="Équipe Génie Créatif BTP"
+                  alt="Équipe Cabinet IVATIS sur le terrain"
                   className="w-full h-full object-cover"
                 />
               </div>
-              {/* Floating accent */}
               <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/20 rounded-lg -z-10" />
               <div className="absolute -top-6 -right-6 w-24 h-24 bg-primary/10 rounded-lg -z-10" />
             </motion.div>
@@ -247,8 +244,8 @@ const Index = () => {
         <div className="container-wide">
           <SectionTitle
             subtitle="Nos Services"
-            title="Construction de Maisons Sur Mesure"
-            description="De la conception à la remise des clés, nous vous accompagnons dans la réalisation de votre projet immobilier."
+            title="Ingénierie Environnementale, Suivi, Formation, TOPO & BTP"
+            description="Des solutions complètes en ingénierie environnementale et sociale, suivi de projets, formation professionnelle, topographie et construction."
             centered
           />
 
@@ -280,8 +277,8 @@ const Index = () => {
         <div className="container-wide">
           <SectionTitle
             subtitle="Nos Réalisations"
-            title="Des Maisons Qui Font Notre Fierté"
-            description="Découvrez quelques-unes de nos réalisations qui témoignent de notre savoir-faire et de notre créativité."
+            title="Des Projets Qui Font Notre Fierté"
+            description="Découvrez quelques-unes de nos réalisations en ingénierie environnementale, topographie et BTP."
             centered
           />
 
@@ -312,11 +309,7 @@ const Index = () => {
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-construction-charcoal" />
         <div className="absolute inset-0 opacity-20">
-          <img
-            src={heroImage}
-            alt=""
-            className="w-full h-full object-cover"
-          />
+          <img src={heroImage} alt="" className="w-full h-full object-cover" />
         </div>
         <div className="relative z-10 container-wide text-center">
           <motion.div
@@ -326,10 +319,10 @@ const Index = () => {
             viewport={{ once: true }}
           >
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
-              Prêt à Construire Votre Maison ?
+              Un Projet Environnemental ou de Construction ?
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-              Contactez-nous dès aujourd'hui pour discuter de votre projet et
+              Contactez Cabinet IVATIS dès aujourd'hui pour discuter de votre projet et
               obtenir un devis personnalisé gratuit.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -342,13 +335,13 @@ const Index = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
-              <a href="tel:+22901401529 85">
+              <a href="tel:+22997606098">
                 <Button
                   variant="outline"
                   size="lg"
                   className="font-semibold text-lg px-8 py-6 border-foreground/30 hover:bg-foreground/10"
                 >
-                  +229 01 40 15 29 85
+                  +229 97 60 60 98
                 </Button>
               </a>
             </div>

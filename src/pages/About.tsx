@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { CheckCircle, Users, Target, Award } from "lucide-react";
+import { CheckCircle, Users, Target, Award, Leaf, Shield } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
@@ -10,35 +10,35 @@ import teamConstruction from "@/assets/team-construction.jpg";
 
 const stats = [
   { value: "10+", label: "Années d'Expérience" },
-  { value: "150+", label: "Maisons Construites" },
-  { value: "30+", label: "Professionnels" },
-  { value: "100%", label: "Satisfaction Client" },
+  { value: "200+", label: "Projets Réalisés" },
+  { value: "50+", label: "Professionnels Formés" },
+  { value: "100%", label: "Conformité Garantie" },
 ];
 
 const values = [
   {
-    icon: Target,
-    title: "Créativité",
+    icon: Leaf,
+    title: "Durabilité",
     description:
-      "Nous concevons des maisons uniques qui reflètent la personnalité et les besoins de chaque client.",
+      "Nous plaçons l'environnement au cœur de chaque décision pour un développement durable et responsable.",
   },
   {
     icon: Users,
     title: "Proximité",
     description:
-      "Nous travaillons en étroite collaboration avec nos clients à chaque étape du projet.",
+      "Nous travaillons en étroite collaboration avec nos clients et les communautés locales.",
   },
   {
     icon: Award,
-    title: "Qualité",
+    title: "Excellence",
     description:
-      "Nous utilisons des matériaux de première qualité pour des constructions durables.",
+      "Nous visons l'excellence dans chaque étude, chaque levé et chaque formation que nous dispensons.",
   },
   {
-    icon: CheckCircle,
-    title: "Fiabilité",
+    icon: Shield,
+    title: "Intégrité",
     description:
-      "Nous respectons nos engagements en termes de délais, de budget et de qualité.",
+      "Nos rapports et études sont rigoureux, objectifs et conformes aux standards internationaux.",
   },
 ];
 
@@ -53,7 +53,7 @@ const About = () => {
         <div className="absolute inset-0">
           <img
             src={heroImage}
-            alt="Génie Créatif BTP"
+            alt="Cabinet IVATIS - À Propos"
             className="w-full h-full object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-construction-charcoal via-construction-charcoal/95 to-background" />
@@ -70,11 +70,12 @@ const About = () => {
               À Propos
             </span>
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-foreground mb-6">
-              Notre Histoire, Notre Passion
+              Notre Histoire, Notre Engagement
             </h1>
             <p className="text-xl text-muted-foreground">
-              Depuis plus de 10 ans, Génie Créatif BTP construit des maisons 
-              de qualité au Bénin, alliant créativité et savoir-faire artisanal.
+              Cabinet IVATIS est un bureau d'études béninois spécialisé en ingénierie 
+              environnementale et sociale, suivi de projets, formation, topographie et BTP, 
+              au service du développement durable.
             </p>
           </motion.div>
         </div>
@@ -103,26 +104,24 @@ const About = () => {
             >
               <SectionTitle
                 subtitle="Notre Histoire"
-                title="Un Parcours de Créativité"
+                title="Un Parcours d'Excellence"
               />
               <div className="space-y-6 text-muted-foreground">
                 <p>
-                  Fondée avec la vision de transformer le secteur de la 
-                  construction résidentielle au Bénin, Génie Créatif BTP 
-                  a commencé son aventure avec une équipe passionnée par 
-                  l'architecture et la construction.
+                  Fondé avec la vision de contribuer au développement durable du Bénin, 
+                  Cabinet IVATIS s'est rapidement imposé comme un acteur clé en ingénierie 
+                  environnementale et sociale dans la sous-région.
                 </p>
                 <p>
-                  Au fil des années, nous avons développé une expertise 
-                  reconnue dans la construction de maisons individuelles, 
-                  villas de luxe et logements collectifs. Notre approche 
-                  créative nous distingue et nous permet de réaliser des 
-                  projets uniques.
+                  Notre expertise couvre l'ensemble du cycle de vie des projets : des études 
+                  d'impact environnemental et social (EIES) aux plans de gestion environnementale 
+                  et sociale (PGES), en passant par le suivi environnemental de chantiers, 
+                  la formation professionnelle et les levés topographiques.
                 </p>
                 <p>
-                  Aujourd'hui, Génie Créatif BTP est fier d'avoir construit 
-                  plus de 150 maisons, offrant à des familles béninoises 
-                  un foyer de qualité adapté à leur mode de vie.
+                  Enregistré sous le RC RB/ABC/22B5468 et l'IFU N° 3202292508230, 
+                  Cabinet IVATIS est fier d'avoir accompagné plus de 200 projets au Bénin, 
+                  garantissant la conformité environnementale et la qualité de chaque intervention.
                 </p>
               </div>
             </motion.div>
@@ -137,7 +136,7 @@ const About = () => {
               <div className="aspect-[4/3] rounded-lg overflow-hidden">
                 <img
                   src={teamConstruction}
-                  alt="Équipe Génie Créatif BTP"
+                  alt="Équipe Cabinet IVATIS sur le terrain"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -154,7 +153,7 @@ const About = () => {
           <SectionTitle
             subtitle="Nos Valeurs"
             title="Ce Qui Nous Guide"
-            description="Nos valeurs fondamentales définissent notre approche et notre engagement envers nos clients."
+            description="Nos valeurs fondamentales définissent notre approche et notre engagement envers l'environnement et nos clients."
             centered
           />
 
@@ -187,7 +186,7 @@ const About = () => {
           <div className="max-w-4xl mx-auto text-center">
             <SectionTitle
               subtitle="Notre Mission"
-              title="Construire Votre Bonheur"
+              title="Bâtir un Avenir Durable"
               centered
             />
             <motion.p
@@ -197,11 +196,11 @@ const About = () => {
               viewport={{ once: true }}
               className="text-xl text-muted-foreground leading-relaxed"
             >
-              Notre mission est de construire des maisons qui deviennent de 
-              véritables foyers pour les familles béninoises. Nous nous engageons 
-              à offrir des constructions de qualité, personnalisées et accessibles, 
-              tout en respectant l'environnement et les traditions architecturales 
-              locales.
+              Notre mission est de fournir des services d'ingénierie environnementale 
+              et sociale de qualité, contribuant au développement durable du Bénin. 
+              Nous nous engageons à accompagner chaque projet avec rigueur, intégrité 
+              et professionnalisme, tout en formant la prochaine génération de 
+              professionnels de l'environnement.
             </motion.p>
           </div>
         </div>

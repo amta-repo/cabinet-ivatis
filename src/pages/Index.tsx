@@ -335,13 +335,13 @@ const Index = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
-              <a href="tel:+22997606098">
+              <a href="tel:+2290197606098">
                 <Button
                   variant="outline"
                   size="lg"
                   className="font-semibold text-lg px-8 py-6 border-foreground/30 hover:bg-foreground/10"
                 >
-                  +229 97 60 60 98
+                  Appelez maintenant
                 </Button>
               </a>
             </div>

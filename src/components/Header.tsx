@@ -78,11 +78,11 @@ export function Header() {
         {/* CTA Button */}
         <div className="hidden lg:flex items-center gap-4">
           <a
-            href="tel:+22997606098"
+            href="tel:+2290197606098"
             className="flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
           >
             <Phone className="w-4 h-4" />
-            <span>+229 97 60 60 98</span>
+            <span>Appelez maintenant</span>
           </a>
           <Link to="/contact">
             <Button variant="default" size="sm" className="font-semibold">
@@ -130,11 +130,11 @@ export function Header() {
               ))}
               <div className="pt-4 border-t border-border/20">
                 <a
-                  href="tel:+22997606098"
+                  href="tel:+2290197606098"
                   className="flex items-center gap-2 text-foreground/80 mb-4"
                 >
                   <Phone className="w-5 h-5" />
-                  <span>+229 97 60 60 98</span>
+                   <span>Appelez maintenant</span>
                 </a>
                 <Link to="/contact" className="block">
                   <Button variant="default" className="w-full font-semibold">

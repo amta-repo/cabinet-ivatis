@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 
 export function WhatsAppButton() {
-  const whatsappNumber = "22997606098";
+  const whatsappNumber = "2290197606098";
   const whatsappMessage = encodeURIComponent(
     "Bonjour Cabinet IVATIS, je souhaite avoir plus d'informations sur vos services d'ingénierie environnementale et sociale."
   );

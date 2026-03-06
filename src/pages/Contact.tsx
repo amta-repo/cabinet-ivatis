@@ -15,8 +15,8 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Téléphone",
-    details: ["+229 97 60 60 98", "+229 98 34 35 35"],
-    action: "tel:+22997606098",
+    details: ["+229 01 97 60 60 98", "+229 98 34 35 35"],
+    action: "tel:+2290197606098",
   },
   {
     icon: Mail,
@@ -69,7 +69,7 @@ const Contact = () => {
     setIsSubmitting(false);
   };
 
-  const whatsappNumber = "22997606098";
+  const whatsappNumber = "2290197606098";
   const whatsappMessage = encodeURIComponent(
     "Bonjour Cabinet IVATIS, je souhaite avoir plus d'informations sur vos services."
   );

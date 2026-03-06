@@ -32,10 +32,10 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[hsl(40,30%,98%)] ${
         isScrolled
-          ? "bg-construction-charcoal/95 backdrop-blur-md shadow-strong py-3"
-          : "bg-transparent py-5"
+          ? "shadow-md py-3"
+          : "py-5"
       }`}
     >
       <div className="container-wide flex items-center justify-between">
@@ -60,8 +60,8 @@ export function Header() {
               to={link.path}
               className={`relative font-medium text-sm uppercase tracking-wider transition-colors hover:text-primary ${
                 location.pathname === link.path
-                  ? "text-primary"
-                  : "text-foreground/80"
+              ? "text-primary"
+                  : "text-foreground"
               }`}
             >
               {link.name}
@@ -112,7 +112,7 @@ export function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-construction-charcoal/98 backdrop-blur-lg border-t border-border/20"
+            className="lg:hidden bg-[hsl(40,30%,98%)] border-t border-border"
           >
             <nav className="container-wide py-6 flex flex-col gap-4">
               {navLinks.map((link) => (

@@ -11,7 +11,6 @@ import { SectionTitle } from "@/components/SectionTitle";
 import { StatCard } from "@/components/StatCard";
 import { PartnersCarousel } from "@/components/PartnersCarousel";
 import heroImage from "@/assets/hero-home.jpg";
-import heroImage from "@/assets/hero-home.jpg";
 import projectVilla from "@/assets/project-villa.jpg";
 import projectTownhouse from "@/assets/project-townhouse.jpg";
 import projectFamilyHome from "@/assets/project-family-home.jpg";

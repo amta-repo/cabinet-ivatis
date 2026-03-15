@@ -9,6 +9,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SectionTitle } from "@/components/SectionTitle";
 import { StatCard } from "@/components/StatCard";
+import { PartnersCarousel } from "@/components/PartnersCarousel";
 import heroImage from "@/assets/hero-home.jpg";
 import projectVilla from "@/assets/project-villa.jpg";
 import projectTownhouse from "@/assets/project-townhouse.jpg";
@@ -335,7 +336,7 @@ const Index = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
-              <a href="tel:+2290197606098">
+              <a href="tel:+2290197203303">
                 <Button
                   variant="outline"
                   size="lg"
@@ -348,6 +349,9 @@ const Index = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Partners Carousel */}
+      <PartnersCarousel />
 
       <Footer />
     </div>

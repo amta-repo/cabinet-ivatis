@@ -357,5 +357,6 @@ const Index = () => {
       <Footer />
     </div>
   );
+};
 
 export default Index;

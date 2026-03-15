@@ -78,7 +78,7 @@ export function Header() {
         {/* CTA Button */}
         <div className="hidden lg:flex items-center gap-4">
           <a
-            href="tel:+2290197606098"
+            href="tel:+2290197203303"
             className="flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
           >
             <Phone className="w-4 h-4" />

@@ -130,7 +130,7 @@ export function Header() {
               ))}
               <div className="pt-4 border-t border-border/20">
                 <a
-                  href="tel:+2290197606098"
+                  href="tel:+2290197203303"
                   className="flex items-center gap-2 text-foreground/80 mb-4"
                 >
                   <Phone className="w-5 h-5" />

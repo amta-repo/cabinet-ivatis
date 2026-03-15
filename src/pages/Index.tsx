@@ -335,7 +335,7 @@ const Index = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
-              <a href="tel:+2290197606098">
+              <a href="tel:+2290197203303">
                 <Button
                   variant="outline"
                   size="lg"

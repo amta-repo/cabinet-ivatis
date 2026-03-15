@@ -69,7 +69,7 @@ const Contact = () => {
     setIsSubmitting(false);
   };
 
-  const whatsappNumber = "2290197606098";
+  const whatsappNumber = "2290197203303";
   const whatsappMessage = encodeURIComponent(
     "Bonjour Cabinet IVATIS, je souhaite avoir plus d'informations sur vos services."
   );

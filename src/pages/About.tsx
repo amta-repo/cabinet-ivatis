@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { CheckCircle, Users, Target, Award, Leaf, Shield } from "lucide-react";
+import { Leaf, Users, Award, Shield } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
@@ -9,7 +9,7 @@ import heroImage from "@/assets/hero-home.jpg";
 import teamConstruction from "@/assets/team-construction.jpg";
 
 const stats = [
-  { value: "10+", label: "Années d'Expérience" },
+  { value: "15+", label: "Années d'Expérience" },
   { value: "200+", label: "Projets Réalisés" },
   { value: "50+", label: "Professionnels Formés" },
   { value: "100%", label: "Conformité Garantie" },
@@ -20,19 +20,19 @@ const values = [
     icon: Leaf,
     title: "Durabilité",
     description:
-      "Nous plaçons l'environnement au cœur de chaque décision pour un développement durable et responsable.",
+      "Le développement durable est une préoccupation constante des interventions d'IVATIS.",
   },
   {
     icon: Users,
-    title: "Proximité",
+    title: "Capital Humain",
     description:
-      "Nous travaillons en étroite collaboration avec nos clients et les communautés locales.",
+      "IVATIS fait de son capital humain une valeur fondamentale et une priorité constante d'investissement.",
   },
   {
     icon: Award,
     title: "Excellence",
     description:
-      "Nous visons l'excellence dans chaque étude, chaque levé et chaque formation que nous dispensons.",
+      "Une culture d'entreprise fondée sur des valeurs d'éthique et de rentabilité.",
   },
   {
     icon: Shield,
@@ -73,9 +73,8 @@ const About = () => {
               Notre Histoire, Notre Engagement
             </h1>
             <p className="text-xl text-muted-foreground">
-              Cabinet IVATIS est un bureau d'études béninois spécialisé en ingénierie 
-              environnementale et sociale, suivi de projets, formation, topographie et BTP, 
-              au service du développement durable.
+              Créé en 2009, Cabinet IVATIS est leader dans les études environnementales 
+              au Bénin, avec une équipe permanente d'experts et techniciens de haut niveau.
             </p>
           </motion.div>
         </div>
@@ -92,7 +91,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Story Section */}
+      {/* Intro Section */}
       <section className="section-padding">
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -103,25 +102,42 @@ const About = () => {
               viewport={{ once: true }}
             >
               <SectionTitle
-                subtitle="Notre Histoire"
-                title="Un Parcours d'Excellence"
+                subtitle="Qui Sommes-Nous"
+                title="Un Parcours d'Excellence depuis 2009"
               />
               <div className="space-y-6 text-muted-foreground">
                 <p>
-                  Fondé avec la vision de contribuer au développement durable du Bénin, 
-                  Cabinet IVATIS s'est rapidement imposé comme un acteur clé en ingénierie 
-                  environnementale et sociale dans la sous-région.
+                  Créé en 2009, IVATIS est abrité par un immeuble R+1 sis à Abomey-Calavi, 
+                  Saint Louis dans la rue Général HOUNDEGNON.
                 </p>
                 <p>
-                  Notre expertise couvre l'ensemble du cycle de vie des projets : des études 
-                  d'impact environnemental et social (EIES) aux plans de gestion environnementale 
-                  et sociale (PGES), en passant par le suivi environnemental de chantiers, 
-                  la formation professionnelle et les levés topographiques.
+                  Leader dans les études environnementales au Bénin, IVATIS dispose d'une 
+                  équipe permanente d'experts et techniciens et assure :
                 </p>
+                <div className="space-y-4">
+                  <div className="p-4 bg-muted/50 rounded-lg border-l-4 border-primary">
+                    <h4 className="font-display text-lg text-foreground mb-2">
+                      Prestations de maîtrise d'œuvre
+                    </h4>
+                    <p className="text-sm">
+                      Études techniques, études économiques, analyses environnementales, 
+                      suivi environnemental, audits, management de la qualité, formation…
+                    </p>
+                  </div>
+                  <div className="p-4 bg-muted/50 rounded-lg border-l-4 border-primary">
+                    <h4 className="font-display text-lg text-foreground mb-2">
+                      Assistance à maîtrise d'ouvrage
+                    </h4>
+                    <p className="text-sm">
+                      Planification des projets, préparation des termes de référence, 
+                      assistance pour l'évaluation des offres et la sélection des entreprises, 
+                      suivi et pilotage des études et des investigations.
+                    </p>
+                  </div>
+                </div>
                 <p>
                   Enregistré sous le RC RB/ABC/22B5468 et l'IFU N° 3202292508230, 
-                  Cabinet IVATIS est fier d'avoir accompagné plus de 200 projets au Bénin, 
-                  garantissant la conformité environnementale et la qualité de chaque intervention.
+                  Cabinet IVATIS est fier d'avoir accompagné plus de 200 projets au Bénin.
                 </p>
               </div>
             </motion.div>
@@ -147,13 +163,33 @@ const About = () => {
         </div>
       </section>
 
+      {/* Values Headline */}
+      <section className="section-padding bg-construction-charcoal">
+        <div className="container-wide">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-primary mb-6 leading-tight">
+              Des Valeurs d'Éthique, un Capital Humain de Haut Niveau et un Réel 
+              Engagement pour le Développement Durable
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Une culture d'entreprise fondée sur des valeurs d'éthique et de rentabilité.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Values Section */}
       <section className="section-padding bg-muted/30">
         <div className="container-wide">
           <SectionTitle
             subtitle="Nos Valeurs"
             title="Ce Qui Nous Guide"
-            description="Nos valeurs fondamentales définissent notre approche et notre engagement envers l'environnement et nos clients."
             centered
           />
 

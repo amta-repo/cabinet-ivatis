@@ -89,7 +89,7 @@ const Index = () => {
           <div className="absolute inset-0 hero-overlay" />
         </div>
 
-        <div className="relative z-10 container-wide text-center pt-20">
+        <div className="relative z-10 container-wide text-center pt-40">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

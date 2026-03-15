@@ -351,9 +351,11 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Partners Carousel */}
+      <PartnersCarousel />
+
       <Footer />
     </div>
-  );
 };
 
 export default Index;

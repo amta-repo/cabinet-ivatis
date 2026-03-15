@@ -15,8 +15,8 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Téléphone",
-    details: ["+229 01 97 60 60 98", "+229 98 34 35 35"],
-    action: "tel:+2290197606098",
+    details: ["+229 01 97 20 33 03", "+229 98 34 35 35"],
+    action: "tel:+2290197203303",
   },
   {
     icon: Mail,

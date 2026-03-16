@@ -5,6 +5,9 @@ import jecoLogo from "@/assets/partners/jeco.jpg";
 import cebLogo from "@/assets/partners/ceb.png";
 import goldenTulipLogo from "@/assets/partners/golden-tulip.png";
 import mcaBeninLogo from "@/assets/partners/mca-benin.png";
+import pebLogo from "@/assets/partners/peb.png";
+import betraLogo from "@/assets/partners/betra.jpg";
+import vinciLogo from "@/assets/partners/vinci.jpg";
 
 const partners = [
   { name: "AGETUR", logo: null, placeholder: "AGETUR" },
@@ -17,6 +20,9 @@ const partners = [
   { name: "MCA Bénin", logo: mcaBeninLogo },
   { name: "PDVIR", logo: null, placeholder: "PDVIR" },
   { name: "P2AE", logo: null, placeholder: "P2AE" },
+  { name: "Société PEB", logo: pebLogo },
+  { name: "Société BETRA", logo: betraLogo },
+  { name: "VINCI Énergie", logo: vinciLogo },
 ];
 
 // Duplicate for seamless loop
@@ -38,7 +44,7 @@ export function PartnersCarousel() {
           animate={{ x: ["0%", "-50%"] }}
           transition={{
             x: {
-              duration: 30,
+              duration: 35,
               repeat: Infinity,
               ease: "linear",
             },

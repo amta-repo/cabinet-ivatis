@@ -5,8 +5,8 @@ import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { SectionTitle } from "@/components/SectionTitle";
 import { StatCard } from "@/components/StatCard";
-import heroImage from "@/assets/hero-home.jpg";
-import teamConstruction from "@/assets/team-construction.jpg";
+import cabinetFront from "@/assets/activities/cabinet-front.jpg";
+import cabinetInterior from "@/assets/activities/cabinet-interior.jpg";
 
 const stats = [
   { value: "15+", label: "Années d'Expérience" },
@@ -52,7 +52,7 @@ const About = () => {
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={heroImage}
+            src={cabinetFront}
             alt="Cabinet IVATIS - À Propos"
             className="w-full h-full object-cover opacity-20"
           />
@@ -73,7 +73,7 @@ const About = () => {
               Notre Histoire, Notre Engagement
             </h1>
             <p className="text-xl text-muted-foreground">
-              Créé en 2009, Cabinet IVATIS est leader dans les études environnementales 
+              Créé en 2009, Cabinet IVATIS est leader dans les études environnementales
               au Bénin, avec une équipe permanente d'experts et techniciens de haut niveau.
             </p>
           </motion.div>
@@ -107,11 +107,11 @@ const About = () => {
               />
               <div className="space-y-6 text-muted-foreground">
                 <p>
-                  Créé en 2009, IVATIS est abrité par un immeuble R+1 sis à Abomey-Calavi, 
+                  Créé en 2009, IVATIS est abrité par un immeuble R+1 sis à Abomey-Calavi,
                   Saint Louis dans la rue Général HOUNDEGNON.
                 </p>
                 <p>
-                  Leader dans les études environnementales au Bénin, IVATIS dispose d'une 
+                  Leader dans les études environnementales au Bénin, IVATIS dispose d'une
                   équipe permanente d'experts et techniciens et assure :
                 </p>
                 <div className="space-y-4">
@@ -120,7 +120,7 @@ const About = () => {
                       Prestations de maîtrise d'œuvre
                     </h4>
                     <p className="text-sm">
-                      Études techniques, études économiques, analyses environnementales, 
+                      Études techniques, études économiques, analyses environnementales,
                       suivi environnemental, audits, management de la qualité, formation…
                     </p>
                   </div>
@@ -129,16 +129,12 @@ const About = () => {
                       Assistance à maîtrise d'ouvrage
                     </h4>
                     <p className="text-sm">
-                      Planification des projets, préparation des termes de référence, 
-                      assistance pour l'évaluation des offres et la sélection des entreprises, 
+                      Planification des projets, préparation des termes de référence,
+                      assistance pour l'évaluation des offres et la sélection des entreprises,
                       suivi et pilotage des études et des investigations.
                     </p>
                   </div>
                 </div>
-                <p>
-                  Enregistré sous le RC RB/ABC/22B5468 et l'IFU N° 3202292508230, 
-                  Cabinet IVATIS est fier d'avoir accompagné plus de 200 projets au Bénin.
-                </p>
               </div>
             </motion.div>
 
@@ -147,17 +143,22 @@ const About = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="relative"
+              className="space-y-6"
             >
               <div className="aspect-[4/3] rounded-lg overflow-hidden">
                 <img
-                  src={teamConstruction}
-                  alt="Équipe Cabinet IVATIS sur le terrain"
+                  src={cabinetFront}
+                  alt="Vue de face du Cabinet IVATIS"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/20 rounded-lg -z-10" />
-              <div className="absolute -top-6 -right-6 w-24 h-24 bg-primary/10 rounded-lg -z-10" />
+              <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                <img
+                  src={cabinetInterior}
+                  alt="Entrée de la Direction Générale du Cabinet IVATIS"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </motion.div>
           </div>
         </div>
@@ -174,7 +175,7 @@ const About = () => {
             className="text-center max-w-4xl mx-auto"
           >
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-primary mb-6 leading-tight">
-              Des Valeurs d'Éthique, un Capital Humain de Haut Niveau et un Réel 
+              Des Valeurs d'Éthique, un Capital Humain de Haut Niveau et un Réel
               Engagement pour le Développement Durable
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -232,10 +233,10 @@ const About = () => {
               viewport={{ once: true }}
               className="text-xl text-muted-foreground leading-relaxed"
             >
-              Notre mission est de fournir des services d'ingénierie environnementale 
-              et sociale de qualité, contribuant au développement durable du Bénin. 
-              Nous nous engageons à accompagner chaque projet avec rigueur, intégrité 
-              et professionnalisme, tout en formant la prochaine génération de 
+              Notre mission est de fournir des services d'ingénierie environnementale
+              et sociale de qualité, contribuant au développement durable du Bénin.
+              Nous nous engageons à accompagner chaque projet avec rigueur, intégrité
+              et professionnalisme, tout en formant la prochaine génération de
               professionnels de l'environnement.
             </motion.p>
           </div>

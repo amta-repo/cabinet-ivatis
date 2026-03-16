@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Leaf, ClipboardCheck, GraduationCap, Compass, HardHat } from "lucide-react";
+import { ArrowRight, Leaf, ClipboardCheck, GraduationCap, Compass } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -10,11 +10,11 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { SectionTitle } from "@/components/SectionTitle";
 import { StatCard } from "@/components/StatCard";
 import { PartnersCarousel } from "@/components/PartnersCarousel";
-import heroImage from "@/assets/hero-home.jpg";
-import projectVilla from "@/assets/project-villa.jpg";
-import projectTownhouse from "@/assets/project-townhouse.jpg";
-import projectFamilyHome from "@/assets/project-family-home.jpg";
-import teamConstruction from "@/assets/team-construction.jpg";
+import cabinetFront from "@/assets/activities/cabinet-front.jpg";
+import auditGolden from "@/assets/activities/audit-golden.jpg";
+import formationSauvegarde from "@/assets/activities/formation-sauvegarde.jpg";
+import environnement1 from "@/assets/activities/environnement-1.jpg";
+import cabinetInterior from "@/assets/activities/cabinet-interior.jpg";
 
 const services = [
   {
@@ -45,27 +45,27 @@ const services = [
 
 const projects = [
   {
-    image: projectVilla,
-    title: "EIES Projet Routier Calavi",
-    category: "Environnement",
-    location: "Abomey-Calavi",
-  },
-  {
-    image: projectTownhouse,
-    title: "Suivi Environnemental Chantier",
-    category: "Suivi",
+    image: auditGolden,
+    title: "Audit Environnemental — Golden Tulip",
+    category: "Audit",
     location: "Cotonou",
   },
   {
-    image: projectFamilyHome,
-    title: "Levé Topographique 50 Ha",
-    category: "Topographie",
-    location: "Allada",
+    image: formationSauvegarde,
+    title: "Formation Instruments de Sauvegarde",
+    category: "Formation",
+    location: "Abomey-Calavi",
+  },
+  {
+    image: environnement1,
+    title: "Étude d'Impact Environnemental",
+    category: "Environnement",
+    location: "Bénin",
   },
 ];
 
 const stats = [
-  { value: "10+", label: "Années d'Expérience" },
+  { value: "15+", label: "Années d'Expérience" },
   { value: "200+", label: "Projets Réalisés" },
   { value: "50+", label: "Professionnels Formés" },
   { value: "100%", label: "Conformité Garantie" },
@@ -81,7 +81,7 @@ const Index = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={heroImage}
+            src={cabinetFront}
             alt="Cabinet IVATIS - Ingénierie Environnementale et Sociale au Bénin"
             className="w-full h-full object-cover"
           />
@@ -117,7 +117,7 @@ const Index = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-10"
           >
-            Cabinet IVATIS, votre partenaire de confiance en ingénierie 
+            Cabinet IVATIS, votre partenaire de confiance en ingénierie
             environnementale et sociale, topographie et BTP au Bénin.
           </motion.p>
 
@@ -188,7 +188,7 @@ const Index = () => {
             >
               <SectionTitle
                 subtitle="À Propos de Nous"
-                title="Experts en Ingénierie Environnementale depuis Plus de 10 Ans"
+                title="Experts en Ingénierie Environnementale depuis Plus de 15 Ans"
                 description="Cabinet IVATIS est un bureau d'études spécialisé en ingénierie environnementale et sociale, suivi de projets, formation, topographie et BTP au Bénin."
               />
               <div className="space-y-4 mb-8">
@@ -228,8 +228,8 @@ const Index = () => {
             >
               <div className="aspect-[4/3] rounded-lg overflow-hidden">
                 <img
-                  src={teamConstruction}
-                  alt="Équipe Cabinet IVATIS sur le terrain"
+                  src={cabinetInterior}
+                  alt="Direction Générale du Cabinet IVATIS"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -310,7 +310,7 @@ const Index = () => {
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-construction-charcoal" />
         <div className="absolute inset-0 opacity-20">
-          <img src={heroImage} alt="" className="w-full h-full object-cover" />
+          <img src={cabinetFront} alt="" className="w-full h-full object-cover" />
         </div>
         <div className="relative z-10 container-wide text-center">
           <motion.div

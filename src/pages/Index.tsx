@@ -14,7 +14,7 @@ import cabinetFront from "@/assets/activities/cabinet-front.jpg";
 import auditGolden from "@/assets/activities/audit-golden.jpg";
 import formationSauvegarde from "@/assets/activities/formation-sauvegarde.jpg";
 import environnement1 from "@/assets/activities/environnement-1.jpg";
-import cabinetInterior from "@/assets/activities/cabinet-interior.jpg";
+import aboutTeam from "@/assets/about-team.jpg";
 
 const services = [
   {

@@ -228,8 +228,8 @@ const Index = () => {
             >
               <div className="aspect-[4/3] rounded-lg overflow-hidden">
                 <img
-                  src={cabinetInterior}
-                  alt="Direction Générale du Cabinet IVATIS"
+                  src={aboutTeam}
+                  alt="Équipe IVATIS sur le terrain"
                   className="w-full h-full object-cover"
                 />
               </div>

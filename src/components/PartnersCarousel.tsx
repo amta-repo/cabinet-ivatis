@@ -8,21 +8,27 @@ import mcaBeninLogo from "@/assets/partners/mca-benin.png";
 import pebLogo from "@/assets/partners/peb.png";
 import betraLogo from "@/assets/partners/betra.jpg";
 import vinciLogo from "@/assets/partners/vinci.jpg";
+import p2aeLogo from "@/assets/partners/p2ae.jpg";
+import paseLogo from "@/assets/partners/pase.jpg";
+import accessLogo from "@/assets/partners/access.jpg";
+import prubaLogo from "@/assets/partners/pruba.jpg";
+import pdvirLogo from "@/assets/partners/pdvir.jpg";
+import ageturLogo from "@/assets/partners/agetur.jpg";
 
 const partners = [
-  { name: "AGETUR", logo: null, placeholder: "AGETUR" },
-  { name: "Complexe Hôtelier JECO", logo: jecoLogo },
-  { name: "PRUBA", logo: null, placeholder: "PRUBA" },
-  { name: "PASE", logo: null, placeholder: "PASE" },
-  { name: "ACCESS", logo: null, placeholder: "ACCESS" },
+  { name: "P2AE", logo: p2aeLogo },
   { name: "CEB", logo: cebLogo },
-  { name: "Golden Tulip Le Diplomate", logo: goldenTulipLogo },
+  { name: "VINCI Énergie", logo: vinciLogo },
+  { name: "PASE", logo: paseLogo },
+  { name: "ACCESS", logo: accessLogo },
+  { name: "PRUBA", logo: prubaLogo },
+  { name: "PDVIR", logo: pdvirLogo },
+  { name: "AGETUR", logo: ageturLogo },
   { name: "MCA Bénin", logo: mcaBeninLogo },
-  { name: "PDVIR", logo: null, placeholder: "PDVIR" },
-  { name: "P2AE", logo: null, placeholder: "P2AE" },
+  { name: "Golden Tulip Le Diplomate", logo: goldenTulipLogo },
   { name: "Société PEB", logo: pebLogo },
   { name: "Société BETRA", logo: betraLogo },
-  { name: "VINCI Énergie", logo: vinciLogo },
+  { name: "Complexe Hôtelier JECO", logo: jecoLogo },
 ];
 
 // Duplicate for seamless loop
@@ -56,17 +62,11 @@ export function PartnersCarousel() {
               key={`${partner.name}-${index}`}
               className="flex-shrink-0 h-20 w-40 flex items-center justify-center grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
             >
-              {partner.logo ? (
-                <img
-                  src={partner.logo}
-                  alt={partner.name}
-                  className="max-h-full max-w-full object-contain"
-                />
-              ) : (
-                <span className="font-display text-lg text-muted-foreground font-bold">
-                  {partner.placeholder}
-                </span>
-              )}
+              <img
+                src={partner.logo}
+                alt={partner.name}
+                className="max-h-full max-w-full object-contain"
+              />
             </div>
           ))}
         </motion.div>

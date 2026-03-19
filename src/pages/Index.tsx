@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Leaf, ClipboardCheck, GraduationCap, Compass } from "lucide-react";
+import { ArrowRight, Leaf, ClipboardCheck, GraduationCap, Compass, HardHat } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -10,11 +10,12 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { SectionTitle } from "@/components/SectionTitle";
 import { StatCard } from "@/components/StatCard";
 import { PartnersCarousel } from "@/components/PartnersCarousel";
-import cabinetFront from "@/assets/activities/cabinet-front.jpg";
+import consultationMairie from "@/assets/activities/consultation-mairie.jpg";
 import auditGolden from "@/assets/activities/audit-golden.jpg";
 import formationSauvegarde from "@/assets/activities/formation-sauvegarde.jpg";
 import environnement1 from "@/assets/activities/environnement-1.jpg";
-import aboutTeam from "@/assets/about-team.jpg";
+import reunionGolden from "@/assets/activities/reunion-golden.jpg";
+import fieldConsultation from "@/assets/activities/field-consultation.jpg";
 
 const services = [
   {
@@ -22,24 +23,35 @@ const services = [
     title: "Ingénierie Environnementale & Sociale",
     description:
       "Études d'impact environnemental et social (EIES), PGES, audits et conformité réglementaire.",
+    slug: "eies",
   },
   {
     icon: ClipboardCheck,
     title: "Suivi de Projets",
     description:
       "Suivi environnemental et social de chantiers, contrôle qualité et reporting.",
+    slug: "suivi-par-pges",
   },
   {
     icon: GraduationCap,
     title: "Formation",
     description:
       "Formation professionnelle en environnement, sécurité, HSE et développement durable.",
+    slug: "formation",
   },
   {
     icon: Compass,
     title: "Topographie",
     description:
       "Levés topographiques, bornage, implantation et plans parcellaires.",
+    slug: "etudes-topographiques",
+  },
+  {
+    icon: HardHat,
+    title: "BTP & Génie Civil",
+    description:
+      "Études, conception et accompagnement technique en génie civil, bâtiments et infrastructures.",
+    slug: "genie-civil-btp",
   },
 ];
 
@@ -81,8 +93,8 @@ const Index = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={cabinetFront}
-            alt="Cabinet IVATIS - Ingénierie Environnementale et Sociale au Bénin"
+            src={fieldConsultation}
+            alt="Cabinet IVATIS - Consultation communautaire terrain au Bénin"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-construction-charcoal/70" />
@@ -125,7 +137,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20"
           >
             <Link to="/contact">
               <Button
@@ -228,8 +240,8 @@ const Index = () => {
             >
               <div className="aspect-[4/3] rounded-lg overflow-hidden">
                 <img
-                  src={aboutTeam}
-                  alt="Équipe IVATIS sur le terrain"
+                  src={reunionGolden}
+                  alt="Équipe IVATIS en réunion de travail"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -250,7 +262,7 @@ const Index = () => {
             centered
           />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <ServiceCard key={service.title} {...service} index={index} />
             ))}
@@ -310,7 +322,7 @@ const Index = () => {
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-construction-charcoal" />
         <div className="absolute inset-0 opacity-20">
-          <img src={cabinetFront} alt="" className="w-full h-full object-cover" />
+          <img src={consultationMairie} alt="" className="w-full h-full object-cover" />
         </div>
         <div className="relative z-10 container-wide text-center">
           <motion.div

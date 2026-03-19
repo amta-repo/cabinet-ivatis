@@ -1,12 +1,22 @@
 import { motion } from "framer-motion";
-import { Leaf, Users, Award, Shield } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Leaf, Users, Award, Shield, ArrowRight, Zap, Truck, Building2, Globe, GraduationCap } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { SectionTitle } from "@/components/SectionTitle";
 import { StatCard } from "@/components/StatCard";
+import reunionGolden from "@/assets/activities/reunion-golden.jpg";
+import consultationMairie from "@/assets/activities/consultation-mairie.jpg";
 import cabinetFront from "@/assets/activities/cabinet-front.jpg";
 import cabinetInterior from "@/assets/activities/cabinet-interior.jpg";
+import energieStation from "@/assets/activities/energie-station.jpg";
+import environnement1 from "@/assets/activities/environnement-1.jpg";
+import transport1 from "@/assets/activities/transport-1.jpg";
+import batiment1 from "@/assets/activities/batiment-1.jpg";
+import fieldConsultation from "@/assets/activities/field-consultation.jpg";
+import formationSauvegarde from "@/assets/activities/formation-sauvegarde.jpg";
 
 const stats = [
   { value: "15+", label: "Années d'Expérience" },
@@ -19,26 +29,67 @@ const values = [
   {
     icon: Leaf,
     title: "Durabilité",
-    description:
-      "Le développement durable est une préoccupation constante des interventions d'IVATIS.",
+    description: "Le développement durable est une préoccupation constante des interventions d'IVATIS.",
   },
   {
     icon: Users,
     title: "Capital Humain",
-    description:
-      "IVATIS fait de son capital humain une valeur fondamentale et une priorité constante d'investissement.",
+    description: "IVATIS fait de son capital humain une valeur fondamentale et une priorité constante d'investissement.",
   },
   {
     icon: Award,
     title: "Excellence",
-    description:
-      "Une culture d'entreprise fondée sur des valeurs d'éthique et de rentabilité.",
+    description: "Une culture d'entreprise fondée sur des valeurs d'éthique et de rentabilité.",
   },
   {
     icon: Shield,
     title: "Intégrité",
-    description:
-      "Nos rapports et études sont rigoureux, objectifs et conformes aux standards internationaux.",
+    description: "Nos rapports et études sont rigoureux, objectifs et conformes aux standards internationaux.",
+  },
+];
+
+const experiences = [
+  {
+    icon: Zap,
+    title: "Énergie",
+    description: "Maîtrise des lignes électriques BT, MT, HT. Audit des lignes et pylônes. Études topographiques des postes de transformation.",
+    image: energieStation,
+    slug: "etudes-topographiques",
+  },
+  {
+    icon: Leaf,
+    title: "Environnement",
+    description: "EIES, audits environnementaux, suivi des PAR et PGES, gestion côtière, conservation de la biodiversité et des zones humides.",
+    image: environnement1,
+    slug: "eies",
+  },
+  {
+    icon: Truck,
+    title: "Transport",
+    description: "Routes, autoroutes, voies urbaines, carrefours et échangeurs, ponts, viaducs, études de trafic et d'exploitation d'infrastructures.",
+    image: transport1,
+    slug: "genie-civil-btp",
+  },
+  {
+    icon: Building2,
+    title: "Bâtiment, Voiries & Énergie",
+    description: "Bâtiments d'habitation, industriels, centres commerciaux, hôtels, équipements publics, infrastructures urbaines.",
+    image: batiment1,
+    slug: "genie-civil-btp",
+  },
+  {
+    icon: Globe,
+    title: "Développement Local",
+    description: "Aménagement du territoire, plans de développement, requalification urbaine, équipements publics, audits organisationnels.",
+    image: fieldConsultation,
+    slug: "cprp",
+  },
+  {
+    icon: GraduationCap,
+    title: "Formations",
+    description: "Animation de séminaires, conception de modules, formation HSE, accompagnement ISO 9001, 14001 et 45001.",
+    image: formationSauvegarde,
+    slug: "formation",
   },
 ];
 
@@ -52,8 +103,8 @@ const About = () => {
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={cabinetFront}
-            alt="Cabinet IVATIS - À Propos"
+            src={consultationMairie}
+            alt="Cabinet IVATIS — Équipe sur le terrain"
             className="w-full h-full object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-construction-charcoal via-construction-charcoal/95 to-background" />
@@ -211,6 +262,57 @@ const About = () => {
                   {value.title}
                 </h3>
                 <p className="text-muted-foreground">{value.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Experiences Section */}
+      <section className="section-padding bg-background">
+        <div className="container-wide">
+          <SectionTitle
+            subtitle="Quelques Images de Nos Expériences"
+            title="Nos Domaines d'Intervention"
+            description="IVATIS intervient dans les projets d'environnement, d'énergie, de transport, de bâtiment, de développement local et de formation."
+            centered
+          />
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {experiences.map((exp, index) => (
+              <motion.div
+                key={exp.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
+                viewport={{ once: true }}
+                className="group bg-card border border-border/50 rounded-lg overflow-hidden hover:border-primary/50 hover:shadow-medium transition-all flex flex-col"
+              >
+                <div className="aspect-[16/10] overflow-hidden">
+                  <img
+                    src={exp.image}
+                    alt={`${exp.title} — Cabinet IVATIS`}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-6 flex flex-col flex-grow">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <exp.icon className="w-5 h-5 text-primary" />
+                    </div>
+                    <h3 className="font-display text-xl text-foreground">{exp.title}</h3>
+                  </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-grow">
+                    {exp.description}
+                  </p>
+                  <Link to={`/services/${exp.slug}`}>
+                    <Button variant="outline" size="sm" className="w-full font-semibold group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                      En Savoir Plus
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Button>
+                  </Link>
+                </div>
               </motion.div>
             ))}
           </div>

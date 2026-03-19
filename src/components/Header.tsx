@@ -10,6 +10,8 @@ const navLinks = [
   { name: "À Propos", path: "/about" },
   { name: "Services", path: "/services" },
   { name: "Nos Réalisations", path: "/projects" },
+  { name: "Galerie", path: "/gallery" },
+  { name: "FAQ", path: "/faq" },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -53,7 +55,7 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.path}
@@ -82,7 +84,7 @@ export function Header() {
             className="flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
           >
             <Phone className="w-4 h-4" />
-            <span>Appelez maintenant</span>
+            <span>+229 01 97 20 33 03</span>
           </a>
           <Link to="/contact">
             <Button variant="default" size="sm" className="font-semibold">
@@ -134,7 +136,7 @@ export function Header() {
                   className="flex items-center gap-2 text-foreground/80 mb-4"
                 >
                   <Phone className="w-5 h-5" />
-                   <span>Appelez maintenant</span>
+                   <span>+229 01 97 20 33 03</span>
                 </a>
                 <Link to="/contact" className="block">
                   <Button variant="default" className="w-full font-semibold">

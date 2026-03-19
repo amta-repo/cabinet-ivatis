@@ -20,8 +20,15 @@ import eies1 from "@/assets/activities/eies-1.jpg";
 import coastal1 from "@/assets/activities/coastal-1.jpg";
 import energie1 from "@/assets/activities/energie-1.jpg";
 import batiment1 from "@/assets/activities/batiment-1.jpg";
-import aboutTeam from "@/assets/about-team.jpg";
 import environnement1 from "@/assets/activities/environnement-1.jpg";
+import auditBetra from "@/assets/activities/audit-betra.jpg";
+import auditBetra2 from "@/assets/activities/audit-betra-2.jpg";
+import topoTerrain from "@/assets/activities/topo-terrain.jpg";
+import topoEquipement from "@/assets/activities/topo-equipement.jpg";
+import btpTerrain from "@/assets/activities/btp-terrain.jpg";
+import energieStation from "@/assets/activities/energie-station.jpg";
+import fieldConsultation from "@/assets/activities/field-consultation.jpg";
+import consultationMairie from "@/assets/activities/consultation-mairie.jpg";
 
 const projects = [
   {
@@ -39,11 +46,25 @@ const projects = [
     description: "Réunion de restitution et recommandations de conformité environnementale et sociale.",
   },
   {
+    image: auditBetra,
+    title: "Audit Environnemental — Société BETRA",
+    category: "Environnement",
+    location: "Bénin",
+    description: "Audit environnemental de la Société BETRA SARL, évaluation des installations industrielles.",
+  },
+  {
+    image: auditBetra2,
+    title: "Consultation — Société BETRA",
+    category: "Environnement",
+    location: "Bénin",
+    description: "Réunion de consultation avec la direction de BETRA dans le cadre de l'audit environnemental.",
+  },
+  {
     image: auditEnvironnemental,
-    title: "Suivi Environnemental — Zone Côtière",
-    category: "Suivi",
-    location: "Littoral, Bénin",
-    description: "Suivi environnemental et social des communautés de la zone côtière dans le cadre du PGES.",
+    title: "Audit de la Société des Brasseries du Bénin (SOBEBRA)",
+    category: "Environnement",
+    location: "Bénin",
+    description: "Audit environnemental et social de la Société des Brasseries du Bénin (SOBEBRA).",
   },
   {
     image: reunion1,
@@ -60,6 +81,13 @@ const projects = [
     description: "Consultation publique avec les communautés locales dans le cadre de la réinstallation des populations.",
   },
   {
+    image: fieldConsultation,
+    title: "Consultation Communautaire — Terrain",
+    category: "Environnement",
+    location: "Bénin",
+    description: "Consultation de terrain avec les populations rurales dans le cadre d'études environnementales.",
+  },
+  {
     image: eies1,
     title: "EIES — Installations Solaires",
     category: "Environnement",
@@ -67,11 +95,46 @@ const projects = [
     description: "Étude d'impact environnemental et social pour un projet d'installation de panneaux solaires.",
   },
   {
-    image: aboutTeam,
-    title: "Levé Topographique de Précision",
+    image: consultationMairie,
+    title: "Suivi Environnemental — Réunion de Chantier",
+    category: "Suivi",
+    location: "Bénin",
+    description: "Réunion de suivi environnemental et social sur site avec les équipes de projet.",
+  },
+  {
+    image: coastal1,
+    title: "Gestion des Inondations — Zone Côtière",
+    category: "Suivi",
+    location: "Littoral, Bénin",
+    description: "Étude et gestion des inondations dans les zones côtières du Bénin.",
+  },
+  {
+    image: environnement1,
+    title: "Évaluation Environnementale Stratégique",
+    category: "Environnement",
+    location: "Bénin",
+    description: "Évaluation environnementale et sociale stratégique pour un programme de développement.",
+  },
+  {
+    image: topoTerrain,
+    title: "Levé Topographique — Route Nationale",
     category: "Topographie",
-    location: "Abomey-Calavi",
-    description: "Levé topographique de précision avec équipement GPS pour un projet d'aménagement foncier.",
+    location: "Bénin",
+    description: "Levé topographique de précision avec équipement GPS RTK pour un projet routier.",
+  },
+  {
+    image: topoEquipement,
+    title: "Relevé Topographique — Station GPS",
+    category: "Topographie",
+    location: "Bénin",
+    description: "Installation et relevé avec station GPS de haute précision.",
+  },
+  {
+    image: energieStation,
+    title: "Études Topographiques — Poste Électrique",
+    category: "Topographie",
+    location: "Bénin",
+    description: "Études topographiques pour les postes de transformation et lignes électriques.",
   },
   {
     image: energie1,
@@ -88,11 +151,18 @@ const projects = [
     description: "Construction d'un bâtiment administratif avec normes environnementales.",
   },
   {
+    image: btpTerrain,
+    title: "Inspection de Chantier BTP",
+    category: "BTP",
+    location: "Bénin",
+    description: "Inspection et suivi de chantier de construction avec équipements de sécurité.",
+  },
+  {
     image: formationSauvegarde4,
     title: "Formation Instruments de Sauvegarde — 2ème Édition",
     category: "Formation",
     location: "Abomey-Calavi",
-    description: "Formation certifiante sur les instruments de sauvegarde environnementale et sociale, 2ème édition.",
+    description: "Formation certifiante sur les instruments de sauvegarde environnementale et sociale.",
   },
   {
     image: formationSecurisme3,
@@ -115,20 +185,6 @@ const projects = [
     location: "Cotonou",
     description: "Démonstration de manipulation d'extincteurs dans le cadre de la formation HSE.",
   },
-  {
-    image: coastal1,
-    title: "Gestion des Inondations — Zone Côtière",
-    category: "Suivi",
-    location: "Littoral, Bénin",
-    description: "Étude et gestion des inondations dans les zones côtières du Bénin.",
-  },
-  {
-    image: environnement1,
-    title: "Évaluation Environnementale Stratégique",
-    category: "Environnement",
-    location: "Bénin",
-    description: "Évaluation environnementale et sociale stratégique pour un programme de développement.",
-  },
 ];
 
 const categories = ["Tous", "Environnement", "Suivi", "Topographie", "BTP", "Formation"];
@@ -149,8 +205,8 @@ const Projects = () => {
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={formationSauvegarde4}
-            alt="Réalisations Cabinet IVATIS"
+            src={consultationMairie}
+            alt="Réalisations Cabinet IVATIS — Suivi environnemental terrain"
             className="w-full h-full object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-construction-charcoal via-construction-charcoal/95 to-background" />

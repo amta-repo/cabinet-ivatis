@@ -5,15 +5,16 @@ import logoIvatis from "@/assets/logo-ivatis.jpg";
 const footerLinks = {
   company: [
     { name: "À Propos", path: "/about" },
-    { name: "Notre Équipe", path: "/about#team" },
-    { name: "Carrières", path: "/contact" },
+    { name: "Nos Réalisations", path: "/projects" },
+    { name: "Galerie", path: "/gallery" },
+    { name: "FAQ", path: "/faq" },
   ],
   services: [
-    { name: "Ingénierie Environnementale", path: "/services#environnement" },
-    { name: "Suivi de Projets", path: "/services#suivi" },
-    { name: "Formation", path: "/services#formation" },
-    { name: "Topographie", path: "/services#topo" },
-    { name: "BTP", path: "/services#btp" },
+    { name: "Ingénierie Environnementale", path: "/services/eies" },
+    { name: "Suivi de Projets", path: "/services/suivi-par-pges" },
+    { name: "Formation", path: "/services/formation" },
+    { name: "Topographie", path: "/services/etudes-topographiques" },
+    { name: "BTP", path: "/services/genie-civil-btp" },
   ],
   legal: [
     { name: "Mentions Légales", path: "/legal" },
@@ -128,10 +129,7 @@ export function Footer() {
                   className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Phone className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <span className="block">+229 01 97 20 33 03</span>
-                    <span className="block">+229 98 34 35 35</span>
-                  </div>
+                  <span>+229 01 97 20 33 03</span>
                 </a>
               </li>
               <li>

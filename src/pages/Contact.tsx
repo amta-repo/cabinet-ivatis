@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Send, Clock, MessageCircle } from "lucide-react";
@@ -15,7 +16,7 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Téléphone",
-    details: ["+229 01 97 20 33 03", "+229 98 34 35 35"],
+    details: ["+229 01 97 20 33 03"],
     action: "tel:+2290197203303",
   },
   {
@@ -77,6 +78,11 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Contactez Cabinet IVATIS | Devis Gratuit EIES, Audit, Topographie — Abomey-Calavi, Bénin</title>
+        <meta name="description" content="Contactez Cabinet IVATIS pour vos projets d'ingénierie environnementale au Bénin. Tél : +229 01 97 20 33 03. Email : ivatis.ivatis@gmail.com. Abomey-Calavi, Quartier Agori St Louis." />
+        <link rel="canonical" href="https://cabinetivatis.com/contact" />
+      </Helmet>
       <Header />
       <WhatsAppButton />
 
@@ -175,15 +181,23 @@ const Contact = () => {
               <SectionTitle subtitle="Notre Localisation" title="Venez Nous Rencontrer" description="Retrouvez-nous dans nos locaux à Calavi St Louis, Abomey-Calavi." />
               <div className="aspect-[4/3] lg:aspect-auto lg:h-[500px] rounded-lg overflow-hidden border border-border/50">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.5!2d2.35!3d6.45!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sCalavi+St+Louis!5e0!3m2!1sfr!2sbj!4v1707000000000!5m2!1sfr!2sbj"
-                  width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Cabinet IVATIS - Calavi St Louis"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.8!2d2.3456515!3d6.4517195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1024a900569bdfdd%3A0xba518488bc18e6f9!2sCabinet+IVATIS!5e0!3m2!1sfr!2sbj!4v1710000000000!5m2!1sfr!2sbj"
+                  width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Cabinet IVATIS - Abomey-Calavi"
                 />
               </div>
               <div className="mt-6 p-6 bg-card border border-border/50 rounded-lg">
                 <h3 className="font-display text-xl mb-2 text-foreground">Cabinet IVATIS</h3>
-                <p className="text-muted-foreground">Calavi St Louis, Abomey-Calavi, Bénin</p>
-                <p className="text-muted-foreground text-sm">BP 1495 Calavi</p>
+                <p className="text-muted-foreground">Quartier Agori St Louis, Rue Général HOUNDEGNON</p>
+                <p className="text-muted-foreground text-sm">Abomey-Calavi, Bénin — BP 1495</p>
                 <p className="text-muted-foreground text-sm mt-1">RC RB/ABC/22B5468 — IFU: N° 3202292508230</p>
+                <a
+                  href="https://www.google.com/maps/place/Cabinet+IVATIS/@6.4517195,2.3456515,17z/data=!3m1!4b1!4m6!3m5!1s0x1024a900569bdfdd:0xba518488bc18e6f9!8m2!3d6.4517142!4d2.3482264!16s%2Fg%2F11zkc7mf48"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-3 text-primary hover:text-primary/80 text-sm font-medium transition-colors"
+                >
+                  Voir sur Google Maps →
+                </a>
               </div>
             </motion.div>
           </div>

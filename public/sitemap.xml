@@ -5,7 +5,7 @@
   <url><loc>https://cabinetivatis.com/services</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://cabinetivatis.com/services/eess</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cabinetivatis.com/services/cges</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cabinetivatis.com/services/eies</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cabinetivatis.com/services/eies</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://cabinetivatis.com/services/audit-environnemental</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cabinetivatis.com/services/audit-par-pges</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cabinetivatis.com/services/pmpp</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>

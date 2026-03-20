@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Leaf, ClipboardCheck, GraduationCap, Compass, HardHat } from "lucide-react";
@@ -86,6 +87,11 @@ const stats = [
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Cabinet IVATIS | Bureau d'Études Environnementales N°1 au Bénin — EIES, PGES, Audit, TOPO & BTP</title>
+        <meta name="description" content="Cabinet IVATIS, leader en ingénierie environnementale et sociale au Bénin depuis 2009. EIES, PGES, CGES, audits environnementaux, topographie GPS, BTP et formation HSE. +200 projets réalisés à Abomey-Calavi." />
+        <link rel="canonical" href="https://cabinetivatis.com/" />
+      </Helmet>
       <Header />
       <WhatsAppButton />
 
@@ -107,7 +113,7 @@ const Index = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="inline-block px-4 py-2 bg-primary/20 text-primary font-semibold text-sm uppercase tracking-wider rounded-full mb-6">
+            <span className="inline-block px-3 py-2 bg-primary/20 text-primary font-semibold text-xs sm:text-sm uppercase tracking-wider rounded-full mb-6 max-w-full text-center leading-relaxed">
               Ingénierie Environnementale & Sociale · Suivi · Formation · TOPO · BTP
             </span>
           </motion.div>
@@ -116,7 +122,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="font-display text-5xl md:text-7xl lg:text-8xl text-foreground mb-6 leading-tight"
+            className="font-display text-3xl sm:text-5xl md:text-7xl lg:text-8xl text-foreground mb-6 leading-tight"
           >
             L'Expertise <span className="text-gradient-amber">Environnementale</span>
             <br />
@@ -127,7 +133,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-10"
+            className="text-base sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-10 px-2"
           >
             Cabinet IVATIS, votre partenaire de confiance en ingénierie
             environnementale et sociale, topographie et BTP au Bénin.

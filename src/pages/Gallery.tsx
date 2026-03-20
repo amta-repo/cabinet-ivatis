@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
@@ -37,6 +38,11 @@ const Gallery = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Galerie Photos | Cabinet IVATIS — Terrain, Audits, Formations au Bénin</title>
+        <meta name="description" content="Galerie photos des activités terrain de Cabinet IVATIS : consultations communautaires, audits environnementaux, levés topographiques, formations HSE au Bénin." />
+        <link rel="canonical" href="https://cabinetivatis.com/gallery" />
+      </Helmet>
       <Header />
       <WhatsAppButton />
 

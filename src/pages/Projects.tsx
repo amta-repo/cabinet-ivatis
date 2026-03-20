@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -198,6 +199,11 @@ const Projects = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Nos Réalisations | +200 Projets EIES, Audits, Topographie et BTP — Cabinet IVATIS Bénin</title>
+        <meta name="description" content="Portfolio de +200 projets réalisés par Cabinet IVATIS : audits Golden Tulip, BETRA, SOBEBRA, formations HSE, études topographiques, suivi environnemental au Bénin." />
+        <link rel="canonical" href="https://cabinetivatis.com/projects" />
+      </Helmet>
       <Header />
       <WhatsAppButton />
 

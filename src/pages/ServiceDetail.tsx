@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, CheckCircle } from "lucide-react";
@@ -23,6 +24,11 @@ const ServiceDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>{service.title} | Cabinet IVATIS — Bénin</title>
+        <meta name="description" content={service.shortDescription + " Cabinet IVATIS, expert en ingénierie environnementale au Bénin. Contactez-nous : +229 01 97 20 33 03."} />
+        <link rel="canonical" href={`https://cabinetivatis.com/services/${slug}`} />
+      </Helmet>
       <Header />
       <WhatsAppButton />
 

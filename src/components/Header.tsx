@@ -81,10 +81,10 @@ export function Header() {
         <div className="hidden lg:flex items-center gap-4">
           <a
             href="tel:+2290197203303"
-            className="flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+            className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all"
+            aria-label="Appelez-nous au +229 01 97 20 33 03"
           >
-            <Phone className="w-4 h-4" />
-            <span>+229 01 97 20 33 03</span>
+            <Phone className="w-5 h-5" />
           </a>
           <Link to="/contact">
             <Button variant="default" size="sm" className="font-semibold">
@@ -136,7 +136,7 @@ export function Header() {
                   className="flex items-center gap-2 text-foreground/80 mb-4"
                 >
                   <Phone className="w-5 h-5" />
-                   <span>+229 01 97 20 33 03</span>
+                  <span>+229 01 97 20 33 03</span>
                 </a>
                 <Link to="/contact" className="block">
                   <Button variant="default" className="w-full font-semibold">

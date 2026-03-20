@@ -127,7 +127,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-10"
+            className="text-base sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-10 px-2"
           >
             Cabinet IVATIS, votre partenaire de confiance en ingénierie
             environnementale et sociale, topographie et BTP au Bénin.

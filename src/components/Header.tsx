@@ -136,7 +136,7 @@ export function Header() {
                   className="flex items-center gap-2 text-foreground/80 mb-4"
                 >
                   <Phone className="w-5 h-5" />
-                   <span>+229 01 97 20 33 03</span>
+                  <span>+229 01 97 20 33 03</span>
                 </a>
                 <Link to="/contact" className="block">
                   <Button variant="default" className="w-full font-semibold">

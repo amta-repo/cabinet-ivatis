@@ -181,9 +181,17 @@ const Contact = () => {
               </div>
               <div className="mt-6 p-6 bg-card border border-border/50 rounded-lg">
                 <h3 className="font-display text-xl mb-2 text-foreground">Cabinet IVATIS</h3>
-                <p className="text-muted-foreground">Calavi St Louis, Abomey-Calavi, Bénin</p>
-                <p className="text-muted-foreground text-sm">BP 1495 Calavi</p>
+                <p className="text-muted-foreground">Quartier Agori St Louis, Rue Général HOUNDEGNON</p>
+                <p className="text-muted-foreground text-sm">Abomey-Calavi, Bénin — BP 1495</p>
                 <p className="text-muted-foreground text-sm mt-1">RC RB/ABC/22B5468 — IFU: N° 3202292508230</p>
+                <a
+                  href="https://www.google.com/maps/place/Cabinet+IVATIS/@6.4517195,2.3456515,17z/data=!3m1!4b1!4m6!3m5!1s0x1024a900569bdfdd:0xba518488bc18e6f9!8m2!3d6.4517142!4d2.3482264!16s%2Fg%2F11zkc7mf48"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-3 text-primary hover:text-primary/80 text-sm font-medium transition-colors"
+                >
+                  Voir sur Google Maps →
+                </a>
               </div>
             </motion.div>
           </div>

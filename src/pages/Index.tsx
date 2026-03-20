@@ -107,7 +107,7 @@ const Index = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="inline-block px-4 py-2 bg-primary/20 text-primary font-semibold text-sm uppercase tracking-wider rounded-full mb-6">
+            <span className="inline-block px-3 py-2 bg-primary/20 text-primary font-semibold text-xs sm:text-sm uppercase tracking-wider rounded-full mb-6 max-w-full text-center leading-relaxed">
               Ingénierie Environnementale & Sociale · Suivi · Formation · TOPO · BTP
             </span>
           </motion.div>

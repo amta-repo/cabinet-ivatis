@@ -87,6 +87,11 @@ const stats = [
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Cabinet IVATIS | Bureau d'Études Environnementales N°1 au Bénin — EIES, PGES, Audit, TOPO & BTP</title>
+        <meta name="description" content="Cabinet IVATIS, leader en ingénierie environnementale et sociale au Bénin depuis 2009. EIES, PGES, CGES, audits environnementaux, topographie GPS, BTP et formation HSE. +200 projets réalisés à Abomey-Calavi." />
+        <link rel="canonical" href="https://cabinetivatis.com/" />
+      </Helmet>
       <Header />
       <WhatsAppButton />
 

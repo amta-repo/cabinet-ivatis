@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Leaf, ClipboardCheck, GraduationCap, Compass, HardHat } from "lucide-react";

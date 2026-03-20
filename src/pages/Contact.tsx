@@ -15,7 +15,7 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Téléphone",
-    details: ["+229 01 97 20 33 03", "+229 98 34 35 35"],
+    details: ["+229 01 97 20 33 03"],
     action: "tel:+2290197203303",
   },
   {

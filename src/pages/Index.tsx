@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { SeoHelmet } from "@/components/SeoHelmet";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Leaf, ClipboardCheck, GraduationCap, Compass, HardHat } from "lucide-react";
@@ -87,11 +87,12 @@ const stats = [
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Cabinet IVATIS | Bureau d'Études Environnementales N°1 au Bénin — EIES, PGES, Audit, TOPO & BTP</title>
-        <meta name="description" content="Cabinet IVATIS, leader en ingénierie environnementale et sociale au Bénin depuis 2009. EIES, PGES, CGES, audits environnementaux, topographie GPS, BTP et formation HSE. +200 projets réalisés à Abomey-Calavi." />
-        <link rel="canonical" href="https://cabinetivatis.com/" />
-      </Helmet>
+      <SeoHelmet
+        title="Cabinet IVATIS | Bureau d'Études Environnementales N°1 au Bénin — EIES, PGES, Audit, TOPO & BTP"
+        description="Cabinet IVATIS, leader en ingénierie environnementale et sociale au Bénin depuis 2009. EIES, PGES, CGES, audits environnementaux, topographie GPS, BTP et formation HSE. +200 projets réalisés à Abomey-Calavi."
+        canonical="/"
+        keywords="cabinet IVATIS, EIES Bénin, étude impact environnemental, PGES, audit environnemental, topographie GPS Bénin, BTP Abomey-Calavi, formation HSE Bénin, bureau études environnementales Bénin"
+      />
       <Header />
       <WhatsAppButton />
 

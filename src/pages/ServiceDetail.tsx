@@ -24,11 +24,12 @@ const ServiceDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>{service.title} | Cabinet IVATIS — Bénin</title>
-        <meta name="description" content={service.shortDescription + " Cabinet IVATIS, expert en ingénierie environnementale au Bénin. Contactez-nous : +229 01 97 20 33 03."} />
-        <link rel="canonical" href={`https://cabinetivatis.com/services/${slug}`} />
-      </Helmet>
+      <SeoHelmet
+        title={`${service.title} | Cabinet IVATIS — Bénin`}
+        description={`${service.shortDescription} Cabinet IVATIS, expert en ingénierie environnementale au Bénin. Contactez-nous : +229 01 97 20 33 03.`}
+        canonical={`/services/${slug}`}
+        keywords={`${service.title}, Cabinet IVATIS, ingénierie environnementale Bénin`}
+      />
       <Header />
       <WhatsAppButton />
 

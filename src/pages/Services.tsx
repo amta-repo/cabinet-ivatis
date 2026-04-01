@@ -12,11 +12,12 @@ import cabinetFront from "@/assets/activities/cabinet-front.jpg";
 const Services = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Services Cabinet IVATIS | EIES, PGES, CGES, Audit Environnemental, Topographie, BTP au Bénin</title>
-        <meta name="description" content="19 services spécialisés : EIES, PGES, CGES, EESS, audits environnementaux, CPRP, PARC, PMPP, suivi environnemental, topographie GPS, BTP et formation HSE. Cabinet IVATIS, Abomey-Calavi." />
-        <link rel="canonical" href="https://cabinetivatis.com/services" />
-      </Helmet>
+      <SeoHelmet
+        title="Services Cabinet IVATIS | EIES, PGES, CGES, Audit Environnemental, Topographie, BTP au Bénin"
+        description="19 services spécialisés : EIES, PGES, CGES, EESS, audits environnementaux, CPRP, PARC, PMPP, suivi environnemental, topographie GPS, BTP et formation HSE. Cabinet IVATIS, Abomey-Calavi."
+        canonical="/services"
+        keywords="services EIES Bénin, PGES, CGES, audit environnemental, topographie GPS, BTP, formation HSE, Cabinet IVATIS"
+      />
       <Header />
       <WhatsAppButton />
 

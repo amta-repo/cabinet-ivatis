@@ -38,11 +38,12 @@ const Gallery = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Galerie Photos | Cabinet IVATIS — Terrain, Audits, Formations au Bénin</title>
-        <meta name="description" content="Galerie photos des activités terrain de Cabinet IVATIS : consultations communautaires, audits environnementaux, levés topographiques, formations HSE au Bénin." />
-        <link rel="canonical" href="https://cabinetivatis.com/gallery" />
-      </Helmet>
+      <SeoHelmet
+        title="Galerie Photos | Cabinet IVATIS — Terrain, Audits, Formations au Bénin"
+        description="Galerie photos des activités terrain de Cabinet IVATIS : consultations communautaires, audits environnementaux, levés topographiques, formations HSE au Bénin."
+        canonical="/gallery"
+        keywords="galerie Cabinet IVATIS, photos terrain environnement Bénin, audit photos, formation HSE photos"
+      />
       <Header />
       <WhatsAppButton />
 

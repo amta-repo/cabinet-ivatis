@@ -95,11 +95,12 @@ const faqCategories = [
 const FAQ = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>FAQ Cabinet IVATIS | Questions sur EIES, PGES, Audit Environnemental, Topographie au Bénin</title>
-        <meta name="description" content="Réponses aux questions fréquentes sur les services de Cabinet IVATIS : EIES, PGES, CGES, audits environnementaux, topographie, BTP et formations HSE au Bénin." />
-        <link rel="canonical" href="https://cabinetivatis.com/faq" />
-      </Helmet>
+      <SeoHelmet
+        title="FAQ Cabinet IVATIS | Questions sur EIES, PGES, Audit Environnemental, Topographie au Bénin"
+        description="Réponses aux questions fréquentes sur les services de Cabinet IVATIS : EIES, PGES, CGES, audits environnementaux, topographie, BTP et formations HSE au Bénin."
+        canonical="/faq"
+        keywords="FAQ EIES Bénin, questions audit environnemental, PGES questions, Cabinet IVATIS FAQ"
+      />
       <Header />
       <WhatsAppButton />
 

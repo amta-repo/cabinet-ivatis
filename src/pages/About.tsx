@@ -97,11 +97,12 @@ const experiences = [
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>À Propos de Cabinet IVATIS | Leader en Études Environnementales au Bénin depuis 2009</title>
-        <meta name="description" content="Créé en 2009, Cabinet IVATIS est le leader des études environnementales au Bénin. 17 experts permanents, +200 projets, valeurs d'éthique et engagement pour le développement durable." />
-        <link rel="canonical" href="https://cabinetivatis.com/about" />
-      </Helmet>
+      <SeoHelmet
+        title="À Propos de Cabinet IVATIS | Leader en Études Environnementales au Bénin depuis 2009"
+        description="Créé en 2009, Cabinet IVATIS est le leader des études environnementales au Bénin. 17 experts permanents, +200 projets, valeurs d'éthique et engagement pour le développement durable."
+        canonical="/about"
+        keywords="Cabinet IVATIS, bureau études environnementales Bénin, ingénierie environnementale Abomey-Calavi, experts environnement Bénin"
+      />
       <Header />
       <WhatsAppButton />
 

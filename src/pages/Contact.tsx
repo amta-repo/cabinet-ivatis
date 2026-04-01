@@ -78,11 +78,12 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Contactez Cabinet IVATIS | Devis Gratuit EIES, Audit, Topographie — Abomey-Calavi, Bénin</title>
-        <meta name="description" content="Contactez Cabinet IVATIS pour vos projets d'ingénierie environnementale au Bénin. Tél : +229 01 97 20 33 03. Email : ivatis.ivatis@gmail.com. Abomey-Calavi, Quartier Agori St Louis." />
-        <link rel="canonical" href="https://cabinetivatis.com/contact" />
-      </Helmet>
+      <SeoHelmet
+        title="Contactez Cabinet IVATIS | Devis Gratuit EIES, Audit, Topographie — Abomey-Calavi, Bénin"
+        description="Contactez Cabinet IVATIS pour vos projets d'ingénierie environnementale au Bénin. Tél : +229 01 97 20 33 03. Email : ivatis.ivatis@gmail.com. Abomey-Calavi, Quartier Agori St Louis."
+        canonical="/contact"
+        keywords="contact Cabinet IVATIS, devis EIES Bénin, bureau études Abomey-Calavi, téléphone IVATIS"
+      />
       <Header />
       <WhatsAppButton />
 

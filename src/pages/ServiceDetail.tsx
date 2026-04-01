@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { SeoHelmet } from "@/components/SeoHelmet";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, CheckCircle } from "lucide-react";

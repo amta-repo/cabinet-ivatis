@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { LucideIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 interface ServiceCardProps {
   icon: LucideIcon;
@@ -10,6 +9,7 @@ interface ServiceCardProps {
   description: string;
   index: number;
   slug?: string;
+  image?: string;
 }
 
 export function ServiceCard({
@@ -18,6 +18,7 @@ export function ServiceCard({
   description,
   index,
   slug,
+  image,
 }: ServiceCardProps) {
   return (
     <motion.div
@@ -25,33 +26,40 @@ export function ServiceCard({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: true }}
-      className="group relative bg-card border border-border/50 rounded-lg p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-medium flex flex-col"
+      className="group bg-card rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-border flex flex-col"
     >
-      {/* Accent line */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-primary rounded-t-lg opacity-0 group-hover:opacity-100 transition-opacity" />
+      {image && (
+        <div className="h-48 overflow-hidden">
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
+        </div>
+      )}
 
-      <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-        <Icon className="w-7 h-7 text-primary" />
-      </div>
+      <div className="p-6 flex flex-col flex-grow">
+        <div className="w-12 h-12 rounded-md bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+          <Icon className="w-6 h-6 text-primary" />
+        </div>
 
-      <h3 className="font-display text-2xl mb-3 text-foreground group-hover:text-primary transition-colors">
-        {title}
-      </h3>
+        <h3 className="font-heading font-bold text-xl text-card-foreground mb-2 group-hover:text-primary transition-colors">
+          {title}
+        </h3>
 
-      <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">{description}</p>
+        <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-grow">{description}</p>
 
-      {slug && (
-        <Link to={`/services/${slug}`}>
-          <Button
-            variant="outline"
-            size="sm"
-            className="font-semibold w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+        {slug && (
+          <Link
+            to={`/services/${slug}`}
+            className="inline-flex items-center gap-2 text-primary font-heading font-semibold text-sm hover:gap-3 transition-all"
           >
             En Savoir Plus
-            <ArrowRight className="ml-2 w-4 h-4" />
-          </Button>
-        </Link>
-      )}
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        )}
+      </div>
     </motion.div>
   );
 }

@@ -2,42 +2,19 @@ import { SeoHelmet } from "@/components/SeoHelmet";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Send, Clock, MessageCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-import { SectionTitle } from "@/components/SectionTitle";
 import { useToast } from "@/hooks/use-toast";
-import heroImage from "@/assets/hero-home.jpg";
 
-const contactInfo = [
-  {
-    icon: Phone,
-    title: "Téléphone",
-    details: ["+229 01 97 20 33 03"],
-    action: "tel:+2290197203303",
-  },
-  {
-    icon: Mail,
-    title: "Email",
-    details: ["ivatis.ivatis@gmail.com"],
-    action: "mailto:ivatis.ivatis@gmail.com",
-  },
-  {
-    icon: MapPin,
-    title: "Adresse",
-    details: ["Calavi St Louis, Abomey-Calavi", "BP 1495 Calavi, Bénin"],
-    action: null,
-  },
-  {
-    icon: Clock,
-    title: "Horaires",
-    details: ["Lun - Ven: 8h00 - 18h00", "Sam: 8h00 - 13h00"],
-    action: null,
-  },
-];
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.15, duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] },
+  }),
+};
 
 const Contact = () => {
   const { toast } = useToast();
@@ -51,7 +28,7 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -87,121 +64,192 @@ const Contact = () => {
       <Header />
       <WhatsAppButton />
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={heroImage} alt="Contact Cabinet IVATIS" className="w-full h-full object-cover opacity-20" />
-          <div className="absolute inset-0 bg-gradient-to-b from-construction-charcoal via-construction-charcoal/95 to-background" />
-        </div>
-        <div className="relative z-10 container-wide">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="max-w-3xl">
-            <span className="inline-block px-4 py-2 bg-primary/20 text-primary font-semibold text-sm uppercase tracking-wider rounded-full mb-6">Contact</span>
-            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-foreground mb-6">Parlons de Votre Projet</h1>
-            <p className="text-xl text-muted-foreground">
-              Notre équipe est à votre disposition pour répondre à toutes vos questions 
+      {/* Hero */}
+      <section className="relative py-20 md:py-28 bg-secondary">
+        <div className="container mx-auto px-4">
+          <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0} className="max-w-2xl">
+            <p className="text-primary font-heading font-semibold text-sm uppercase tracking-widest mb-3">Contact</p>
+            <h1 className="font-heading font-black text-4xl md:text-5xl text-secondary-foreground mb-6">
+              Parlons de Votre Projet
+            </h1>
+            <p className="text-secondary-foreground/70 text-lg leading-relaxed">
+              Notre équipe est à votre disposition pour répondre à toutes vos questions
               en ingénierie environnementale, topographie et BTP.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Contact Info Cards */}
-      <section className="py-12 -mt-8">
-        <div className="container-wide">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {contactInfo.map((info, index) => (
-              <motion.div key={info.title} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: index * 0.1 }}>
-                {info.action ? (
-                  <a href={info.action} className="block bg-card border border-border/50 rounded-lg p-6 hover:border-primary/50 hover:shadow-medium transition-all">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                      <info.icon className="w-6 h-6 text-primary" />
+      {/* Contact Content */}
+      <section className="py-20 md:py-28 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-3 gap-12">
+            {/* Contact info */}
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="space-y-8">
+              <div>
+                <h2 className="font-heading font-bold text-2xl text-foreground mb-6">Nos Coordonnées</h2>
+                <ul className="space-y-6">
+                  <li className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                      <Phone className="w-5 h-5 text-primary" />
                     </div>
-                    <h3 className="font-display text-xl mb-2 text-foreground">{info.title}</h3>
-                    {info.details.map((detail) => (<p key={detail} className="text-muted-foreground text-sm">{detail}</p>))}
-                  </a>
-                ) : (
-                  <div className="bg-card border border-border/50 rounded-lg p-6">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                      <info.icon className="w-6 h-6 text-primary" />
+                    <div>
+                      <p className="font-heading font-semibold text-foreground">Téléphone</p>
+                      <a href="tel:+2290197203303" className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                        +229 01 97 20 33 03
+                      </a>
                     </div>
-                    <h3 className="font-display text-xl mb-2 text-foreground">{info.title}</h3>
-                    {info.details.map((detail) => (<p key={detail} className="text-muted-foreground text-sm">{detail}</p>))}
-                  </div>
-                )}
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                      <MessageCircle className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-heading font-semibold text-foreground">WhatsApp</p>
+                      <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                        +229 01 97 20 33 03
+                      </a>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                      <Mail className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-heading font-semibold text-foreground">Email</p>
+                      <a href="mailto:ivatis.ivatis@gmail.com" className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                        ivatis.ivatis@gmail.com
+                      </a>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                      <MapPin className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-heading font-semibold text-foreground">Adresse</p>
+                      <p className="text-muted-foreground text-sm">Calavi St Louis, Abomey-Calavi, Bénin</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                      <Clock className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-heading font-semibold text-foreground">Horaires</p>
+                      <p className="text-muted-foreground text-sm">Lun - Ven: 8h00 - 18h00</p>
+                      <p className="text-muted-foreground text-sm">Sam: 8h00 - 13h00</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
 
-      {/* Contact Form & Map */}
-      <section className="section-padding">
-        <div className="container-wide">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
-            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
-              <SectionTitle subtitle="Formulaire de Contact" title="Envoyez-nous un Message" description="Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais." />
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">Nom Complet *</label>
-                    <Input id="name" name="name" value={formData.name} onChange={handleInputChange} placeholder="Votre nom" required className="bg-card" />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">Email *</label>
-                    <Input id="email" name="email" type="email" value={formData.email} onChange={handleInputChange} placeholder="votre@email.com" required className="bg-card" />
-                  </div>
-                </div>
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">Téléphone</label>
-                    <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleInputChange} placeholder="+229 XX XX XX XX" className="bg-card" />
-                  </div>
-                  <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">Sujet *</label>
-                    <Input id="subject" name="subject" value={formData.subject} onChange={handleInputChange} placeholder="Sujet de votre message" required className="bg-card" />
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">Message *</label>
-                  <Textarea id="message" name="message" value={formData.message} onChange={handleInputChange} placeholder="Décrivez votre projet..." rows={6} required className="bg-card resize-none" />
-                </div>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button type="submit" size="lg" className="font-semibold flex-1" disabled={isSubmitting}>
-                    {isSubmitting ? "Envoi en cours..." : (<>Envoyer le Message <Send className="ml-2 w-4 h-4" /></>)}
-                  </Button>
-                  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                    <Button type="button" variant="outline" size="lg" className="font-semibold w-full sm:w-auto">
-                      <MessageCircle className="mr-2 w-4 h-4" /> WhatsApp
-                    </Button>
-                  </a>
-                </div>
-              </form>
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-3 w-full bg-accent text-accent-foreground py-4 rounded-md font-heading font-bold text-sm hover:brightness-110 transition-all"
+              >
+                <MessageCircle className="w-5 h-5" />
+                Chattez avec nous sur WhatsApp
+              </a>
             </motion.div>
 
-            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
-              <SectionTitle subtitle="Notre Localisation" title="Venez Nous Rencontrer" description="Retrouvez-nous dans nos locaux à Calavi St Louis, Abomey-Calavi." />
-              <div className="aspect-[4/3] lg:aspect-auto lg:h-[500px] rounded-lg overflow-hidden border border-border/50">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.8!2d2.3456515!3d6.4517195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1024a900569bdfdd%3A0xba518488bc18e6f9!2sCabinet+IVATIS!5e0!3m2!1sfr!2sbj!4v1710000000000!5m2!1sfr!2sbj"
-                  width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Cabinet IVATIS - Abomey-Calavi"
-                />
-              </div>
-              <div className="mt-6 p-6 bg-card border border-border/50 rounded-lg">
-                <h3 className="font-display text-xl mb-2 text-foreground">Cabinet IVATIS</h3>
-                <p className="text-muted-foreground">Quartier Agori St Louis, Rue Général HOUNDEGNON</p>
-                <p className="text-muted-foreground text-sm">Abomey-Calavi, Bénin — BP 1495</p>
-                <p className="text-muted-foreground text-sm mt-1">RC RB/ABC/22B5468 — IFU: N° 3202292508230</p>
-                <a
-                  href="https://www.google.com/maps/place/Cabinet+IVATIS/@6.4517195,2.3456515,17z/data=!3m1!4b1!4m6!3m5!1s0x1024a900569bdfdd:0xba518488bc18e6f9!8m2!3d6.4517142!4d2.3482264!16s%2Fg%2F11zkc7mf48"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block mt-3 text-primary hover:text-primary/80 text-sm font-medium transition-colors"
-                >
-                  Voir sur Google Maps →
-                </a>
+            {/* Form */}
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={1} className="lg:col-span-2">
+              <div className="bg-card rounded-lg p-6 md:p-8 shadow-md border border-border">
+                <h2 className="font-heading font-bold text-2xl text-card-foreground mb-6">Envoyez-nous un Message</h2>
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  <div className="grid sm:grid-cols-2 gap-5">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-foreground mb-1.5">Nom complet *</label>
+                      <input
+                        id="name" name="name" value={formData.name} onChange={handleInputChange}
+                        className="w-full px-4 py-3 rounded-md bg-background border border-input text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                        placeholder="Votre nom" required
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1.5">Email *</label>
+                      <input
+                        id="email" name="email" type="email" value={formData.email} onChange={handleInputChange}
+                        className="w-full px-4 py-3 rounded-md bg-background border border-input text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                        placeholder="votre@email.com" required
+                      />
+                    </div>
+                  </div>
+                  <div className="grid sm:grid-cols-2 gap-5">
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-1.5">Téléphone</label>
+                      <input
+                        id="phone" name="phone" value={formData.phone} onChange={handleInputChange}
+                        className="w-full px-4 py-3 rounded-md bg-background border border-input text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                        placeholder="+229 XX XX XX XX"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-1.5">Sujet *</label>
+                      <select
+                        id="subject" name="subject" value={formData.subject} onChange={handleInputChange}
+                        className="w-full px-4 py-3 rounded-md bg-background border border-input text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                        required
+                      >
+                        <option value="">Sélectionnez un sujet</option>
+                        <option value="EIES">Étude d'Impact Environnemental</option>
+                        <option value="Audit">Audit Environnemental</option>
+                        <option value="Topographie">Topographie</option>
+                        <option value="BTP">BTP & Génie Civil</option>
+                        <option value="Formation">Formation</option>
+                        <option value="Devis">Demande de devis</option>
+                        <option value="Autre">Autre</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-1.5">Message *</label>
+                    <textarea
+                      id="message" name="message" rows={5} value={formData.message} onChange={handleInputChange}
+                      className="w-full px-4 py-3 rounded-md bg-background border border-input text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-none"
+                      placeholder="Décrivez votre projet ou votre question..." required
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3.5 rounded-md font-heading font-bold text-sm hover:brightness-110 transition-all disabled:opacity-60"
+                  >
+                    {isSubmitting ? "Envoi en cours..." : "Envoyer le Message"}
+                    <Send className="w-4 h-4" />
+                  </button>
+                </form>
               </div>
             </motion.div>
           </div>
+
+          {/* Map */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="mt-16">
+            <h2 className="font-heading font-bold text-2xl text-foreground mb-6">Notre Localisation</h2>
+            <div className="rounded-lg overflow-hidden shadow-md border border-border h-80 md:h-[450px]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.8!2d2.3456515!3d6.4517195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1024a900569bdfdd%3A0xba518488bc18e6f9!2sCabinet+IVATIS!5e0!3m2!1sfr!2sbj!4v1710000000000!5m2!1sfr!2sbj"
+                width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"
+                title="Cabinet IVATIS - Abomey-Calavi"
+              />
+            </div>
+            <div className="mt-4 p-6 bg-card border border-border rounded-lg">
+              <h3 className="font-heading font-bold text-lg text-card-foreground">Cabinet IVATIS</h3>
+              <p className="text-muted-foreground text-sm">Quartier Agori St Louis, Rue Général HOUNDEGNON — Abomey-Calavi, Bénin — BP 1495</p>
+              <p className="text-muted-foreground text-sm mt-1">RC RB/ABC/22B5468 — IFU: N° 3202292508230</p>
+              <a
+                href="https://www.google.com/maps/place/Cabinet+IVATIS/@6.4517195,2.3456515,17z/data=!3m1!4b1!4m6!3m5!1s0x1024a900569bdfdd:0xba518488bc18e6f9!8m2!3d6.4517142!4d2.3482264!16s%2Fg%2F11zkc7mf48"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-3 text-primary hover:text-primary/80 text-sm font-heading font-semibold transition-colors"
+              >
+                Voir sur Google Maps →
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
 

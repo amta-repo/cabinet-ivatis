@@ -24,22 +24,22 @@ export function SectionTitle({
       className={`mb-12 md:mb-16 ${centered ? "text-center" : ""}`}
     >
       {subtitle && (
-        <span className="inline-block text-primary font-semibold text-sm uppercase tracking-wider mb-3">
+        <p className="text-primary font-heading font-semibold text-sm uppercase tracking-widest mb-3">
           {subtitle}
-        </span>
+        </p>
       )}
       <h2
-        className={`font-display text-4xl md:text-5xl lg:text-6xl mb-4 ${
-          light ? "text-foreground" : "text-foreground"
+        className={`font-heading font-black text-3xl md:text-4xl lg:text-5xl mb-4 ${
+          light ? "text-secondary-foreground" : "text-foreground"
         }`}
       >
         {title}
       </h2>
       {description && (
         <p
-          className={`text-lg max-w-2xl ${
+          className={`text-lg max-w-2xl leading-relaxed ${
             centered ? "mx-auto" : ""
-          } ${light ? "text-muted-foreground" : "text-muted-foreground"}`}
+          } ${light ? "text-secondary-foreground/70" : "text-muted-foreground"}`}
         >
           {description}
         </p>

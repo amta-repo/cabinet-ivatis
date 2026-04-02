@@ -2,12 +2,20 @@ import { SeoHelmet } from "@/components/SeoHelmet";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { servicesData } from "@/data/servicesData";
 import cabinetFront from "@/assets/activities/cabinet-front.jpg";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.15, duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] },
+  }),
+};
 
 const Services = () => {
   return (
@@ -22,30 +30,14 @@ const Services = () => {
       <WhatsAppButton />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src={cabinetFront}
-            alt="Services Cabinet IVATIS"
-            className="w-full h-full object-cover opacity-20"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-construction-charcoal via-construction-charcoal/95 to-background" />
-        </div>
-
-        <div className="relative z-10 container-wide">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl"
-          >
-            <span className="inline-block px-4 py-2 bg-primary/20 text-primary font-semibold text-sm uppercase tracking-wider rounded-full mb-6">
-              Nos Activités
-            </span>
-            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-foreground mb-6">
+      <section className="relative py-20 md:py-28 bg-secondary">
+        <div className="container mx-auto px-4">
+          <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0} className="max-w-2xl">
+            <p className="text-primary font-heading font-semibold text-sm uppercase tracking-widest mb-3">Nos Activités</p>
+            <h1 className="font-heading font-black text-4xl md:text-5xl text-secondary-foreground mb-6">
               Détail Sommaire des Activités
             </h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-secondary-foreground/70 text-lg leading-relaxed">
               Des solutions complètes en ingénierie environnementale et sociale,
               conservation, topographie et BTP au Bénin.
             </p>
@@ -54,37 +46,47 @@ const Services = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="section-padding">
-        <div className="container-wide">
+      <section className="py-20 md:py-28 bg-background">
+        <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {servicesData.map((service, index) => (
               <motion.div
                 key={service.slug}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
+                custom={index}
+                initial="hidden"
+                whileInView="visible"
                 viewport={{ once: true }}
-                className="bg-card border border-border/50 rounded-lg p-6 hover:border-primary/50 hover:shadow-medium transition-all group flex flex-col"
+                variants={fadeUp}
+                className="group bg-card rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-border flex flex-col"
               >
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                  <service.icon className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="font-display text-xl mb-3 text-foreground leading-tight">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-grow">
-                  {service.shortDescription}
-                </p>
-                <Link to={`/services/${service.slug}`}>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="font-semibold w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                {service.images?.[0] && (
+                  <div className="h-48 overflow-hidden">
+                    <img
+                      src={service.images[0]}
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
+                <div className="p-6 flex flex-col flex-grow">
+                  <div className="w-12 h-12 rounded-md bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                    <service.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-heading font-bold text-xl mb-2 text-card-foreground leading-tight group-hover:text-primary transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-grow">
+                    {service.shortDescription}
+                  </p>
+                  <Link
+                    to={`/services/${service.slug}`}
+                    className="inline-flex items-center gap-2 text-primary font-heading font-semibold text-sm hover:gap-3 transition-all"
                   >
                     En Savoir Plus
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
-                </Link>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -92,32 +94,20 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-construction-charcoal" />
-        <div className="relative z-10 container-wide text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+      <section className="py-16 bg-primary">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="font-heading font-black text-3xl text-primary-foreground mb-4">
+            Un Projet Environnemental ou de Construction ?
+          </h2>
+          <p className="text-primary-foreground/80 mb-8 max-w-lg mx-auto">
+            Contactez notre équipe pour une étude gratuite et un devis personnalisé.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-8 py-4 rounded-md font-heading font-bold text-sm hover:brightness-110 transition-all"
           >
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
-              Un Projet Environnemental ou de Construction ?
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-              Contactez Cabinet IVATIS pour discuter de votre projet et obtenir
-              un devis personnalisé gratuit.
-            </p>
-            <Link to="/contact">
-              <Button
-                size="lg"
-                className="font-semibold text-lg px-8 py-6 shadow-amber"
-              >
-                Contactez-Nous
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
-          </motion.div>
+            Contactez-Nous <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </section>
 

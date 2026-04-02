@@ -2,11 +2,19 @@ import { SeoHelmet } from "@/components/SeoHelmet";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, CheckCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { getServiceBySlug, servicesData } from "@/data/servicesData";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.15, duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] },
+  }),
+};
 
 const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -34,100 +42,77 @@ const ServiceDetail = () => {
       <WhatsAppButton />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src={service.images[0]}
-            alt={service.title}
-            className="w-full h-full object-cover opacity-20"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-construction-charcoal via-construction-charcoal/95 to-background" />
-        </div>
-        <div className="relative z-10 container-wide">
+      <section className="relative py-20 md:py-28 bg-secondary overflow-hidden">
+        {service.images[0] && (
+          <div className="absolute inset-0">
+            <img src={service.images[0]} alt={service.title} className="w-full h-full object-cover opacity-10" />
+          </div>
+        )}
+        <div className="container mx-auto px-4 relative z-10">
           <Link
             to="/services"
-            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 mb-6 transition-colors"
+            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 mb-6 transition-colors font-heading font-semibold text-sm"
           >
             <ArrowLeft className="w-4 h-4" />
             Retour aux activités
           </Link>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl"
-          >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-14 h-14 rounded-lg bg-primary/20 flex items-center justify-center">
-                <Icon className="w-7 h-7 text-primary" />
-              </div>
+          <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0} className="max-w-3xl">
+            <div className="w-14 h-14 rounded-lg bg-primary/20 flex items-center justify-center mb-6">
+              <Icon className="w-7 h-7 text-primary" />
             </div>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
+            <h1 className="font-heading font-black text-4xl md:text-5xl text-secondary-foreground mb-6">
               {service.title}
             </h1>
-            <p className="text-xl text-muted-foreground">{service.shortDescription}</p>
+            <p className="text-secondary-foreground/70 text-lg leading-relaxed">{service.shortDescription}</p>
           </motion.div>
         </div>
       </section>
 
       {/* Content */}
-      <section className="section-padding">
-        <div className="container-wide">
+      <section className="py-20 md:py-28 bg-background">
+        <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
             {/* Text */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="font-display text-3xl md:text-4xl text-foreground mb-6">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
+              <h2 className="font-heading font-bold text-2xl md:text-3xl text-foreground mb-6">
                 Description
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-8">
                 {service.fullDescription}
               </p>
-              <h3 className="font-display text-2xl text-foreground mb-4">
+              <h3 className="font-heading font-bold text-xl text-foreground mb-4">
                 Détails de l'intervention
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-3 mb-8">
                 {service.details.map((detail, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-muted-foreground">{detail}</span>
+                    <span className="text-muted-foreground text-sm">{detail}</span>
                   </li>
                 ))}
               </ul>
 
-              <div className="mt-10">
-                <Link to="/contact">
-                  <Button size="lg" className="font-semibold shadow-amber">
-                    Demander un Devis
-                    <ArrowRight className="ml-2 w-5 h-5" />
-                  </Button>
-                </Link>
-              </div>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-md font-heading font-bold text-sm hover:brightness-110 transition-all"
+              >
+                Demander un Devis
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </motion.div>
 
             {/* Images */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="space-y-6"
-            >
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={1} className="space-y-6">
               {service.images.map((img, i) => (
-                <div key={i} className="rounded-lg overflow-hidden">
+                <div key={i} className="rounded-lg overflow-hidden shadow-xl">
                   <img
                     src={img}
-                    alt={
-                      service.imageCaptions?.[i] || `${service.title} - Image ${i + 1}`
-                    }
+                    alt={service.imageCaptions?.[i] || `${service.title} - Image ${i + 1}`}
                     className="w-full h-auto object-cover rounded-lg"
+                    loading="lazy"
                   />
                   {service.imageCaptions?.[i] && (
-                    <p className="text-sm text-muted-foreground mt-2 italic">
+                    <p className="text-sm text-muted-foreground mt-2 italic px-1">
                       {service.imageCaptions[i]}
                     </p>
                   )}
@@ -139,12 +124,12 @@ const ServiceDetail = () => {
       </section>
 
       {/* Navigation */}
-      <section className="py-12 border-t border-border/50">
-        <div className="container-wide flex items-center justify-between">
+      <section className="py-8 border-t border-border">
+        <div className="container mx-auto px-4 flex items-center justify-between">
           {prevService ? (
             <Link
               to={`/services/${prevService.slug}`}
-              className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+              className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors font-heading text-sm font-semibold"
             >
               <ArrowLeft className="w-4 h-4" />
               <span className="hidden sm:inline">{prevService.title.length > 40 ? prevService.title.slice(0, 40) + "…" : prevService.title}</span>
@@ -156,7 +141,7 @@ const ServiceDetail = () => {
           {nextService ? (
             <Link
               to={`/services/${nextService.slug}`}
-              className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+              className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors font-heading text-sm font-semibold"
             >
               <span className="hidden sm:inline">{nextService.title.length > 40 ? nextService.title.slice(0, 40) + "…" : nextService.title}</span>
               <span className="sm:hidden">Suivant</span>
@@ -169,29 +154,20 @@ const ServiceDetail = () => {
       </section>
 
       {/* CTA */}
-      <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-construction-charcoal" />
-        <div className="relative z-10 container-wide text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+      <section className="py-16 bg-primary">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="font-heading font-black text-3xl text-primary-foreground mb-4">
+            Besoin de cette expertise ?
+          </h2>
+          <p className="text-primary-foreground/80 mb-8 max-w-lg mx-auto">
+            Contactez Cabinet IVATIS pour discuter de votre projet et obtenir un devis personnalisé gratuit.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-8 py-4 rounded-md font-heading font-bold text-sm hover:brightness-110 transition-all"
           >
-            <h2 className="font-display text-4xl md:text-5xl text-foreground mb-6">
-              Besoin de cette expertise ?
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-              Contactez Cabinet IVATIS pour discuter de votre projet et obtenir
-              un devis personnalisé gratuit.
-            </p>
-            <Link to="/contact">
-              <Button size="lg" className="font-semibold text-lg px-8 py-6 shadow-amber">
-                Contactez-Nous
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
-          </motion.div>
+            Contactez-Nous <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </section>
 

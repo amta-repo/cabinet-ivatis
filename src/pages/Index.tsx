@@ -1,15 +1,13 @@
 import { SeoHelmet } from "@/components/SeoHelmet";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Leaf, ClipboardCheck, GraduationCap, Compass, HardHat } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ArrowRight, Leaf, ClipboardCheck, GraduationCap, Compass, HardHat, CheckCircle } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ServiceCard } from "@/components/ServiceCard";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SectionTitle } from "@/components/SectionTitle";
-import { StatCard } from "@/components/StatCard";
 import { PartnersCarousel } from "@/components/PartnersCarousel";
 import consultationMairie from "@/assets/activities/consultation-mairie.jpg";
 import auditGolden from "@/assets/activities/audit-golden.jpg";
@@ -17,6 +15,18 @@ import formationSauvegarde from "@/assets/activities/formation-sauvegarde.jpg";
 import environnement1 from "@/assets/activities/environnement-1.jpg";
 import reunionGolden from "@/assets/activities/reunion-golden.jpg";
 import fieldConsultation from "@/assets/activities/field-consultation.jpg";
+import topoTerrain from "@/assets/activities/topo-terrain.jpg";
+import btpTerrain from "@/assets/activities/btp-terrain.jpg";
+import energieStation from "@/assets/activities/energie-station.jpg";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.15, duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] },
+  }),
+};
 
 const services = [
   {
@@ -25,6 +35,7 @@ const services = [
     description:
       "Études d'impact environnemental et social (EIES), PGES, audits et conformité réglementaire.",
     slug: "eies",
+    image: environnement1,
   },
   {
     icon: ClipboardCheck,
@@ -32,6 +43,7 @@ const services = [
     description:
       "Suivi environnemental et social de chantiers, contrôle qualité et reporting.",
     slug: "suivi-par-pges",
+    image: consultationMairie,
   },
   {
     icon: GraduationCap,
@@ -39,6 +51,7 @@ const services = [
     description:
       "Formation professionnelle en environnement, sécurité, HSE et développement durable.",
     slug: "formation",
+    image: formationSauvegarde,
   },
   {
     icon: Compass,
@@ -46,6 +59,7 @@ const services = [
     description:
       "Levés topographiques, bornage, implantation et plans parcellaires.",
     slug: "etudes-topographiques",
+    image: topoTerrain,
   },
   {
     icon: HardHat,
@@ -53,6 +67,7 @@ const services = [
     description:
       "Études, conception et accompagnement technique en génie civil, bâtiments et infrastructures.",
     slug: "genie-civil-btp",
+    image: btpTerrain,
   },
 ];
 
@@ -84,6 +99,15 @@ const stats = [
   { value: "100%", label: "Conformité Garantie" },
 ];
 
+const advantages = [
+  "Études d'impact environnemental et social (EIES) conformes aux normes",
+  "Suivi et contrôle environnemental rigoureux de projets",
+  "Formations professionnelles et levés topographiques de précision",
+  "Plus de 15 ans d'expérience au Bénin et en Afrique de l'Ouest",
+  "Équipe de 17 experts et techniciens permanents",
+  "Conformité garantie aux standards internationaux",
+];
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -97,272 +121,263 @@ const Index = () => {
       <WhatsAppButton />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={fieldConsultation}
             alt="Cabinet IVATIS - Consultation communautaire terrain au Bénin"
             className="w-full h-full object-cover"
+            loading="eager"
           />
-          <div className="absolute inset-0 bg-construction-charcoal/70" />
-          <div className="absolute inset-0 hero-overlay" />
+          <div className="absolute inset-0 bg-gradient-to-r from-construction-charcoal/90 via-construction-charcoal/75 to-construction-charcoal/50" />
         </div>
 
-        <div className="relative z-10 container-wide text-center pt-40">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <span className="inline-block px-3 py-2 bg-primary/20 text-primary font-semibold text-xs sm:text-sm uppercase tracking-wider rounded-full mb-6 max-w-full text-center leading-relaxed">
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-2xl">
+            <motion.p
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-primary font-heading font-semibold text-sm uppercase tracking-widest mb-4"
+            >
               Ingénierie Environnementale & Sociale · Suivi · Formation · TOPO · BTP
-            </span>
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="font-display text-3xl sm:text-5xl md:text-7xl lg:text-8xl text-foreground mb-6 leading-tight"
-          >
-            L'Expertise <span className="text-gradient-amber">Environnementale</span>
-            <br />
-            Au Service du Développement
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-base sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-10 px-2"
-          >
-            Cabinet IVATIS, votre partenaire de confiance en ingénierie
-            environnementale et sociale, topographie et BTP au Bénin.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20"
-          >
-            <Link to="/contact">
-              <Button
-                size="lg"
-                className="font-semibold text-lg px-8 py-6 shadow-amber"
+            </motion.p>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="font-heading font-black text-4xl md:text-5xl lg:text-6xl leading-tight mb-6 text-white"
+            >
+              L'Expertise{" "}
+              <span className="text-gradient-amber">Environnementale</span>
+              <br />
+              Au Service du Développement
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-white/80 text-lg md:text-xl mb-8 leading-relaxed"
+            >
+              Cabinet IVATIS, votre partenaire de confiance en ingénierie
+              environnementale et sociale, topographie et BTP au Bénin.
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="flex flex-col sm:flex-row gap-4"
+            >
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-md font-heading font-bold text-sm hover:brightness-110 transition-all"
               >
                 Demander un Devis
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
-            <Link to="/services">
-              <Button
-                variant="outline"
-                size="lg"
-                className="font-semibold text-lg px-8 py-6 border-foreground/30 hover:bg-foreground/10"
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-md font-heading font-bold text-sm hover:border-primary hover:text-primary transition-all"
               >
                 Découvrir Nos Services
-              </Button>
-            </Link>
-          </motion.div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-6 h-10 border-2 border-foreground/30 rounded-full flex items-start justify-center p-2"
-          >
-            <div className="w-1.5 h-3 bg-primary rounded-full" />
-          </motion.div>
-        </motion.div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 bg-construction-charcoal border-y border-border/20">
-        <div className="container-wide">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <StatCard key={stat.label} {...stat} index={index} />
-            ))}
+              </Link>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* About Preview Section */}
-      <section className="section-padding bg-background">
-        <div className="container-wide">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <SectionTitle
-                subtitle="À Propos de Nous"
-                title="Experts en Ingénierie Environnementale depuis Plus de 15 Ans"
-                description="Cabinet IVATIS est un bureau d'études spécialisé en ingénierie environnementale et sociale, suivi de projets, formation, topographie et BTP au Bénin."
-              />
-              <div className="space-y-4 mb-8">
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-primary mt-2" />
-                  <p className="text-muted-foreground">
-                    Études d'impact environnemental et social (EIES) conformes aux normes
-                  </p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-primary mt-2" />
-                  <p className="text-muted-foreground">
-                    Suivi et contrôle environnemental rigoureux de projets
-                  </p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-primary mt-2" />
-                  <p className="text-muted-foreground">
-                    Formations professionnelles et levés topographiques de précision
-                  </p>
-                </div>
-              </div>
-              <Link to="/about">
-                <Button variant="outline" className="font-semibold">
-                  En Savoir Plus
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
-              </Link>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="aspect-[4/3] rounded-lg overflow-hidden">
-                <img
-                  src={reunionGolden}
-                  alt="Équipe IVATIS en réunion de travail"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/20 rounded-lg -z-10" />
-              <div className="absolute -top-6 -right-6 w-24 h-24 bg-primary/10 rounded-lg -z-10" />
-            </motion.div>
+      {/* Stats */}
+      <section className="bg-primary py-6">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {stats.map((stat, i) => (
+              <motion.div
+                key={stat.label}
+                custom={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                className="text-center py-4"
+              >
+                <p className="font-heading font-black text-3xl md:text-4xl text-primary-foreground">
+                  {stat.value}
+                </p>
+                <p className="text-primary-foreground/80 text-sm mt-1 font-medium">
+                  {stat.label}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="section-padding bg-muted/30">
-        <div className="container-wide">
-          <SectionTitle
-            subtitle="Nos Services"
-            title="Ingénierie Environnementale, Suivi, Formation, TOPO & BTP"
-            description="Des solutions complètes en ingénierie environnementale et sociale, suivi de projets, formation professionnelle, topographie et construction."
-            centered
-          />
+      <section className="py-20 md:py-28 bg-background">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            custom={0}
+            className="text-center max-w-2xl mx-auto mb-16"
+          >
+            <p className="text-primary font-heading font-semibold text-sm uppercase tracking-widest mb-3">
+              Ce Que Nous Faisons
+            </p>
+            <h2 className="font-heading font-black text-3xl md:text-4xl text-foreground">
+              Nos Services
+            </h2>
+          </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <ServiceCard key={service.title} {...service} index={index} />
             ))}
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="text-center mt-12"
-          >
-            <Link to="/services">
-              <Button variant="default" size="lg" className="font-semibold">
-                Découvrir Tous Nos Services
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
+          <div className="text-center mt-12">
+            <Link
+              to="/services"
+              className="inline-flex items-center gap-2 text-primary font-heading font-semibold text-sm hover:gap-3 transition-all"
+            >
+              Voir tous nos services
+              <ArrowRight className="w-4 h-4" />
             </Link>
-          </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why IVATIS */}
+      <section className="py-20 md:py-28 bg-secondary">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeUp}
+              custom={0}
+            >
+              <p className="text-primary font-heading font-semibold text-sm uppercase tracking-widest mb-3">
+                À Propos de Nous
+              </p>
+              <h2 className="font-heading font-black text-3xl md:text-4xl text-secondary-foreground mb-6">
+                Experts en Ingénierie Environnementale depuis Plus de 15 Ans
+              </h2>
+              <p className="text-secondary-foreground/70 leading-relaxed mb-8">
+                Cabinet IVATIS est un bureau d'études spécialisé en ingénierie
+                environnementale et sociale, suivi de projets, formation professionnelle,
+                topographie et BTP au Bénin. Depuis 2009, nous accompagnons les entreprises
+                et institutions dans leurs projets de développement durable.
+              </p>
+              <ul className="space-y-3">
+                {advantages.map((adv) => (
+                  <li key={adv} className="flex items-start gap-3 text-secondary-foreground/80 text-sm">
+                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    {adv}
+                  </li>
+                ))}
+              </ul>
+              <Link
+                to="/about"
+                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-md font-heading font-bold text-sm mt-8 hover:brightness-110 transition-all"
+              >
+                En Savoir Plus
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="relative"
+            >
+              <img
+                src={reunionGolden}
+                alt="Équipe IVATIS en réunion de travail"
+                className="rounded-lg shadow-2xl w-full"
+                loading="lazy"
+              />
+              <div className="absolute -bottom-6 -left-6 bg-primary rounded-lg p-6 shadow-lg hidden md:block">
+                <p className="font-heading font-black text-3xl text-primary-foreground">15+</p>
+                <p className="text-primary-foreground/80 text-sm">Années d'expertise</p>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Projects Section */}
-      <section className="section-padding bg-background">
-        <div className="container-wide">
-          <SectionTitle
-            subtitle="Nos Réalisations"
-            title="Des Projets Qui Font Notre Fierté"
-            description="Découvrez quelques-unes de nos réalisations en ingénierie environnementale, topographie et BTP."
-            centered
-          />
+      <section className="py-20 md:py-28 bg-background">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            custom={0}
+            className="text-center max-w-2xl mx-auto mb-16"
+          >
+            <p className="text-primary font-heading font-semibold text-sm uppercase tracking-widest mb-3">
+              Nos Réalisations
+            </p>
+            <h2 className="font-heading font-black text-3xl md:text-4xl text-foreground">
+              Des Projets Qui Font Notre Fierté
+            </h2>
+          </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <ProjectCard key={project.title} {...project} index={index} />
             ))}
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="text-center mt-12"
-          >
-            <Link to="/projects">
-              <Button variant="outline" size="lg" className="font-semibold">
-                Voir Toutes Nos Réalisations
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
+          <div className="text-center mt-12">
+            <Link
+              to="/projects"
+              className="inline-flex items-center gap-2 text-primary font-heading font-semibold text-sm hover:gap-3 transition-all"
+            >
+              Voir Toutes Nos Réalisations
+              <ArrowRight className="w-4 h-4" />
             </Link>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-construction-charcoal" />
-        <div className="absolute inset-0 opacity-20">
-          <img src={consultationMairie} alt="" className="w-full h-full object-cover" />
-        </div>
-        <div className="relative z-10 container-wide text-center">
+      <section className="py-20 bg-primary">
+        <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
+            variants={fadeUp}
+            custom={0}
           >
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
+            <h2 className="font-heading font-black text-3xl md:text-4xl text-primary-foreground mb-4">
               Un Projet Environnemental ou de Construction ?
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
+            <p className="text-primary-foreground/80 text-lg mb-8 max-w-xl mx-auto">
               Contactez Cabinet IVATIS dès aujourd'hui pour discuter de votre projet et
               obtenir un devis personnalisé gratuit.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/contact">
-                <Button
-                  size="lg"
-                  className="font-semibold text-lg px-8 py-6 shadow-amber"
-                >
-                  Contactez-Nous
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground px-8 py-4 rounded-md font-heading font-bold text-sm hover:brightness-110 transition-all"
+              >
+                Contactez-Nous
+                <ArrowRight className="w-4 h-4" />
               </Link>
-              <a href="tel:+2290197203303">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="font-semibold text-lg px-8 py-6 border-foreground/30 hover:bg-foreground/10"
-                >
-                  Appelez maintenant
-                </Button>
+              <a
+                href="tel:+2290197203303"
+                className="inline-flex items-center justify-center gap-2 border-2 border-primary-foreground/30 text-primary-foreground px-8 py-4 rounded-md font-heading font-bold text-sm hover:bg-primary-foreground/10 transition-all"
+              >
+                Appelez maintenant
               </a>
             </div>
           </motion.div>

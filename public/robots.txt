@@ -1,3 +1,19 @@
+User-agent: *
+Allow: /
+Sitemap: https://cabinetivatis.com/sitemap.xml
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
 User-agent: Googlebot
 Allow: /
 
@@ -9,8 +25,3 @@ Allow: /
 
 User-agent: facebookexternalhit
 Allow: /
-
-User-agent: *
-Allow: /
-
-Sitemap: https://cabinetivatis.com/sitemap.xml

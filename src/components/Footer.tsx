@@ -26,7 +26,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-secondary text-secondary-foreground">
+    <footer className="bg-[hsl(220,15%,10%)] text-white/90">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Logo & about */}
@@ -35,14 +35,14 @@ export function Footer() {
               <img src={logoIvatis} alt="Cabinet IVATIS" className="h-12 w-auto rounded" />
               <div>
                 <span className="font-heading font-bold text-xl text-primary">Cabinet</span>
-                <span className="font-heading font-bold text-xl text-secondary-foreground"> IVATIS</span>
+                <span className="font-heading font-bold text-xl text-white"> IVATIS</span>
               </div>
             </Link>
-            <p className="text-secondary-foreground/70 text-sm leading-relaxed">
+            <p className="text-white/60 text-sm leading-relaxed">
               Cabinet d'ingénierie environnementale et sociale, suivi de projets,
               formation professionnelle, topographie et BTP au Bénin.
             </p>
-            <p className="text-secondary-foreground/50 text-xs">
+            <p className="text-white/40 text-xs">
               RC RB/ABC/22B5468 — IFU: N° 3202292508230
             </p>
             <div className="flex items-center gap-3 pt-2">
@@ -51,7 +51,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
               >
                 <Facebook className="w-5 h-5 text-primary" />
               </a>
@@ -60,7 +60,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube"
-                className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
               >
                 <Youtube className="w-5 h-5 text-primary" />
               </a>
@@ -69,14 +69,14 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
               >
                 <Instagram className="w-5 h-5 text-primary" />
               </a>
               <a
                 href="mailto:ivatis.ivatis@gmail.com"
                 aria-label="Email"
-                className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
               >
                 <Mail className="w-5 h-5 text-primary" />
               </a>
@@ -91,7 +91,7 @@ export function Footer() {
                 <li key={link.name}>
                   <Link
                     to={link.path}
-                    className="text-secondary-foreground/70 hover:text-primary transition-colors text-sm"
+                    className="text-white/60 hover:text-primary transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -103,7 +103,7 @@ export function Footer() {
           {/* Services */}
           <div>
             <h3 className="font-heading font-bold text-lg mb-4 text-primary">Nos Services</h3>
-            <ul className="space-y-3 text-sm text-secondary-foreground/70">
+            <ul className="space-y-3 text-sm text-white/60">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
                   <Link to={link.path} className="hover:text-primary transition-colors">
@@ -117,7 +117,7 @@ export function Footer() {
           {/* Contact info */}
           <div>
             <h3 className="font-heading font-bold text-lg mb-4 text-primary">Contact</h3>
-            <ul className="space-y-4 text-sm text-secondary-foreground/70">
+            <ul className="space-y-4 text-sm text-white/60">
               <li className="flex items-start gap-3">
                 <Phone className="w-4 h-4 mt-0.5 text-primary shrink-0" />
                 <a href="tel:+2290197203303" className="hover:text-primary transition-colors">
@@ -139,9 +139,9 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-primary/10">
+      <div className="border-t border-white/10">
         <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-secondary-foreground/50">
+          <p className="text-xs text-white/40">
             © {currentYear} Cabinet IVATIS. Tous droits réservés.
           </p>
           <div className="flex items-center gap-6">
@@ -149,7 +149,7 @@ export function Footer() {
               <Link
                 key={link.name}
                 to={link.path}
-                className="text-xs text-secondary-foreground/50 hover:text-primary transition-colors"
+                className="text-xs text-white/40 hover:text-primary transition-colors"
               >
                 {link.name}
               </Link>

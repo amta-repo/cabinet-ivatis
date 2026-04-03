@@ -7,6 +7,7 @@ import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { servicesData } from "@/data/servicesData";
 import cabinetFront from "@/assets/activities/cabinet-front.jpg";
+import ctaBackground from "@/assets/cta-background.jpeg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },

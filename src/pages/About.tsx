@@ -16,6 +16,7 @@ import transport1 from "@/assets/activities/transport-1.jpg";
 import batiment1 from "@/assets/activities/batiment-1.jpg";
 import fieldConsultation from "@/assets/activities/field-consultation.jpg";
 import formationSauvegarde from "@/assets/activities/formation-sauvegarde.jpg";
+import ctaBackground from "@/assets/cta-background.jpeg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },

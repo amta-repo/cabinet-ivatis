@@ -7,6 +7,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ProjectCard } from "@/components/ProjectCard";
+import ctaBackground from "@/assets/cta-background.jpeg";
 import formationSauvegarde4 from "@/assets/activities/formation-sauvegarde-4.jpg";
 import auditGolden from "@/assets/activities/audit-golden.jpg";
 import auditGolden2 from "@/assets/activities/audit-golden-2.jpg";

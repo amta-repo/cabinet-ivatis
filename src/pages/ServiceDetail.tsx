@@ -6,6 +6,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { getServiceBySlug, servicesData } from "@/data/servicesData";
+import ctaBackground from "@/assets/cta-background.jpeg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },

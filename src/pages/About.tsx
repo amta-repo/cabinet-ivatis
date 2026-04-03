@@ -16,6 +16,7 @@ import transport1 from "@/assets/activities/transport-1.jpg";
 import batiment1 from "@/assets/activities/batiment-1.jpg";
 import fieldConsultation from "@/assets/activities/field-consultation.jpg";
 import formationSauvegarde from "@/assets/activities/formation-sauvegarde.jpg";
+import ctaBackground from "@/assets/cta-background.jpeg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -130,7 +131,7 @@ const About = () => {
       </section>
 
       {/* Stats */}
-      <section className="bg-primary py-6">
+      <section className="bg-cta py-6">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, i) => (
@@ -143,10 +144,10 @@ const About = () => {
                 variants={fadeUp}
                 className="text-center py-4"
               >
-                <p className="font-heading font-black text-3xl md:text-4xl text-primary-foreground">
+                <p className="font-heading font-black text-3xl md:text-4xl text-cta-foreground">
                   {stat.value}
                 </p>
-                <p className="text-primary-foreground/80 text-sm mt-1 font-medium">
+                <p className="text-cta-foreground/80 text-sm mt-1 font-medium">
                   {stat.label}
                 </p>
               </motion.div>
@@ -310,13 +311,22 @@ const About = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="py-16 bg-primary">
-        <div className="container mx-auto px-4 text-center">
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={ctaBackground}
+            alt="Cabinet IVATIS sur le terrain"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-construction-charcoal/80" />
+        </div>
+        <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
-            <h2 className="font-heading font-black text-3xl md:text-4xl text-primary-foreground mb-4">
+            <h2 className="font-heading font-black text-3xl md:text-4xl text-white mb-4">
               Bâtir un Avenir Durable
             </h2>
-            <p className="text-primary-foreground/80 text-lg mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-white/80 text-lg mb-8 max-w-3xl mx-auto leading-relaxed">
               Notre mission est de fournir des services d'ingénierie environnementale
               et sociale de qualité, contribuant au développement durable du Bénin.
               Nous nous engageons à accompagner chaque projet avec rigueur, intégrité
@@ -324,7 +334,7 @@ const About = () => {
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-8 py-4 rounded-md font-heading font-bold text-sm hover:brightness-110 transition-all"
+              className="inline-flex items-center gap-2 bg-cta text-cta-foreground px-8 py-4 rounded-md font-heading font-bold text-sm hover:brightness-110 transition-all"
             >
               Contactez-Nous
               <ArrowRight className="w-4 h-4" />

@@ -148,7 +148,7 @@ const Contact = () => {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-3 w-full bg-accent text-accent-foreground py-4 rounded-md font-heading font-bold text-sm hover:brightness-110 transition-all"
+                className="flex items-center justify-center gap-3 w-full bg-cta text-cta-foreground py-4 rounded-md font-heading font-bold text-sm hover:brightness-110 transition-all"
               >
                 <MessageCircle className="w-5 h-5" />
                 Chattez avec nous sur WhatsApp
@@ -216,7 +216,7 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3.5 rounded-md font-heading font-bold text-sm hover:brightness-110 transition-all disabled:opacity-60"
+                    className="inline-flex items-center gap-2 bg-cta text-cta-foreground px-8 py-3.5 rounded-md font-heading font-bold text-sm hover:brightness-110 transition-all disabled:opacity-60"
                   >
                     {isSubmitting ? "Envoi en cours..." : "Envoyer le Message"}
                     <Send className="w-4 h-4" />

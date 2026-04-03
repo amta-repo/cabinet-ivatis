@@ -7,6 +7,7 @@ import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { servicesData } from "@/data/servicesData";
 import cabinetFront from "@/assets/activities/cabinet-front.jpg";
+import ctaBackground from "@/assets/cta-background.jpeg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -94,17 +95,26 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-primary">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="font-heading font-black text-3xl text-primary-foreground mb-4">
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={ctaBackground}
+            alt="Cabinet IVATIS sur le terrain"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-construction-charcoal/80" />
+        </div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h2 className="font-heading font-black text-3xl md:text-4xl text-white mb-4">
             Un Projet Environnemental ou de Construction ?
           </h2>
-          <p className="text-primary-foreground/80 mb-8 max-w-lg mx-auto">
+          <p className="text-white/80 mb-8 max-w-lg mx-auto">
             Contactez notre équipe pour une étude gratuite et un devis personnalisé.
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-8 py-4 rounded-md font-heading font-bold text-sm hover:brightness-110 transition-all"
+            className="inline-flex items-center gap-2 bg-cta text-cta-foreground px-8 py-4 rounded-md font-heading font-bold text-sm hover:brightness-110 transition-all"
           >
             Contactez-Nous <ArrowRight className="w-4 h-4" />
           </Link>

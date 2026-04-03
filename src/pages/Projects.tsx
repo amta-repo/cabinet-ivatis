@@ -7,6 +7,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ProjectCard } from "@/components/ProjectCard";
+import ctaBackground from "@/assets/cta-background.jpeg";
 import formationSauvegarde4 from "@/assets/activities/formation-sauvegarde-4.jpg";
 import auditGolden from "@/assets/activities/audit-golden.jpg";
 import auditGolden2 from "@/assets/activities/audit-golden-2.jpg";
@@ -110,7 +111,7 @@ const Projects = () => {
                 onClick={() => setActiveCategory(category)}
                 className={`px-6 py-2.5 rounded-full text-sm font-heading font-semibold transition-all ${
                   activeCategory === category
-                    ? "bg-primary text-primary-foreground"
+                    ? "bg-cta text-cta-foreground"
                     : "bg-muted text-muted-foreground hover:bg-muted/80 hover:text-foreground"
                 }`}
               >
@@ -147,17 +148,26 @@ const Projects = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-primary">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="font-heading font-black text-3xl text-primary-foreground mb-4">
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={ctaBackground}
+            alt="Cabinet IVATIS sur le terrain"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-construction-charcoal/80" />
+        </div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h2 className="font-heading font-black text-3xl md:text-4xl text-white mb-4">
             Votre Projet Pourrait Être le Prochain
           </h2>
-          <p className="text-primary-foreground/80 mb-8 max-w-lg mx-auto">
+          <p className="text-white/80 mb-8 max-w-lg mx-auto">
             Confiez-nous votre projet environnemental, topographique ou de construction.
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-8 py-4 rounded-md font-heading font-bold text-sm hover:brightness-110 transition-all"
+            className="inline-flex items-center gap-2 bg-cta text-cta-foreground px-8 py-4 rounded-md font-heading font-bold text-sm hover:brightness-110 transition-all"
           >
             Démarrer Votre Projet <ArrowRight className="w-4 h-4" />
           </Link>

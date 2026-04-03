@@ -39,6 +39,10 @@
 
     --radius: 0.5rem;
 
+    /* CTA / Button color — professional deep teal */
+    --cta: 195 70% 30%;
+    --cta-foreground: 0 0% 100%;
+
     /* Custom ZNH variables */
     --construction-dark: 220 15% 15%;
     --construction-slate: 220 10% 25%;
@@ -98,6 +102,9 @@
     --border: 220 10% 22%;
     --input: 220 10% 22%;
     --ring: 38 92% 50%;
+
+    --cta: 195 70% 30%;
+    --cta-foreground: 0 0% 100%;
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;

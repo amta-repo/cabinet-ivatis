@@ -174,14 +174,14 @@ const Index = () => {
             >
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-md font-heading font-bold text-sm hover:brightness-110 transition-all"
+                className="inline-flex items-center justify-center gap-2 bg-cta text-cta-foreground px-8 py-4 rounded-md font-heading font-bold text-sm hover:brightness-110 transition-all"
               >
                 Demander un Devis
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-md font-heading font-bold text-sm hover:border-primary hover:text-primary transition-all"
+                className="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-md font-heading font-bold text-sm hover:border-white hover:bg-white/10 transition-all"
               >
                 Découvrir Nos Services
               </Link>
@@ -286,7 +286,7 @@ const Index = () => {
               </ul>
               <Link
                 to="/about"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-md font-heading font-bold text-sm mt-8 hover:brightness-110 transition-all"
+                className="inline-flex items-center gap-2 bg-cta text-cta-foreground px-8 py-4 rounded-md font-heading font-bold text-sm mt-8 hover:brightness-110 transition-all"
               >
                 En Savoir Plus
                 <ArrowRight className="w-4 h-4" />
@@ -306,9 +306,9 @@ const Index = () => {
                 className="rounded-lg shadow-2xl w-full"
                 loading="lazy"
               />
-              <div className="absolute -bottom-6 -left-6 bg-primary rounded-lg p-6 shadow-lg hidden md:block">
-                <p className="font-heading font-black text-3xl text-primary-foreground">15+</p>
-                <p className="text-primary-foreground/80 text-sm">Années d'expertise</p>
+              <div className="absolute -bottom-6 -left-6 bg-cta rounded-lg p-6 shadow-lg hidden md:block">
+                <p className="font-heading font-black text-3xl text-cta-foreground">15+</p>
+                <p className="text-cta-foreground/80 text-sm">Années d'expertise</p>
               </div>
             </motion.div>
           </div>
@@ -381,7 +381,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-md font-heading font-bold text-sm hover:brightness-110 transition-all"
+                className="inline-flex items-center justify-center gap-2 bg-cta text-cta-foreground px-8 py-4 rounded-md font-heading font-bold text-sm hover:brightness-110 transition-all"
               >
                 Contactez-Nous
                 <ArrowRight className="w-4 h-4" />

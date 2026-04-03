@@ -131,7 +131,7 @@ const About = () => {
       </section>
 
       {/* Stats */}
-      <section className="bg-primary py-6">
+      <section className="bg-cta py-6">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, i) => (

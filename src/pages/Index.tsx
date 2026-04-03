@@ -286,7 +286,7 @@ const Index = () => {
               </ul>
               <Link
                 to="/about"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-md font-heading font-bold text-sm mt-8 hover:brightness-110 transition-all"
+                className="inline-flex items-center gap-2 bg-cta text-cta-foreground px-8 py-4 rounded-md font-heading font-bold text-sm mt-8 hover:brightness-110 transition-all"
               >
                 En Savoir Plus
                 <ArrowRight className="w-4 h-4" />

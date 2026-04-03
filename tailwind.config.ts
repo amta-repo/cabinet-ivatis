@@ -76,6 +76,10 @@ export default {
           white: "hsl(var(--warm-white))",
           gray: "hsl(var(--warm-gray))",
         },
+        cta: {
+          DEFAULT: "hsl(var(--cta))",
+          foreground: "hsl(var(--cta-foreground))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

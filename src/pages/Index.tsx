@@ -18,6 +18,7 @@ import fieldConsultation from "@/assets/activities/field-consultation.jpg";
 import topoTerrain from "@/assets/activities/topo-terrain.jpg";
 import btpTerrain from "@/assets/activities/btp-terrain.jpg";
 import energieStation from "@/assets/activities/energie-station.jpg";
+import ctaBackground from "@/assets/cta-background.jpeg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },

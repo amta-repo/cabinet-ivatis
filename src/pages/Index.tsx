@@ -306,9 +306,9 @@ const Index = () => {
                 className="rounded-lg shadow-2xl w-full"
                 loading="lazy"
               />
-              <div className="absolute -bottom-6 -left-6 bg-primary rounded-lg p-6 shadow-lg hidden md:block">
-                <p className="font-heading font-black text-3xl text-primary-foreground">15+</p>
-                <p className="text-primary-foreground/80 text-sm">Années d'expertise</p>
+              <div className="absolute -bottom-6 -left-6 bg-cta rounded-lg p-6 shadow-lg hidden md:block">
+                <p className="font-heading font-black text-3xl text-cta-foreground">15+</p>
+                <p className="text-cta-foreground/80 text-sm">Années d'expertise</p>
               </div>
             </motion.div>
           </div>

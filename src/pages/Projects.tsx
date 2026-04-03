@@ -111,7 +111,7 @@ const Projects = () => {
                 onClick={() => setActiveCategory(category)}
                 className={`px-6 py-2.5 rounded-full text-sm font-heading font-semibold transition-all ${
                   activeCategory === category
-                    ? "bg-primary text-primary-foreground"
+                    ? "bg-cta text-cta-foreground"
                     : "bg-muted text-muted-foreground hover:bg-muted/80 hover:text-foreground"
                 }`}
               >

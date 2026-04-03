@@ -190,9 +190,9 @@ const Index = () => {
       </section>
 
       {/* Stats */}
-      <section className="bg-primary py-6">
+      <section className="bg-[hsl(30,10%,95%)] py-10 md:py-12">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             {stats.map((stat, i) => (
               <motion.div
                 key={stat.label}
@@ -201,12 +201,12 @@ const Index = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeUp}
-                className="text-center py-4"
+                className="text-center py-6 px-4 bg-card rounded-xl shadow-sm border border-border"
               >
-                <p className="font-heading font-black text-3xl md:text-4xl text-primary-foreground">
+                <p className="font-heading font-black text-3xl md:text-4xl text-primary">
                   {stat.value}
                 </p>
-                <p className="text-primary-foreground/80 text-sm mt-1 font-medium">
+                <p className="text-muted-foreground text-sm mt-2 font-medium">
                   {stat.label}
                 </p>
               </motion.div>

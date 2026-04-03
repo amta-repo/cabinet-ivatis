@@ -121,7 +121,7 @@ const Index = () => {
       <WhatsAppButton />
 
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={fieldConsultation}
@@ -132,21 +132,24 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-construction-charcoal/90 via-construction-charcoal/75 to-construction-charcoal/50" />
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 relative z-10 pt-32 pb-24 md:pt-40 md:pb-32">
           <div className="max-w-2xl">
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-primary font-heading font-semibold text-sm uppercase tracking-widest mb-4"
+              className="inline-flex items-center gap-2 bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-full px-4 py-2 mb-6"
             >
-              Ingénierie Environnementale & Sociale · Suivi · Formation · TOPO · BTP
-            </motion.p>
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              <span className="text-primary font-heading font-semibold text-xs sm:text-sm uppercase tracking-wider">
+                Ingénierie Environnementale & Sociale
+              </span>
+            </motion.div>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="font-heading font-black text-4xl md:text-5xl lg:text-6xl leading-tight mb-6 text-white"
+              className="font-heading font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight mb-6 text-white"
             >
               L'Expertise{" "}
               <span className="text-gradient-amber">Environnementale</span>
@@ -157,7 +160,7 @@ const Index = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-white/80 text-lg md:text-xl mb-8 leading-relaxed"
+              className="text-white/80 text-base sm:text-lg md:text-xl mb-10 leading-relaxed"
             >
               Cabinet IVATIS, votre partenaire de confiance en ingénierie
               environnementale et sociale, topographie et BTP au Bénin.

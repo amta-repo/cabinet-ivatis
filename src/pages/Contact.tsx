@@ -148,7 +148,7 @@ const Contact = () => {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-3 w-full bg-accent text-accent-foreground py-4 rounded-md font-heading font-bold text-sm hover:brightness-110 transition-all"
+                className="flex items-center justify-center gap-3 w-full bg-cta text-cta-foreground py-4 rounded-md font-heading font-bold text-sm hover:brightness-110 transition-all"
               >
                 <MessageCircle className="w-5 h-5" />
                 Chattez avec nous sur WhatsApp

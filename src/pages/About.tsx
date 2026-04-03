@@ -144,10 +144,10 @@ const About = () => {
                 variants={fadeUp}
                 className="text-center py-4"
               >
-                <p className="font-heading font-black text-3xl md:text-4xl text-primary-foreground">
+                <p className="font-heading font-black text-3xl md:text-4xl text-cta-foreground">
                   {stat.value}
                 </p>
-                <p className="text-primary-foreground/80 text-sm mt-1 font-medium">
+                <p className="text-cta-foreground/80 text-sm mt-1 font-medium">
                   {stat.label}
                 </p>
               </motion.div>

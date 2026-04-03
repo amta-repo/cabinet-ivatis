@@ -352,8 +352,17 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary">
-        <div className="container mx-auto px-4 text-center">
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={ctaBackground}
+            alt="Cabinet IVATIS sur le terrain"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-construction-charcoal/80" />
+        </div>
+        <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -361,24 +370,24 @@ const Index = () => {
             variants={fadeUp}
             custom={0}
           >
-            <h2 className="font-heading font-black text-3xl md:text-4xl text-primary-foreground mb-4">
+            <h2 className="font-heading font-black text-3xl md:text-4xl text-white mb-4">
               Un Projet Environnemental ou de Construction ?
             </h2>
-            <p className="text-primary-foreground/80 text-lg mb-8 max-w-xl mx-auto">
+            <p className="text-white/80 text-lg mb-10 max-w-xl mx-auto">
               Contactez Cabinet IVATIS dès aujourd'hui pour discuter de votre projet et
               obtenir un devis personnalisé gratuit.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground px-8 py-4 rounded-md font-heading font-bold text-sm hover:brightness-110 transition-all"
+                className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-md font-heading font-bold text-sm hover:brightness-110 transition-all"
               >
                 Contactez-Nous
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <a
                 href="tel:+2290197203303"
-                className="inline-flex items-center justify-center gap-2 border-2 border-primary-foreground/30 text-primary-foreground px-8 py-4 rounded-md font-heading font-bold text-sm hover:bg-primary-foreground/10 transition-all"
+                className="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-md font-heading font-bold text-sm hover:bg-white/10 transition-all"
               >
                 Appelez maintenant
               </a>

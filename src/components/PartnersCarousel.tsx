@@ -31,7 +31,6 @@ const partners = [
   { name: "Complexe Hôtelier JECO", logo: jecoLogo },
 ];
 
-// Duplicate for seamless loop
 const allPartners = [...partners, ...partners];
 
 export function PartnersCarousel() {
@@ -40,7 +39,7 @@ export function PartnersCarousel() {
       <div className="container-wide mb-10">
         <SectionTitle
           subtitle="Nos Partenaires"
-          title="Ils Nous Font Confiance"
+          title="Ils nous font confiance"
           centered
         />
       </div>
@@ -60,7 +59,7 @@ export function PartnersCarousel() {
           {allPartners.map((partner, index) => (
             <div
               key={`${partner.name}-${index}`}
-              className="flex-shrink-0 h-20 w-40 flex items-center justify-center grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
+              className="flex-shrink-0 h-20 w-40 flex items-center justify-center transition-all duration-300"
             >
               <img
                 src={partner.logo}

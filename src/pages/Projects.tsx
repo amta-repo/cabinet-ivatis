@@ -17,7 +17,7 @@ import formationSecurisme4 from "@/assets/activities/formation-securisme-4.jpg";
 import formationSecurisme5 from "@/assets/activities/formation-securisme-5.jpg";
 import reunion1 from "@/assets/activities/reunion-1.jpg";
 import consultationCommunautaire from "@/assets/activities/consultation-communautaire.jpg";
-import eies1 from "@/assets/activities/eies-1.jpg";
+import installationSolaire from "@/assets/activities/installation-solaire.jpg";
 import coastal1 from "@/assets/activities/coastal-1.jpg";
 import energie1 from "@/assets/activities/energie-1.jpg";
 import batiment1 from "@/assets/activities/batiment-1.jpg";
@@ -49,7 +49,7 @@ const projects = [
   { image: reunion1, title: "Consultation Institutionnelle — PMPP", category: "Environnement", location: "Bénin", description: "Consultation des parties prenantes institutionnelles dans le cadre du Plan de Mobilisation des Parties Prenantes." },
   { image: consultationCommunautaire, title: "Consultation Communautaire — CPRP", category: "Environnement", location: "Allada", description: "Consultation publique avec les communautés locales dans le cadre de la réinstallation des populations." },
   { image: fieldConsultation, title: "Consultation Communautaire — Terrain", category: "Environnement", location: "Bénin", description: "Consultation de terrain avec les populations rurales dans le cadre d'études environnementales." },
-  { image: eies1, title: "EIES — Installations Solaires", category: "Environnement", location: "Bénin", description: "Étude d'impact environnemental et social pour un projet d'installation de panneaux solaires." },
+  { image: installationSolaire, title: "EIES — Installations Solaires", category: "Environnement", location: "Bénin", description: "Étude d'impact environnemental et social pour un projet d'installation de panneaux solaires." },
   { image: consultationMairie, title: "Suivi Environnemental — Réunion de Chantier", category: "Suivi", location: "Bénin", description: "Réunion de suivi environnemental et social sur site avec les équipes de projet." },
   { image: coastal1, title: "Gestion des Inondations — Zone Côtière", category: "Suivi", location: "Littoral, Bénin", description: "Étude et gestion des inondations dans les zones côtières du Bénin." },
   { image: environnement1, title: "Évaluation Environnementale Stratégique", category: "Environnement", location: "Bénin", description: "Évaluation environnementale et sociale stratégique pour un programme de développement." },
@@ -77,10 +77,10 @@ const Projects = () => {
   return (
     <div className="min-h-screen bg-background">
       <SeoHelmet
-        title="Nos Réalisations | +200 Projets EIES, Audits, Topographie et BTP — Cabinet IVATIS Bénin"
-        description="Portfolio de +200 projets réalisés par Cabinet IVATIS : audits Golden Tulip, BETRA, SOBEBRA, formations HSE, études topographiques, suivi environnemental au Bénin."
+        title="Nos Réalisations | +200 Projets EIES, Audits, Topographie et BTP — CABINET IVATIS Bénin"
+        description="Portfolio de +200 projets réalisés par CABINET IVATIS : audits Golden Tulip, BETRA, SOBEBRA, formations HSE, études topographiques, suivi environnemental au Bénin et en Afrique de l'Ouest."
         canonical="/projects"
-        keywords="réalisations Cabinet IVATIS, projets EIES Bénin, audit environnemental Golden Tulip, formation HSE CMCP"
+        keywords="réalisations CABINET IVATIS, projets EIES Bénin, audit environnemental Golden Tulip, formation HSE CMCP"
       />
       <Header />
       <WhatsAppButton />
@@ -95,7 +95,7 @@ const Projects = () => {
             </h1>
             <p className="text-secondary-foreground/70 text-lg leading-relaxed">
               Découvrez notre portfolio de projets en ingénierie environnementale,
-              topographie, formation et BTP au Bénin.
+              topographie, formation et BTP au Bénin et en Afrique de l'Ouest.
             </p>
           </motion.div>
         </div>
@@ -152,7 +152,7 @@ const Projects = () => {
         <div className="absolute inset-0">
           <img
             src={ctaBackground}
-            alt="Cabinet IVATIS sur le terrain"
+            alt="CABINET IVATIS sur le terrain"
             className="w-full h-full object-cover"
             loading="lazy"
           />

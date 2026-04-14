@@ -5,11 +5,9 @@ import { Leaf, Users, Award, Shield, ArrowRight, Zap, Truck, Building2, Globe, G
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-import { SectionTitle } from "@/components/SectionTitle";
+import { AnimatedCounter } from "@/components/AnimatedCounter";
 import reunionGolden from "@/assets/activities/reunion-golden.jpg";
-import consultationMairie from "@/assets/activities/consultation-mairie.jpg";
 import cabinetFront from "@/assets/activities/cabinet-front.jpg";
-import cabinetInterior from "@/assets/activities/cabinet-interior.jpg";
 import energieStation from "@/assets/activities/energie-station.jpg";
 import environnement1 from "@/assets/activities/environnement-1.jpg";
 import transport1 from "@/assets/activities/transport-1.jpg";
@@ -23,7 +21,7 @@ const fadeUp = {
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.15, duration: 0.6, ease: "easeOut" as const },
+    transition: { delay: i * 0.15, duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] },
   }),
 };
 
@@ -106,10 +104,10 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <SeoHelmet
-        title="À Propos de Cabinet IVATIS | Leader en Études Environnementales au Bénin depuis 2009"
-        description="Créé en 2009, Cabinet IVATIS est le leader des études environnementales au Bénin. 17 experts permanents, +200 projets, valeurs d'éthique et engagement pour le développement durable."
+        title="À Propos de CABINET IVATIS | Leader en Études Environnementales au Bénin et en Afrique de l'Ouest depuis 2009"
+        description="Créé en 2009, CABINET IVATIS est le leader des études environnementales au Bénin et en Afrique de l'Ouest. 17 experts permanents, +200 projets, valeurs d'éthique et engagement pour le développement durable."
         canonical="/about"
-        keywords="Cabinet IVATIS, bureau études environnementales Bénin, ingénierie environnementale Abomey-Calavi, experts environnement Bénin"
+        keywords="CABINET IVATIS, bureau études environnementales Bénin, ingénierie environnementale Abomey-Calavi, experts environnement Bénin Afrique de l'Ouest"
       />
       <Header />
       <WhatsAppButton />
@@ -123,36 +121,10 @@ const About = () => {
               Notre Histoire, Notre Engagement
             </h1>
             <p className="text-secondary-foreground/70 text-lg leading-relaxed">
-              Créé en 2009, Cabinet IVATIS est leader dans les études environnementales
-              au Bénin, avec une équipe permanente d'experts et techniciens de haut niveau.
+              Créé en 2009, CABINET IVATIS est leader dans les études environnementales
+              au Bénin et en Afrique de l'Ouest, avec une équipe permanente d'experts et techniciens de haut niveau.
             </p>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Stats */}
-      <section className="bg-cta py-6">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {stats.map((stat, i) => (
-              <motion.div
-                key={stat.label}
-                custom={i}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                className="text-center py-4"
-              >
-                <p className="font-heading font-black text-3xl md:text-4xl text-cta-foreground">
-                  {stat.value}
-                </p>
-                <p className="text-cta-foreground/80 text-sm mt-1 font-medium">
-                  {stat.label}
-                </p>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -168,7 +140,7 @@ const About = () => {
                   Saint Louis dans la rue Général HOUNDEGNON.
                 </p>
                 <p>
-                  Leader dans les études environnementales au Bénin, IVATIS dispose d'une
+                  Leader dans les études environnementales au Bénin et en Afrique de l'Ouest, IVATIS dispose d'une
                   équipe permanente d'experts et techniciens et assure :
                 </p>
               </div>
@@ -199,10 +171,8 @@ const About = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="space-y-6"
             >
-              <img src={cabinetFront} alt="Vue de face du Cabinet IVATIS" className="rounded-lg shadow-2xl w-full" loading="lazy" />
-              <img src={cabinetInterior} alt="Entrée de la Direction Générale du Cabinet IVATIS" className="rounded-lg shadow-xl w-full" loading="lazy" />
+              <img src={cabinetFront} alt="Vue de face du CABINET IVATIS" className="rounded-lg shadow-2xl w-full" loading="lazy" />
             </motion.div>
           </div>
         </div>
@@ -281,7 +251,7 @@ const About = () => {
                 <div className="h-48 overflow-hidden">
                   <img
                     src={exp.image}
-                    alt={`${exp.title} — Cabinet IVATIS`}
+                    alt={`${exp.title} — CABINET IVATIS`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
@@ -298,7 +268,7 @@ const About = () => {
                   </p>
                   <Link
                     to={`/services/${exp.slug}`}
-                    className="inline-flex items-center gap-2 text-primary font-heading font-semibold text-sm hover:gap-3 transition-all"
+                    className="inline-flex items-center gap-2 text-cta font-heading font-semibold text-sm hover:gap-3 transition-all"
                   >
                     En Savoir Plus
                     <ArrowRight className="w-4 h-4" />
@@ -310,12 +280,30 @@ const About = () => {
         </div>
       </section>
 
+      {/* Stats — moved under Nos Domaines d'Intervention */}
+      <section className="bg-cta py-6">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {stats.map((stat) => (
+              <AnimatedCounter
+                key={stat.label}
+                value={stat.value}
+                label={stat.label}
+                className="py-4"
+                valueClassName="text-cta-foreground"
+                labelClassName="text-cta-foreground/80"
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Mission Section */}
       <section className="relative py-24 md:py-32 overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={ctaBackground}
-            alt="Cabinet IVATIS sur le terrain"
+            alt="CABINET IVATIS sur le terrain"
             className="w-full h-full object-cover"
             loading="lazy"
           />
@@ -328,7 +316,7 @@ const About = () => {
             </h2>
             <p className="text-white/80 text-lg mb-8 max-w-3xl mx-auto leading-relaxed">
               Notre mission est de fournir des services d'ingénierie environnementale
-              et sociale de qualité, contribuant au développement durable du Bénin.
+              et sociale de qualité, contribuant au développement durable du Bénin et de l'Afrique de l'Ouest.
               Nous nous engageons à accompagner chaque projet avec rigueur, intégrité
               et professionnalisme.
             </p>

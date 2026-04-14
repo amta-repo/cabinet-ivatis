@@ -17,6 +17,13 @@ import auditBetra from "@/assets/activities/audit-betra.jpg";
 import auditBetra2 from "@/assets/activities/audit-betra-2.jpg";
 import consultationCommunautaire from "@/assets/activities/consultation-communautaire.jpg";
 import reunion1 from "@/assets/activities/reunion-1.jpg";
+import formationSauvegarde from "@/assets/activities/formation-sauvegarde.jpg";
+import formationSecurisme from "@/assets/activities/formation-securisme.jpg";
+import formationSecurisme2 from "@/assets/activities/formation-securisme-2.jpg";
+import formationSecurisme3 from "@/assets/activities/formation-securisme-3.jpg";
+import formationSecurisme4 from "@/assets/activities/formation-securisme-4.jpg";
+import formationSecurisme5 from "@/assets/activities/formation-securisme-5.jpg";
+import formationSauvegarde4 from "@/assets/activities/formation-sauvegarde-4.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -40,6 +47,13 @@ const galleryImages = [
   { src: auditBetra2, caption: "Consultation avec la direction BETRA", category: "Terrain" },
   { src: consultationCommunautaire, caption: "Consultation communautaire — Allada", category: "Terrain" },
   { src: reunion1, caption: "Réunion institutionnelle — PMPP", category: "Terrain" },
+  { src: formationSauvegarde, caption: "Formation sur les instruments de sauvegarde environnementale", category: "Formation" },
+  { src: formationSauvegarde4, caption: "Formation Instruments de Sauvegarde — 2ème Édition", category: "Formation" },
+  { src: formationSecurisme, caption: "Formation en sécurité incendie — CMCP", category: "Formation" },
+  { src: formationSecurisme2, caption: "Formation en secourisme — CMCP", category: "Formation" },
+  { src: formationSecurisme3, caption: "Formation pratique sécurité incendie", category: "Formation" },
+  { src: formationSecurisme4, caption: "Formation secourisme d'urgence", category: "Formation" },
+  { src: formationSecurisme5, caption: "Démonstration manipulation d'extincteurs — HSE", category: "Formation" },
 ];
 
 const Gallery = () => {
@@ -48,10 +62,10 @@ const Gallery = () => {
   return (
     <div className="min-h-screen bg-background">
       <SeoHelmet
-        title="Galerie Photos | Cabinet IVATIS — Terrain, Audits, Formations au Bénin"
-        description="Galerie photos des activités terrain de Cabinet IVATIS : consultations communautaires, audits environnementaux, levés topographiques, formations HSE au Bénin."
+        title="Galerie Photos | CABINET IVATIS — Terrain, Audits, Formations au Bénin et en Afrique de l'Ouest"
+        description="Galerie photos des activités terrain de CABINET IVATIS : consultations communautaires, audits environnementaux, levés topographiques, formations HSE au Bénin et en Afrique de l'Ouest."
         canonical="/gallery"
-        keywords="galerie Cabinet IVATIS, photos terrain environnement Bénin, audit photos, formation HSE photos"
+        keywords="galerie CABINET IVATIS, photos terrain environnement Bénin, audit photos, formation HSE photos"
       />
       <Header />
       <WhatsAppButton />
@@ -67,8 +81,8 @@ const Gallery = () => {
               Nos Activités en Images
             </h1>
             <p className="text-secondary-foreground/70 text-lg leading-relaxed">
-              Découvrez Cabinet IVATIS sur le terrain : consultations communautaires, audits,
-              levés topographiques et inspections de chantier à travers le Bénin.
+              Découvrez CABINET IVATIS sur le terrain : consultations communautaires, audits,
+              levés topographiques, formations et inspections de chantier à travers le Bénin et l'Afrique de l'Ouest.
             </p>
           </motion.div>
         </div>

@@ -34,10 +34,10 @@ const ServiceDetail = () => {
   return (
     <div className="min-h-screen bg-background">
       <SeoHelmet
-        title={`${service.title} | Cabinet IVATIS — Bénin`}
-        description={`${service.shortDescription} Cabinet IVATIS, expert en ingénierie environnementale au Bénin. Contactez-nous : +229 01 97 20 33 03.`}
+        title={`${service.title} | CABINET IVATIS — Bénin et Afrique de l'Ouest`}
+        description={`${service.shortDescription} CABINET IVATIS, expert en ingénierie environnementale au Bénin et en Afrique de l'Ouest. Contactez-nous : +229 01 97 20 33 03.`}
         canonical={`/services/${slug}`}
-        keywords={`${service.title}, Cabinet IVATIS, ingénierie environnementale Bénin`}
+        keywords={`${service.title}, CABINET IVATIS, ingénierie environnementale Bénin Afrique de l'Ouest`}
       />
       <Header />
       <WhatsAppButton />
@@ -159,7 +159,7 @@ const ServiceDetail = () => {
         <div className="absolute inset-0">
           <img
             src={ctaBackground}
-            alt="Cabinet IVATIS sur le terrain"
+            alt="CABINET IVATIS sur le terrain"
             className="w-full h-full object-cover"
             loading="lazy"
           />
@@ -170,7 +170,7 @@ const ServiceDetail = () => {
             Besoin de cette expertise ?
           </h2>
           <p className="text-white/80 mb-8 max-w-lg mx-auto">
-            Contactez Cabinet IVATIS pour discuter de votre projet et obtenir un devis personnalisé gratuit.
+            Contactez CABINET IVATIS pour discuter de votre projet et obtenir un devis personnalisé gratuit.
           </p>
           <Link
             to="/contact"

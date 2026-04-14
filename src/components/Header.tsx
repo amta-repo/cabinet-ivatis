@@ -42,10 +42,10 @@ export function Header() {
       <div className="container-wide flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
-          <img src={logoIvatis} alt="Cabinet IVATIS" className="h-10 md:h-12 w-auto rounded" />
+          <img src={logoIvatis} alt="CABINET IVATIS" className="h-10 md:h-12 w-auto rounded" />
           <div className="relative">
             <span className="font-display text-2xl md:text-3xl tracking-wider text-primary">
-              Cabinet
+              CABINET
             </span>
             <span className="font-display text-2xl md:text-3xl tracking-wider text-foreground">
               {" "}IVATIS

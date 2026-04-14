@@ -6,7 +6,6 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { servicesData } from "@/data/servicesData";
-import cabinetFront from "@/assets/activities/cabinet-front.jpg";
 import ctaBackground from "@/assets/cta-background.jpeg";
 
 const fadeUp = {
@@ -22,10 +21,10 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-background">
       <SeoHelmet
-        title="Services Cabinet IVATIS | EIES, PGES, CGES, Audit Environnemental, Topographie, BTP au Bénin"
-        description="19 services spécialisés : EIES, PGES, CGES, EESS, audits environnementaux, CPRP, PARC, PMPP, suivi environnemental, topographie GPS, BTP et formation HSE. Cabinet IVATIS, Abomey-Calavi."
+        title="Services CABINET IVATIS | EIES, PGES, CGES, Audit Environnemental, Topographie, BTP au Bénin"
+        description="19 services spécialisés : EIES, PGES, CGES, EESS, audits environnementaux, CPRP, PARC, PMPP, suivi environnemental, topographie GPS, BTP et formation HSE. CABINET IVATIS, Abomey-Calavi."
         canonical="/services"
-        keywords="services EIES Bénin, PGES, CGES, audit environnemental, topographie GPS, BTP, formation HSE, Cabinet IVATIS"
+        keywords="services EIES Bénin, PGES, CGES, audit environnemental, topographie GPS, BTP, formation HSE, CABINET IVATIS"
       />
       <Header />
       <WhatsAppButton />
@@ -40,7 +39,7 @@ const Services = () => {
             </h1>
             <p className="text-secondary-foreground/70 text-lg leading-relaxed">
               Des solutions complètes en ingénierie environnementale et sociale,
-              conservation, topographie et BTP au Bénin.
+              conservation, topographie et BTP au Bénin et en Afrique de l'Ouest.
             </p>
           </motion.div>
         </div>
@@ -82,7 +81,7 @@ const Services = () => {
                   </p>
                   <Link
                     to={`/services/${service.slug}`}
-                    className="inline-flex items-center gap-2 text-primary font-heading font-semibold text-sm hover:gap-3 transition-all"
+                    className="inline-flex items-center gap-2 text-cta font-heading font-semibold text-sm hover:gap-3 transition-all"
                   >
                     En Savoir Plus
                     <ArrowRight className="w-4 h-4" />
@@ -99,7 +98,7 @@ const Services = () => {
         <div className="absolute inset-0">
           <img
             src={ctaBackground}
-            alt="Cabinet IVATIS sur le terrain"
+            alt="CABINET IVATIS sur le terrain"
             className="w-full h-full object-cover"
             loading="lazy"
           />

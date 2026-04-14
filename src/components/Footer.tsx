@@ -32,15 +32,15 @@ export function Footer() {
           {/* Logo & about */}
           <div className="space-y-4">
             <Link to="/" className="inline-flex items-center gap-3">
-              <img src={logoIvatis} alt="Cabinet IVATIS" className="h-12 w-auto rounded" />
+              <img src={logoIvatis} alt="CABINET IVATIS" className="h-12 w-auto rounded" />
               <div>
-                <span className="font-heading font-bold text-xl text-primary">Cabinet</span>
+                <span className="font-heading font-bold text-xl text-primary">CABINET</span>
                 <span className="font-heading font-bold text-xl text-white"> IVATIS</span>
               </div>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed">
               Cabinet d'ingénierie environnementale et sociale, suivi de projets,
-              formation professionnelle, topographie et BTP au Bénin.
+              formation professionnelle, topographie et BTP au Bénin et en Afrique de l'Ouest.
             </p>
             <p className="text-white/40 text-xs">
               RC RB/ABC/22B5468 — IFU: N° 3202292508230
@@ -142,7 +142,7 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white/40">
-            © {currentYear} Cabinet IVATIS. Tous droits réservés.
+            © {currentYear} CABINET IVATIS. Tous droits réservés.
           </p>
           <div className="flex items-center gap-6">
             {footerLinks.legal.map((link) => (

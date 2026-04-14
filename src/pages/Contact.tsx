@@ -49,17 +49,17 @@ const Contact = () => {
 
   const whatsappNumber = "2290197203303";
   const whatsappMessage = encodeURIComponent(
-    "Bonjour Cabinet IVATIS, je souhaite avoir plus d'informations sur vos services."
+    "Bonjour CABINET IVATIS, je souhaite avoir plus d'informations sur vos services."
   );
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   return (
     <div className="min-h-screen bg-background">
       <SeoHelmet
-        title="Contactez Cabinet IVATIS | Devis Gratuit EIES, Audit, Topographie — Abomey-Calavi, Bénin"
-        description="Contactez Cabinet IVATIS pour vos projets d'ingénierie environnementale au Bénin. Tél : +229 01 97 20 33 03. Email : ivatis.ivatis@gmail.com. Abomey-Calavi, Quartier Agori St Louis."
+        title="Contactez CABINET IVATIS | Devis Gratuit EIES, Audit, Topographie — Abomey-Calavi, Bénin"
+        description="Contactez CABINET IVATIS pour vos projets d'ingénierie environnementale au Bénin et en Afrique de l'Ouest. Tél : +229 01 97 20 33 03. Email : ivatis.ivatis@gmail.com. Abomey-Calavi, Quartier Agori St Louis."
         canonical="/contact"
-        keywords="contact Cabinet IVATIS, devis EIES Bénin, bureau études Abomey-Calavi, téléphone IVATIS"
+        keywords="contact CABINET IVATIS, devis EIES Bénin, bureau études Abomey-Calavi, téléphone IVATIS"
       />
       <Header />
       <WhatsAppButton />
@@ -237,7 +237,7 @@ const Contact = () => {
               />
             </div>
             <div className="mt-4 p-6 bg-card border border-border rounded-lg">
-              <h3 className="font-heading font-bold text-lg text-card-foreground">Cabinet IVATIS</h3>
+              <h3 className="font-heading font-bold text-lg text-card-foreground">CABINET IVATIS</h3>
               <p className="text-muted-foreground text-sm">Quartier Agori St Louis, Rue Général HOUNDEGNON — Abomey-Calavi, Bénin — BP 1495</p>
               <p className="text-muted-foreground text-sm mt-1">RC RB/ABC/22B5468 — IFU: N° 3202292508230</p>
               <a

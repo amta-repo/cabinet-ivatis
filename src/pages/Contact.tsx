@@ -6,6 +6,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { PageHeader } from "@/components/PageHeader";
+import headerContact from "@/assets/header-contact.jpg";
 import { useToast } from "@/hooks/use-toast";
 
 const fadeUp = {
@@ -68,6 +69,7 @@ const Contact = () => {
       <PageHeader
         eyebrow="Contact"
         title="Parlons de Votre Projet"
+        backgroundImage={headerContact}
         description="Notre équipe est à votre disposition pour répondre à toutes vos questions en ingénierie environnementale, topographie et BTP."
       />
 

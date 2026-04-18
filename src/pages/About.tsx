@@ -5,6 +5,7 @@ import { Leaf, Users, Award, Shield, ArrowRight, Zap, Truck, Building2, Globe, G
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { PageHeader } from "@/components/PageHeader";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
 import reunionGolden from "@/assets/activities/reunion-golden.jpg";
 import cabinetFront from "@/assets/activities/cabinet-front.jpg";
@@ -112,21 +113,11 @@ const About = () => {
       <Header />
       <WhatsAppButton />
 
-      {/* Hero Section */}
-      <section className="relative py-20 md:py-28 bg-secondary">
-        <div className="container mx-auto px-4">
-          <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0} className="max-w-2xl">
-            <p className="text-primary font-heading font-semibold text-sm uppercase tracking-widest mb-3">À Propos</p>
-            <h1 className="font-heading font-black text-4xl md:text-5xl text-secondary-foreground mb-6">
-              Notre Histoire, Notre Engagement
-            </h1>
-            <p className="text-secondary-foreground/70 text-lg leading-relaxed">
-              Créé en 2009, CABINET IVATIS est leader dans les études environnementales
-              au Bénin et en Afrique de l'Ouest, avec une équipe permanente d'experts et techniciens de haut niveau.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHeader
+        eyebrow="À Propos"
+        title="Notre Histoire, Notre Engagement"
+        description="Créé en 2009, CABINET IVATIS est leader dans les études environnementales au Bénin et en Afrique de l'Ouest, avec une équipe permanente d'experts et techniciens de haut niveau."
+      />
 
       {/* Story Section */}
       <section className="py-20 md:py-28 bg-background">

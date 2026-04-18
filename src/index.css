@@ -9,13 +9,13 @@
   :root {
     /* Warm charcoal and amber gold palette */
     --background: 30 15% 97%;
-    --foreground: 30 10% 10%;
+    --foreground: 220 25% 8%;
 
     --card: 30 20% 99%;
-    --card-foreground: 30 10% 10%;
+    --card-foreground: 220 25% 8%;
 
     --popover: 30 20% 99%;
-    --popover-foreground: 30 10% 10%;
+    --popover-foreground: 220 25% 8%;
 
     /* Amber/Gold Primary */
     --primary: 38 92% 50%;
@@ -25,7 +25,7 @@
     --secondary-foreground: 30 10% 15%;
 
     --muted: 30 10% 90%;
-    --muted-foreground: 30 10% 45%;
+    --muted-foreground: 220 15% 28%;
 
     --accent: 38 85% 55%;
     --accent-foreground: 30 10% 5%;
@@ -130,7 +130,7 @@
     @apply text-foreground font-body antialiased;
     background-color: hsl(var(--background));
     background-image:
-      linear-gradient(hsl(var(--background) / 0.92), hsl(var(--background) / 0.92)),
+      linear-gradient(hsl(var(--background) / 0.78), hsl(var(--background) / 0.78)),
       url('/src/assets/background.jpg');
     background-attachment: fixed;
     background-size: cover;

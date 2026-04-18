@@ -9,7 +9,8 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SectionTitle } from "@/components/SectionTitle";
 import { PartnersCarousel } from "@/components/PartnersCarousel";
-import { AnimatedCounter } from "@/components/AnimatedCounter";
+import { HeroCarousel } from "@/components/HeroCarousel";
+import { DonutStats } from "@/components/DonutStats";
 import consultationMairie from "@/assets/activities/consultation-mairie.jpg";
 import auditGolden from "@/assets/activities/audit-golden.jpg";
 import formationSauvegarde from "@/assets/activities/formation-sauvegarde.jpg";
@@ -19,6 +20,16 @@ import topoTerrain from "@/assets/activities/topo-terrain.jpg";
 import btpTerrain from "@/assets/activities/btp-terrain.jpg";
 import ctaBackground from "@/assets/cta-background.jpeg";
 import heroBackground from "@/assets/hero-background1.jpg";
+import heroTrans from "@/assets/hero-trans.jpg";
+import heroTrans1 from "@/assets/hero-trans1.jpg";
+import heroTrans2 from "@/assets/hero-trans2.jpg";
+
+const heroImages = [
+  { src: heroBackground, alt: "CABINET IVATIS — équipe sur le terrain au Bénin" },
+  { src: heroTrans, alt: "Industrie durable et énergie renouvelable" },
+  { src: heroTrans1, alt: "Conservation des écosystèmes en Afrique de l'Ouest" },
+  { src: heroTrans2, alt: "Audit environnemental d'installations industrielles" },
+];
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -132,15 +143,7 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src={heroBackground}
-            alt="CABINET IVATIS - Ingénierie environnementale au Bénin et en Afrique de l'Ouest"
-            className="w-full h-full object-cover"
-            loading="eager"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-construction-charcoal/90 via-construction-charcoal/75 to-construction-charcoal/50" />
-        </div>
+        <HeroCarousel images={heroImages} />
 
         <div className="container mx-auto px-4 relative z-10 pt-40 pb-32 md:pt-48 md:pb-40">
           <div className="max-w-2xl">
@@ -148,21 +151,18 @@ const Index = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="font-heading font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight mb-6 text-white"
+              className="font-heading font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight mb-6 text-white drop-shadow-lg"
             >
-              L'Expertise{" "}
-              <span className="text-gradient-amber">Environnementale</span>
-              <br />
-              Au Service du Développement
+              Protéger l'Environnement.{" "}
+              <span className="text-gradient-amber">Bâtir l'Avenir.</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-white/80 text-base sm:text-lg md:text-xl mb-8 leading-relaxed"
+              className="text-white/90 text-base sm:text-lg md:text-xl mb-8 leading-relaxed drop-shadow"
             >
-              CABINET IVATIS, votre partenaire de confiance en ingénierie
-              environnementale et sociale, topographie et BTP au Bénin et en Afrique de l'Ouest.
+              EIES, audits, topographie GPS, formation HSE et BTP — la conformité et la durabilité réunies.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -199,24 +199,10 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="bg-[hsl(30,10%,95%)] py-10 md:py-12">
+      {/* Stats — Donut design */}
+      <section className="py-16 md:py-20 bg-background/85 backdrop-blur-sm">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-            {stats.map((stat) => (
-              <div
-                key={stat.label}
-                className="bg-card rounded-xl shadow-sm border border-border py-6 px-4"
-              >
-                <AnimatedCounter
-                  value={stat.value}
-                  label={stat.label}
-                  valueClassName="text-primary"
-                  labelClassName="text-muted-foreground"
-                />
-              </div>
-            ))}
-          </div>
+          <DonutStats stats={stats} />
         </div>
       </section>
 

@@ -5,6 +5,7 @@ import { Phone, Mail, MapPin, Send, Clock, MessageCircle } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { PageHeader } from "@/components/PageHeader";
 import { useToast } from "@/hooks/use-toast";
 
 const fadeUp = {
@@ -64,21 +65,11 @@ const Contact = () => {
       <Header />
       <WhatsAppButton />
 
-      {/* Hero */}
-      <section className="relative py-20 md:py-28 bg-secondary">
-        <div className="container mx-auto px-4">
-          <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0} className="max-w-2xl">
-            <p className="text-primary font-heading font-semibold text-sm uppercase tracking-widest mb-3">Contact</p>
-            <h1 className="font-heading font-black text-4xl md:text-5xl text-secondary-foreground mb-6">
-              Parlons de Votre Projet
-            </h1>
-            <p className="text-secondary-foreground/70 text-lg leading-relaxed">
-              Notre équipe est à votre disposition pour répondre à toutes vos questions
-              en ingénierie environnementale, topographie et BTP.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHeader
+        eyebrow="Contact"
+        title="Parlons de Votre Projet"
+        description="Notre équipe est à votre disposition pour répondre à toutes vos questions en ingénierie environnementale, topographie et BTP."
+      />
 
       {/* Contact Content */}
       <section className="py-20 md:py-28 bg-background">

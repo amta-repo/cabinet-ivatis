@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { PageHeader } from "@/components/PageHeader";
 import { servicesData } from "@/data/servicesData";
 import ctaBackground from "@/assets/cta-background.jpeg";
 
@@ -29,21 +30,11 @@ const Services = () => {
       <Header />
       <WhatsAppButton />
 
-      {/* Hero Section */}
-      <section className="relative py-20 md:py-28 bg-secondary">
-        <div className="container mx-auto px-4">
-          <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0} className="max-w-2xl">
-            <p className="text-primary font-heading font-semibold text-sm uppercase tracking-widest mb-3">Nos Activités</p>
-            <h1 className="font-heading font-black text-4xl md:text-5xl text-secondary-foreground mb-6">
-              Détail Sommaire des Activités
-            </h1>
-            <p className="text-secondary-foreground/70 text-lg leading-relaxed">
-              Des solutions complètes en ingénierie environnementale et sociale,
-              conservation, topographie et BTP au Bénin et en Afrique de l'Ouest.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHeader
+        eyebrow="Nos Activités"
+        title="Détail Sommaire des Activités"
+        description="Des solutions complètes en ingénierie environnementale et sociale, conservation, topographie et BTP au Bénin et en Afrique de l'Ouest."
+      />
 
       {/* Services Grid */}
       <section className="py-20 md:py-28 bg-background">

@@ -26,7 +26,7 @@ export function ServiceCard({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: true }}
-      className="group bg-card rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-border flex flex-col"
+      className="group bg-card sm:rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow border-y sm:border border-border flex flex-col -mx-4 sm:mx-0"
     >
       {image && (
         <div className="h-48 overflow-hidden">
@@ -53,7 +53,7 @@ export function ServiceCard({
         {slug && (
           <Link
             to={`/services/${slug}`}
-            className="inline-flex items-center gap-2 text-primary font-heading font-semibold text-sm hover:gap-3 transition-all"
+            className="inline-flex items-center gap-2 text-cta font-heading font-semibold text-sm hover:gap-3 transition-all"
           >
             En Savoir Plus
             <ArrowRight className="w-4 h-4" />

@@ -44,12 +44,17 @@ const ServiceDetail = () => {
       <WhatsAppButton />
 
       {/* Hero */}
-      <section className="relative py-20 md:py-28 bg-secondary overflow-hidden">
-        {service.images[0] && (
-          <div className="absolute inset-0">
-            <img src={service.images[0]} alt={service.title} className="w-full h-full object-cover opacity-10" />
-          </div>
-        )}
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={service.images[0] || headerBg}
+            alt=""
+            aria-hidden="true"
+            className="w-full h-full object-cover"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-construction-charcoal/90 via-construction-charcoal/75 to-construction-charcoal/55" />
+        </div>
         <div className="container mx-auto px-4 relative z-10">
           <Link
             to="/services"
@@ -62,10 +67,10 @@ const ServiceDetail = () => {
             <div className="w-14 h-14 rounded-lg bg-primary/20 flex items-center justify-center mb-6">
               <Icon className="w-7 h-7 text-primary" />
             </div>
-            <h1 className="font-heading font-black text-4xl md:text-5xl text-secondary-foreground mb-6">
+            <h1 className="font-heading font-black text-4xl md:text-5xl text-white mb-6">
               {service.title}
             </h1>
-            <p className="text-secondary-foreground/70 text-lg leading-relaxed">{service.shortDescription}</p>
+            <p className="text-white/85 text-lg leading-relaxed">{service.shortDescription}</p>
           </motion.div>
         </div>
       </section>

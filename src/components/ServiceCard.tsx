@@ -26,7 +26,7 @@ export function ServiceCard({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: true }}
-      className="group bg-card sm:rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow border-y sm:border border-border flex flex-col -mx-4 sm:mx-0"
+      className="group bg-card sm:rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow border-y sm:border border-border flex flex-col -mx-4 sm:mx-0 w-screen sm:w-auto"
     >
       {image && (
         <div className="h-48 overflow-hidden">

@@ -5,6 +5,7 @@ import { X } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { PageHeader } from "@/components/PageHeader";
 import fieldConsultation from "@/assets/activities/field-consultation.jpg";
 import fieldConsultation2 from "@/assets/activities/field-consultation-2.jpg";
 import consultationMairie from "@/assets/activities/consultation-mairie.jpg";
@@ -70,23 +71,11 @@ const Gallery = () => {
       <Header />
       <WhatsAppButton />
 
-      {/* Hero */}
-      <section className="relative py-20 md:py-28 bg-secondary">
-        <div className="container mx-auto px-4">
-          <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0} className="max-w-2xl">
-            <p className="text-primary font-heading font-semibold text-sm uppercase tracking-widest mb-3">
-              Galerie Photos
-            </p>
-            <h1 className="font-heading font-black text-4xl md:text-5xl text-secondary-foreground mb-6">
-              Nos Activités en Images
-            </h1>
-            <p className="text-secondary-foreground/70 text-lg leading-relaxed">
-              Découvrez CABINET IVATIS sur le terrain : consultations communautaires, audits,
-              levés topographiques, formations et inspections de chantier à travers le Bénin et l'Afrique de l'Ouest.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHeader
+        eyebrow="Galerie Photos"
+        title="Nos Activités en Images"
+        description="Découvrez CABINET IVATIS sur le terrain : consultations communautaires, audits, levés topographiques, formations et inspections de chantier à travers le Bénin et l'Afrique de l'Ouest."
+      />
 
       {/* Gallery Grid */}
       <section className="py-20 md:py-28 bg-background">

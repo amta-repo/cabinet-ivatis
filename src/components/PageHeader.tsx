@@ -1,21 +1,22 @@
 import { motion } from "framer-motion";
-import headerBg from "@/assets/header-apropos.jpg";
+import defaultBg from "@/assets/header-apropos.jpg";
 
 interface PageHeaderProps {
   eyebrow?: string;
   title: string;
   description?: string;
+  backgroundImage?: string;
 }
 
 /**
  * Reusable hero/header for inner pages with image background and dark overlay.
  */
-export function PageHeader({ eyebrow, title, description }: PageHeaderProps) {
+export function PageHeader({ eyebrow, title, description, backgroundImage }: PageHeaderProps) {
   return (
     <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src={headerBg}
+          src={backgroundImage ?? defaultBg}
           alt=""
           aria-hidden="true"
           className="w-full h-full object-cover"

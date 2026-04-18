@@ -147,6 +147,19 @@ const Index = () => {
 
         <div className="container mx-auto px-4 relative z-10 pt-40 pb-32 md:pt-48 md:pb-40">
           <div className="max-w-2xl">
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.05 }}
+              className="flex justify-end mb-3"
+            >
+              <span className="inline-flex items-center gap-1.5 bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-full px-2.5 py-1">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+                <span className="text-primary font-heading font-semibold text-[10px] uppercase tracking-wider">
+                  Ingénierie Environnementale & Sociale
+                </span>
+              </span>
+            </motion.div>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -164,17 +177,6 @@ const Index = () => {
             >
               EIES, audits, topographie GPS, formation HSE et BTP — la conformité et la durabilité réunies.
             </motion.p>
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.25 }}
-              className="inline-flex items-center gap-2 bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-full px-4 py-2 mb-8"
-            >
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-primary font-heading font-semibold text-xs sm:text-sm uppercase tracking-wider">
-                Ingénierie Environnementale & Sociale
-              </span>
-            </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

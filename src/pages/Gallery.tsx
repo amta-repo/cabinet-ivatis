@@ -6,6 +6,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { PageHeader } from "@/components/PageHeader";
+import headerGallery from "@/assets/header-gallery.jpg";
 import fieldConsultation from "@/assets/activities/field-consultation.jpg";
 import fieldConsultation2 from "@/assets/activities/field-consultation-2.jpg";
 import consultationMairie from "@/assets/activities/consultation-mairie.jpg";
@@ -75,6 +76,7 @@ const Gallery = () => {
         eyebrow="Galerie Photos"
         title="Nos Activités en Images"
         description="Découvrez CABINET IVATIS sur le terrain : consultations communautaires, audits, levés topographiques, formations et inspections de chantier à travers le Bénin et l'Afrique de l'Ouest."
+        backgroundImage={headerGallery}
       />
 
       {/* Gallery Grid */}

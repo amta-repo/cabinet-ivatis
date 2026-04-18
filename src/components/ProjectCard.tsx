@@ -23,7 +23,7 @@ export function ProjectCard({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
       viewport={{ once: true }}
-      className="group bg-card rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-border"
+      className="group bg-card sm:rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow border-y sm:border border-border -mx-4 sm:mx-0 w-screen sm:w-auto"
     >
       <div className="h-56 overflow-hidden">
         <img

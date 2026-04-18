@@ -8,6 +8,7 @@ import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ProjectCard } from "@/components/ProjectCard";
 import { PageHeader } from "@/components/PageHeader";
+import headerAchievements from "@/assets/header-achievements.jpg";
 import ctaBackground from "@/assets/cta-background.jpeg";
 import formationSauvegarde4 from "@/assets/activities/formation-sauvegarde-4.jpg";
 import auditGolden from "@/assets/activities/audit-golden.jpg";
@@ -90,6 +91,7 @@ const Projects = () => {
         eyebrow="Nos Réalisations"
         title="Projets Réalisés"
         description="Découvrez notre portfolio de projets en ingénierie environnementale, topographie, formation et BTP au Bénin et en Afrique de l'Ouest."
+        backgroundImage={headerAchievements}
       />
 
       {/* Filter Tabs */}

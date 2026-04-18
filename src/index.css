@@ -127,7 +127,14 @@
   }
 
   body {
-    @apply bg-background text-foreground font-body antialiased;
+    @apply text-foreground font-body antialiased;
+    background-color: hsl(var(--background));
+    background-image:
+      linear-gradient(hsl(var(--background) / 0.92), hsl(var(--background) / 0.92)),
+      url('/src/assets/background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
   }
 
   h1, h2, h3, h4, h5, h6 {

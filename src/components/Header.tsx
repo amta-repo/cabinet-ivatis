@@ -89,19 +89,19 @@ export function Header() {
                           transition={{ duration: 0.15 }}
                           className="absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[26rem]"
                         >
-                          <div className="bg-transparent backdrop-blur-md rounded-lg shadow-xl border border-white/20 overflow-hidden">
+                          <div className="bg-white/50 backdrop-blur-md rounded-lg shadow-xl border border-white/40 overflow-hidden">
                             {servicesData.slice(0, SERVICES_PREVIEW_COUNT).map((s) => (
                               <Link
                                 key={s.slug}
                                 to={`/services/${s.slug}`}
-                                className="block px-4 py-2 text-xs text-cta hover:bg-white/10 hover:text-cta/80 transition-colors"
+                                className="block px-4 py-2 text-xs font-medium text-[hsl(35,95%,50%)] hover:bg-white/40 hover:text-[hsl(28,95%,45%)] transition-colors"
                               >
                                 {s.title}
                               </Link>
                             ))}
                             <Link
                               to="/services"
-                              className="block px-4 py-2.5 text-xs font-heading font-bold uppercase tracking-wider text-white border-t border-white/20 hover:bg-white/10 text-center"
+                              className="block px-4 py-2.5 text-xs font-heading font-bold uppercase tracking-wider text-foreground border-t border-white/40 hover:bg-white/40 text-center"
                             >
                               Voir plus →
                             </Link>

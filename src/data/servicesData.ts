@@ -13,8 +13,6 @@ import audit3 from "@/assets/activities/audit-3.jpg";
 import audit4 from "@/assets/activities/audit-4.jpg";
 import auditGolden from "@/assets/activities/audit-golden.jpg";
 import eies1 from "@/assets/activities/eies-1.jpg";
-import eies2 from "@/assets/activities/eies-2.jpg";
-import eies3 from "@/assets/activities/eies-3.jpg";
 import coastal1 from "@/assets/activities/coastal-1.jpg";
 import coastal2 from "@/assets/activities/coastal-2.jpg";
 import coastal3 from "@/assets/activities/coastal-3.jpg";

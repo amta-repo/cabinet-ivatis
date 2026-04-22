@@ -32,6 +32,9 @@ import auditMain from "@/assets/services/audit-main.jpg";
 import suiviMain from "@/assets/services/suivi-main.jpg";
 import eessMain from "@/assets/services/eess-main.jpg";
 import cgesMain from "@/assets/services/cges-main.jpg";
+import auditParPgesMain from "@/assets/services/audit-par-pges-main.jpg";
+import pmppMain from "@/assets/services/pmpp-main.jpg";
+import pgrcpMain from "@/assets/services/pgrcp-main.jpg";
 
 import {
   Target,
@@ -155,7 +158,8 @@ export const servicesData: ServiceData[] = [
       "Recommandations d'amélioration",
       "Rapports d'audit détaillés",
     ],
-    images: [auditGolden, environnement1],
+    images: [auditParPgesMain],
+    imageCaptions: ["Audit des PAR et des PGES"],
   },
   {
     slug: "pmpp",
@@ -172,7 +176,8 @@ export const servicesData: ServiceData[] = [
       "Stratégies de communication adaptées",
       "Suivi de l'engagement des parties prenantes",
     ],
-    images: [formationSauvegarde, auditGolden],
+    images: [pmppMain],
+    imageCaptions: ["Plan de Mobilisation des Parties Prenantes (PMPP)"],
   },
   {
     slug: "suivi-par-pges",
@@ -260,7 +265,8 @@ export const servicesData: ServiceData[] = [
       "Procédures de découverte fortuite",
       "Consultation des communautés locales",
     ],
-    images: [environnement1, coastal1],
+    images: [pgrcpMain],
+    imageCaptions: ["Plan de Gestion des Ressources Culturelles Physiques (PGRCP)"],
   },
   {
     slug: "gestion-marine-cotiere",

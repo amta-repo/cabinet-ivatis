@@ -6,7 +6,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { PageHeader } from "@/components/PageHeader";
-import { AnimatedCounter } from "@/components/AnimatedCounter";
+import { DonutStats } from "@/components/DonutStats";
 import reunionGolden from "@/assets/activities/reunion-golden.jpg";
 import cabinetFront from "@/assets/activities/cabinet-front.jpg";
 import energieStation from "@/assets/activities/energie-station.jpg";
@@ -271,21 +271,10 @@ const About = () => {
         </div>
       </section>
 
-      {/* Stats — moved under Nos Domaines d'Intervention */}
-      <section className="bg-cta py-6">
+      {/* Stats — donut chart variant matching homepage */}
+      <section className="py-16 md:py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {stats.map((stat) => (
-              <AnimatedCounter
-                key={stat.label}
-                value={stat.value}
-                label={stat.label}
-                className="py-4"
-                valueClassName="text-cta-foreground"
-                labelClassName="text-cta-foreground/80"
-              />
-            ))}
-          </div>
+          <DonutStats stats={stats} />
         </div>
       </section>
 

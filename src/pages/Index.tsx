@@ -23,6 +23,10 @@ import heroBackground from "@/assets/hero-background1.jpg";
 import heroTrans from "@/assets/hero-trans.jpg";
 import heroTrans1 from "@/assets/hero-trans1.jpg";
 import heroTrans2 from "@/assets/hero-trans2.jpg";
+import eiesMain from "@/assets/services/eies-main.jpg";
+import parcMain from "@/assets/services/parc-main.jpg";
+import auditMain from "@/assets/services/audit-main.jpg";
+import suiviMain from "@/assets/services/suivi-main.jpg";
 
 const heroImages = [
   { src: heroBackground, alt: "CABINET IVATIS — équipe sur le terrain au Bénin" },
@@ -46,21 +50,21 @@ const services = [
     title: "Étude d'Impact Environnemental et Social (EIES)",
     description: "Analyse détaillée des impacts potentiels d'un projet sur l'environnement et les communautés.",
     slug: "eies",
-    image: environnement1,
+    image: eiesMain,
   },
   {
     icon: Users,
     title: "Plan d'Action de Réinstallation et de Compensation (PARC)",
     description: "Plan détaillé visant à indemniser et réinstaller les populations affectées par un projet.",
     slug: "parc",
-    image: consultationMairie,
+    image: parcMain,
   },
   {
     icon: Shield,
     title: "Audit environnemental et social",
     description: "Évaluation indépendante de la conformité environnementale et sociale d'un projet ou d'une installation.",
     slug: "audit-environnemental",
-    image: auditGolden,
+    image: auditMain,
   },
   {
     icon: GraduationCap,
@@ -81,7 +85,7 @@ const services = [
     title: "Suivi Environnemental et Social",
     description: "Suivi environnemental et social de chantiers, contrôle qualité et reporting.",
     slug: "suivi-par-pges",
-    image: consultationMairie,
+    image: suiviMain,
   },
   {
     icon: Compass,

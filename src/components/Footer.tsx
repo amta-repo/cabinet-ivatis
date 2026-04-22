@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Youtube, Mail, Phone, MapPin } from "lucide-react";
 import logoIvatis from "@/assets/logo-ivatis.png";
+import { WorldMapLocation } from "@/components/WorldMapLocation";
 
 const footerLinks = {
   company: [
@@ -28,7 +29,7 @@ export function Footer() {
   return (
     <footer className="bg-[hsl(220,15%,10%)] text-white/90">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Logo & about */}
           <div className="space-y-4">
             <Link to="/" className="inline-flex items-center gap-3">
@@ -135,6 +136,15 @@ export function Footer() {
                 <span>Calavi St Louis, Abomey-Calavi, Bénin<br />BP 1495 Calavi</span>
               </li>
             </ul>
+          </div>
+
+          {/* World map with location marker */}
+          <div>
+            <h3 className="font-heading font-bold text-lg mb-4 text-primary">Notre Localisation</h3>
+            <WorldMapLocation />
+            <p className="text-xs text-white/50 mt-2">
+              Abomey-Calavi, Bénin — Afrique de l'Ouest
+            </p>
           </div>
         </div>
       </div>

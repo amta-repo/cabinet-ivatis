@@ -28,6 +28,12 @@ import batiment4 from "@/assets/activities/batiment-4.jpg";
 import formationSauvegarde from "@/assets/activities/formation-sauvegarde.jpg";
 import formationSecurisme from "@/assets/activities/formation-securisme.jpg";
 import formationSecurisme2 from "@/assets/activities/formation-securisme-2.jpg";
+import eiesMain from "@/assets/services/eies-main.jpg";
+import parcMain from "@/assets/services/parc-main.jpg";
+import auditMain from "@/assets/services/audit-main.jpg";
+import suiviMain from "@/assets/services/suivi-main.jpg";
+import eessMain from "@/assets/services/eess-main.jpg";
+import cgesMain from "@/assets/services/cges-main.jpg";
 
 import {
   Target,

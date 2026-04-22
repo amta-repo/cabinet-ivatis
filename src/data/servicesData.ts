@@ -244,7 +244,8 @@ export const servicesData: ServiceData[] = [
       "Restauration des moyens de subsistance",
       "Mécanismes de suivi et d'évaluation",
     ],
-    images: [formationSauvegarde, environnement1],
+    images: [parcMain],
+    imageCaptions: ["Plan d'Action de Réinstallation et de Compensation (PARC)"],
   },
   {
     slug: "pgrcp",

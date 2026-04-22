@@ -82,7 +82,8 @@ export const servicesData: ServiceData[] = [
       "Intégration des principes de développement durable",
       "Consultation des parties prenantes au niveau stratégique",
     ],
-    images: [environnement1, eies1],
+    images: [eessMain],
+    imageCaptions: ["Évaluation Environnementale et Sociale Stratégique (EESS)"],
   },
   {
     slug: "cges",
@@ -99,7 +100,8 @@ export const servicesData: ServiceData[] = [
       "Plan de renforcement des capacités",
       "Mécanismes de suivi et évaluation",
     ],
-    images: [environnement1, auditGolden],
+    images: [cgesMain],
+    imageCaptions: ["Cadre de Gestion Environnementale et Sociale (CGES)"],
   },
   {
     slug: "eies",
@@ -117,8 +119,8 @@ export const servicesData: ServiceData[] = [
       "Consultations publiques et participation communautaire",
       "Conformité aux normes nationales et internationales",
     ],
-    images: [eies1, eies2, eies3],
-    imageCaptions: ["EIES des installations solaires", "EIES des dragages de sable", "Analyse sur le terrain"],
+    images: [eiesMain],
+    imageCaptions: ["Étude d'Impact Environnemental et Social (EIES)"],
   },
   {
     slug: "audit-environnemental",
@@ -137,14 +139,8 @@ export const servicesData: ServiceData[] = [
       "Vérification de la conformité réglementaire",
       "Identification des écarts et actions correctives",
     ],
-    images: [audit1, audit2, audit3, audit4, auditGolden],
-    imageCaptions: [
-      "Audit à la Centrale Électrique de Parakou",
-      "Audit de la Société ORYX SA",
-      "Audit du Port Autonome de Cotonou",
-      "Audit de la Société de Ciment du Bénin",
-      "Audit environnemental — Golden Tulip",
-    ],
+    images: [auditMain],
+    imageCaptions: ["Audit environnemental et social"],
   },
   {
     slug: "audit-par-pges",
@@ -195,7 +191,8 @@ export const servicesData: ServiceData[] = [
       "Recommandations d'ajustement",
       "Formation des équipes de terrain",
     ],
-    images: [environnement1, auditGolden],
+    images: [suiviMain],
+    imageCaptions: ["Suivi environnemental et social"],
   },
   {
     slug: "cprp",

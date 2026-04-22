@@ -3,8 +3,10 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import logoIvatis from "@/assets/logo-ivatis.jpg";
+import logoIvatis from "@/assets/logo-ivatis.png";
 import { servicesData } from "@/data/servicesData";
+
+const SERVICES_PREVIEW_COUNT = 6;
 
 const navLinks = [
   { name: "Accueil", path: "/" },
@@ -87,22 +89,22 @@ export function Header() {
                           transition={{ duration: 0.15 }}
                           className="absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[26rem]"
                         >
-                          <div className="bg-white/95 backdrop-blur-md rounded-lg shadow-xl border border-border overflow-hidden max-h-[70vh] overflow-y-auto">
-                            <Link
-                              to="/services"
-                              className="block px-4 py-2.5 text-xs font-heading font-bold uppercase tracking-wider text-primary border-b border-border hover:bg-primary/5"
-                            >
-                              Tous nos services →
-                            </Link>
-                            {servicesData.map((s) => (
+                          <div className="bg-transparent backdrop-blur-md rounded-lg shadow-xl border border-white/20 overflow-hidden">
+                            {servicesData.slice(0, SERVICES_PREVIEW_COUNT).map((s) => (
                               <Link
                                 key={s.slug}
                                 to={`/services/${s.slug}`}
-                                className="block px-4 py-2 text-xs text-foreground hover:bg-primary/5 hover:text-primary transition-colors"
+                                className="block px-4 py-2 text-xs text-cta hover:bg-white/10 hover:text-cta/80 transition-colors"
                               >
                                 {s.title}
                               </Link>
                             ))}
+                            <Link
+                              to="/services"
+                              className="block px-4 py-2.5 text-xs font-heading font-bold uppercase tracking-wider text-white border-t border-white/20 hover:bg-white/10 text-center"
+                            >
+                              Voir plus →
+                            </Link>
                           </div>
                         </motion.div>
                       )}

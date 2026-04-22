@@ -39,11 +39,31 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+
+    // Build a WhatsApp message that clearly indicates it was sent from the website
+    const waNumber = "2290197203303";
+    const lines = [
+      "*Nouveau message — envoyé depuis le site web cabinetivatis.com*",
+      "",
+      `*Nom :* ${formData.name}`,
+      `*Email :* ${formData.email}`,
+      formData.phone ? `*Téléphone :* ${formData.phone}` : null,
+      `*Sujet :* ${formData.subject}`,
+      "",
+      "*Message :*",
+      formData.message,
+    ].filter(Boolean).join("\n");
+    const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(lines)}`;
+
+    // Open WhatsApp in a new tab so the message is delivered to the company number,
+    // clearly tagged as coming from the website.
+    window.open(waUrl, "_blank", "noopener,noreferrer");
+
+    await new Promise((resolve) => setTimeout(resolve, 800));
     toast({
-      title: "Message envoyé !",
+      title: "Message prêt à être envoyé !",
       description:
-        "Nous avons bien reçu votre message et vous répondrons dans les plus brefs délais.",
+        "WhatsApp s'est ouvert avec votre message — appuyez sur Envoyer pour finaliser. Nous vous répondrons dans les plus brefs délais.",
     });
     setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
     setIsSubmitting(false);

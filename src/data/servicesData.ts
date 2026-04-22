@@ -225,7 +225,7 @@ export const servicesData: ServiceData[] = [
       "Estimation des coûts de mise en œuvre",
       "Calendrier de mise en œuvre",
     ],
-    images: [environnement1, eies2],
+    images: [environnement1, eies1],
   },
   {
     slug: "parc",

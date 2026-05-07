@@ -1,18 +1,22 @@
 // Service detail data with slugs for routing and image assignments
 
 // Activity images
+import amenagementForet1 from "@/assets/activities/Aménagement participatif des forêts et aires protégées1.jpg"
 import energie1 from "@/assets/activities/energie-1.jpg";
 import energie2 from "@/assets/activities/energie-2.jpg";
 import energie3 from "@/assets/activities/energie-3.jpg";
 import energiePylone1 from "@/assets/activities/energie-pylone-1.jpg";
 import energiePylone2 from "@/assets/activities/energie-pylone-2.jpg";
-import environnement1 from "@/assets/activities/environnement-1.jpg";
+import environnement1 from "@/assets/activities/cprp.jpg";
+import environnement2 from "@/assets/activities/environnement-1.jpg"
 import audit1 from "@/assets/activities/audit-1.jpg";
 import audit2 from "@/assets/activities/audit-2.jpg";
 import audit3 from "@/assets/activities/audit-3.jpg";
 import audit4 from "@/assets/activities/audit-4.jpg";
 import auditGolden from "@/assets/activities/audit-golden.jpg";
+import biodiversite1 from "@/assets/activities/Conservation des milieux naturels et de la biodiversité.jpg"
 import eies1 from "@/assets/activities/eies-1.jpg";
+import humide1 from "@/assets/activities/protection-zone-humides.jpg"
 import coastal1 from "@/assets/activities/coastal-1.jpg";
 import coastal2 from "@/assets/activities/coastal-2.jpg";
 import coastal3 from "@/assets/activities/coastal-3.jpg";
@@ -212,7 +216,7 @@ export const servicesData: ServiceData[] = [
       "Mécanismes de plainte et de recours",
       "Budget estimatif et sources de financement",
     ],
-    images: [environnement1, formationSauvegarde],
+    images: [environnement2, formationSauvegarde],
   },
   {
     slug: "pges",
@@ -301,7 +305,7 @@ export const servicesData: ServiceData[] = [
       "Sensibilisation des communautés",
       "Suivi environnemental",
     ],
-    images: [coastal1, coastal3],
+    images: [humide1, coastal3],
   },
   {
     slug: "biodiversite",
@@ -318,7 +322,7 @@ export const servicesData: ServiceData[] = [
       "Mesures de compensation écologique",
       "Suivi écologique des espèces et habitats",
     ],
-    images: [environnement1, coastal2],
+    images: [biodiversite1, coastal2],
   },
   {
     slug: "forets-aires-protegees",
@@ -335,7 +339,7 @@ export const servicesData: ServiceData[] = [
       "Restauration des terres dégradées",
       "Formation et renforcement des capacités communautaires",
     ],
-    images: [environnement1, coastal1],
+    images: [amenagementForet1, coastal1],
   },
   {
     slug: "sites-touristiques",

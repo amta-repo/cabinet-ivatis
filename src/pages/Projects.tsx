@@ -44,7 +44,7 @@ const fadeUp = {
 
 const projects = [
   { image: auditGolden, title: "Audit Environnemental — Golden Tulip Le Diplomate", category: "Environnement", location: "Cotonou", description: "Audit environnemental complet de l'hôtel Golden Tulip Le Diplomate avec recommandations de conformité." },
-  { image: auditGolden2, title: "Audit de Conformité — Golden Tulip", category: "Environnement", location: "Cotonou", description: "Réunion de restitution et recommandations de conformité environnementale et sociale." },
+  // { image: auditGolden2, title: "Audit de Conformité — Golden Tulip", category: "Environnement", location: "Cotonou", description: "Réunion de restitution et recommandations de conformité environnementale et sociale." },
   { image: auditBetra, title: "Audit Environnemental — Société BETRA", category: "Environnement", location: "Bénin", description: "Audit environnemental de la Société BETRA SARL, évaluation des installations industrielles." },
   { image: auditBetra2, title: "Consultation — Société BETRA", category: "Environnement", location: "Bénin", description: "Réunion de consultation avec la direction de BETRA dans le cadre de l'audit environnemental." },
   { image: auditEnvironnemental, title: "Audit de la Société des Brasseries du Bénin (SOBEBRA)", category: "Environnement", location: "Bénin", description: "Audit environnemental et social de la Société des Brasseries du Bénin (SOBEBRA)." },

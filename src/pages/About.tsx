@@ -35,19 +35,19 @@ const stats = [
 
 const vision = [
   {
-    icon: Leaf,
-    // title: "Durabilité",
-    description: "Être un cabinet de référence en Afrique de l’Ouest dans les domaines de l’expertise environnementale, sociale et du développement durable, en proposant des solutions techniques fiables, innovantes et adaptées aux réalités des territoires",
+    icon: Eye,
+    title: "Notre Vision",
+    description: "Être un cabinet de référence en Afrique de l'Ouest dans les domaines de l'expertise environnementale, sociale et du développement durable, en proposant des solutions techniques fiables, innovantes et adaptées aux réalités des territoires.",
   },
   {
-    icon: Users,
-    // title: "Capital Humain",
+    icon: Target,
+    title: "Notre Mission",
     description: "Apporter aux acteurs publics et privés des solutions techniques de qualité favorisant la conformité réglementaire, la prévention des risques, la durabilité environnementale et la performance des projets de développement.",
   },
 ];
 
 const values = [
-   {
+  {
     icon: Award,
     title: "Excellence Technique",
     description: "Nous garantissons des prestations rigoureuses, conformes aux standards nationaux et internationaux.",
@@ -57,22 +57,29 @@ const values = [
     title: "Professionnalisme",
     description: "Chaque mission est conduite avec méthode, exigence et sens de responsabilité.",
   },
-    {
+  {
     icon: Shield,
     title: "Intégrité",
-    description: "Nous plaçons l’éthique, la transparence et la crédibilité au cœur de nos interventions.",
+    description: "Nous plaçons l'éthique, la transparence et la crédibilité au cœur de nos interventions.",
   },
   {
-    icon: bulb,
+    icon: Lightbulb,
     title: "Innovation et adaptation",
     description: "Nous développons des approches contextualisées répondant aux réalités du terrain et aux exigences des clients.",
   },
   {
-    icon: bulb,
+    icon: Lightbulb,
     title: "Engagement pour le développement durable",
     description: "Nous œuvrons pour un équilibre durable entre performance économique, protection environnementale et inclusion sociale.",
   },
+];
 
+const reasons = [
+  "Une expertise multidisciplinaire et expérimentée.",
+  "Une forte maîtrise des exigences réglementaires environnementales et sociales.",
+  "Une expérience confirmée dans les missions d'études, d'audit et de suivi.",
+  "Une approche participative et orientée résultats.",
+  "Un accompagnement technique personnalisé et de proximité.",
 ];
 
 const experiences = [

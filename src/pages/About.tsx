@@ -249,23 +249,29 @@ const About = () => {
             <h2 className="font-heading font-black text-3xl md:text-4xl text-foreground">Ce Qui Nous Guide</h2>
           </motion.div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((v, i) => (
-              <motion.div
-                key={v.title}
-                custom={i + 1}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                className="bg-card rounded-lg p-6 text-center shadow-sm border border-border"
-              >
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <v.icon className="w-7 h-7 text-primary" />
-                </div>
-                <h3 className="font-heading font-bold text-lg text-card-foreground mb-2">{v.title}</h3>
-                <p className="text-muted-foreground text-sm">{v.description}</p>
-              </motion.div>
-            ))}
+            {values.map((v, i) => {
+              const isLast = i === values.length - 1;
+              return (
+                <motion.div
+                  key={v.title}
+                  custom={i + 1}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeUp}
+                  whileHover={{ y: -8, scale: 1.02 }}
+                  className={`bg-card rounded-lg p-6 text-center shadow-sm border border-border transition-all duration-300 hover:shadow-2xl hover:border-primary/40 hover:bg-gradient-to-br hover:from-white hover:to-amber-50 cursor-pointer group ${
+                    isLast ? "sm:col-span-2 lg:col-span-4 sm:max-w-sm sm:mx-auto" : ""
+                  }`}
+                >
+                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-primary/20 group-hover:scale-110 group-hover:rotate-6">
+                    <v.icon className="w-7 h-7 text-primary" />
+                  </div>
+                  <h3 className="font-heading font-bold text-lg text-card-foreground mb-2">{v.title}</h3>
+                  <p className="text-muted-foreground text-sm">{v.description}</p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>

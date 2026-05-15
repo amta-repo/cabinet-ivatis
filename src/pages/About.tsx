@@ -268,7 +268,46 @@ const About = () => {
         </div>
       </section>
 
-      {/* Values Headline */}
+      {/* Why Choose IVATIS Section */}
+      <section className="py-20 md:py-28 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="text-center mb-12">
+              <p className="text-primary font-heading font-semibold text-sm uppercase tracking-widest mb-3">Notre Différence</p>
+              <h2 className="font-heading font-black text-3xl md:text-4xl text-foreground">Pourquoi choisir IVATIS ?</h2>
+            </motion.div>
+            <div className="grid md:grid-cols-2 gap-4 mb-10">
+              {reasons.map((r, i) => (
+                <motion.div
+                  key={r}
+                  custom={i + 1}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeUp}
+                  className="flex items-start gap-3 p-5 bg-card rounded-lg border border-border shadow-sm"
+                >
+                  <CheckCircle2 className="w-6 h-6 text-primary shrink-0 mt-0.5" />
+                  <p className="text-card-foreground text-sm md:text-base leading-relaxed">{r}</p>
+                </motion.div>
+              ))}
+            </div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeUp}
+              custom={reasons.length + 1}
+              className="p-6 md:p-8 bg-primary/5 border-l-4 border-primary rounded-lg"
+            >
+              <p className="text-foreground text-base md:text-lg leading-relaxed italic">
+                Au Cabinet IVATIS, nous croyons qu'un projet durable est un projet techniquement solide,
+                socialement responsable et respectueux de l'environnement.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
       <section className="py-20 md:py-28 bg-secondary">
         <div className="container mx-auto px-4">
           <motion.div

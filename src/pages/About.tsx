@@ -171,12 +171,13 @@ const About = () => {
                     Prestations de maîtrise d'œuvre
                   </h4>
                   <p className="text-sm text-muted-foreground">
-                    Études d’Impact Environnemental et Social (EIES), des audits environnementaux et sociaux,
-                    des Plans de Gestion Environnementale et Sociale (PGES), des Cadres de Gestion 
-                    Environnementale et Sociale (CGES), des Plans d’Action de Réinstallation (PAR), des 
-                    Plans d’Opération Interne (POI), des plans d’urgence, des études de conformité, ainsi 
-                    que des missions d’assistance technique, de suivi-évaluation et de renforcement des 
+                    Études d'Impact Environnemental et Social (EIES), des audits environnementaux et sociaux,
+                    des Plans de Gestion Environnementale et Sociale (PGES), des Cadres de Gestion
+                    Environnementale et Sociale (CGES), des Plans d'Action de Réinstallation (PAR), des
+                    Plans d'Opération Interne (POI), des plans d'urgence, des études de conformité, ainsi
+                    que des missions d'assistance technique, de suivi-évaluation et de renforcement des
                     capacités.
+                  </p>
                 </div>
                 {/* <div className="p-4 bg-muted rounded-lg border-l-4 border-primary">
                   <h4 className="font-heading font-bold text-foreground mb-2">

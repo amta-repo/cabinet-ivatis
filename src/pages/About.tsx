@@ -1,7 +1,7 @@
 import { SeoHelmet } from "@/components/SeoHelmet";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Leaf, Users, Award, Shield, ArrowRight, Zap, Truck, Building2, Globe, GraduationCap } from "lucide-react";
+import { Leaf, Users, Award, Shield, ArrowRight, Zap, Truck, Building2, Globe, GraduationCap, Lightbulb, CheckCircle2, Eye, Target } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";

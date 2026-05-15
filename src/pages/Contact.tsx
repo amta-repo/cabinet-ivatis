@@ -45,14 +45,14 @@ const Contact = () => {
     const lines = [
       "*Nouveau message — envoyé depuis le site web cabinetivatis.com*",
       "",
+      `*Sujet :* ${formData.subject}`,
       `*Nom :* ${formData.name}`,
       `*Email :* ${formData.email}`,
-      formData.phone ? `*Téléphone :* ${formData.phone}` : null,
-      `*Sujet :* ${formData.subject}`,
+      `*Téléphone :* ${formData.phone || "Non renseigné"}`,
       "",
       "*Message :*",
       formData.message,
-    ].filter(Boolean).join("\n");
+    ].join("\n");
     const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(lines)}`;
 
     // Open WhatsApp in a new tab so the message is delivered to the company number,

@@ -1,7 +1,7 @@
 import { SeoHelmet } from "@/components/SeoHelmet";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Leaf, Users, Award, Shield, ArrowRight, Zap, Truck, Building2, Globe, GraduationCap, Lightbulb, CheckCircle2, Eye, Target } from "lucide-react";
+import { Leaf, Users, Award, Shield, ArrowRight, Zap, Truck, Building2, Globe, GraduationCap, Lightbulb, CircleUser, CheckCircle2, Eye, Target } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
@@ -68,7 +68,7 @@ const values = [
     description: "Nous développons des approches contextualisées répondant aux réalités du terrain et aux exigences des clients.",
   },
   {
-    icon: Lightbulb,
+    icon: CircleUser,
     title: "Engagement pour le développement durable",
     description: "Nous œuvrons pour un équilibre durable entre performance économique, protection environnementale et inclusion sociale.",
   },
@@ -167,9 +167,9 @@ const About = () => {
               </div>
               <div className="space-y-4 mt-6">
                 <div className="p-4 bg-muted rounded-lg border-l-4 border-primary">
-                  <h4 className="font-heading font-bold text-foreground mb-2">
+                  {/* <h4 className="font-heading font-bold text-foreground mb-2">
                     Prestations de maîtrise d'œuvre
-                  </h4>
+                  </h4> */}
                   <p className="text-sm text-muted-foreground">
                     Études d'Impact Environnemental et Social (EIES), des audits environnementaux et sociaux,
                     des Plans de Gestion Environnementale et Sociale (PGES), des Cadres de Gestion

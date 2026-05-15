@@ -137,14 +137,6 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* World map with location marker */}
-          <div>
-            <h3 className="font-heading font-bold text-lg mb-4 text-primary">Notre Localisation</h3>
-            <WorldMapLocation />
-            <p className="text-xs text-white/50 mt-2">
-              Abomey-Calavi, Bénin — Afrique de l'Ouest
-            </p>
-          </div>
         </div>
       </div>
 

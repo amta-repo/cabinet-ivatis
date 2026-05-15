@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Youtube, Mail, Phone, MapPin } from "lucide-react";
 import logoIvatis from "@/assets/logo-ivatis.png";
-import { WorldMapLocation } from "@/components/WorldMapLocation";
 
 const footerLinks = {
   company: [

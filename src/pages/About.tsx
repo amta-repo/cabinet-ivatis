@@ -47,26 +47,32 @@ const vision = [
 ];
 
 const values = [
+   {
+    icon: Award,
+    title: "Excellence Technique",
+    description: "Nous garantissons des prestations rigoureuses, conformes aux standards nationaux et internationaux.",
+  },
   {
     icon: Leaf,
-    title: "Durabilité",
-    description: "Le développement durable est une préoccupation constante des interventions d'IVATIS.",
+    title: "Professionnalisme",
+    description: "Chaque mission est conduite avec méthode, exigence et sens de responsabilité.",
   },
-  {
-    icon: Users,
-    title: "Capital Humain",
-    description: "IVATIS fait de son capital humain une valeur fondamentale et une priorité constante d'investissement.",
-  },
-  {
-    icon: Award,
-    title: "Excellence",
-    description: "Une culture d'entreprise fondée sur des valeurs d'éthique et de rentabilité.",
-  },
-  {
+    {
     icon: Shield,
     title: "Intégrité",
-    description: "Nos rapports et études sont rigoureux, objectifs et conformes aux standards internationaux.",
+    description: "Nous plaçons l’éthique, la transparence et la crédibilité au cœur de nos interventions.",
   },
+  {
+    icon: bulb,
+    title: "Innovation et adaptation",
+    description: "Nous développons des approches contextualisées répondant aux réalités du terrain et aux exigences des clients.",
+  },
+  {
+    icon: bulb,
+    title: "Engagement pour le développement durable",
+    description: "Nous œuvrons pour un équilibre durable entre performance économique, protection environnementale et inclusion sociale.",
+  },
+
 ];
 
 const experiences = [

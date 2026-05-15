@@ -204,13 +204,11 @@ const About = () => {
       </section>
 
 
-        {/* Vision and Mission Section */}
-{/* Vison and Mission */}
-      <section className="py-20 md:py-28 bg-muted">
+      {/* Vision and Mission Section */}
+      <section className="py-20 md:py-28 bg-gradient-to-br from-sky-50 via-sky-100/60 to-blue-50">
         <div className="container mx-auto px-4">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="text-center mb-16">
             <p className="text-primary font-heading font-semibold text-sm uppercase tracking-widest mb-3">Nos Vision & Mission </p>
-            {/* <h2 className="font-heading font-black text-3xl md:text-4xl text-foreground">Ce Qui Nous Guide</h2> */}
           </motion.div>
           <div className="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {vision.map((v, i) => (
@@ -221,9 +219,10 @@ const About = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeUp}
-                className="bg-card rounded-lg p-6 text-center shadow-sm border border-border"
+                whileHover={{ y: -8, scale: 1.02 }}
+                className="bg-card rounded-lg p-6 text-center shadow-sm border border-border transition-all duration-300 hover:shadow-2xl hover:border-primary/40 hover:bg-gradient-to-br hover:from-white hover:to-sky-50 cursor-pointer group"
               >
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-primary/20 group-hover:scale-110 group-hover:rotate-6">
                   <v.icon className="w-7 h-7 text-primary" />
                 </div>
                 <h3 className="font-heading font-bold text-lg text-card-foreground mb-2">{v.title}</h3>
@@ -232,8 +231,11 @@ const About = () => {
             ))}
           </div>
         </div>
+        {/* Thin demarcation line */}
+        <div className="container mx-auto px-4 mt-20">
+          <div className="h-px max-w-4xl mx-auto bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+        </div>
       </section>
-{/* Vision and Mission section End */}
 
 
 

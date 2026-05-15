@@ -1,7 +1,7 @@
 import { SeoHelmet } from "@/components/SeoHelmet";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Leaf, Users, Award, Shield, ArrowRight, Zap, Truck, Building2, Globe, GraduationCap } from "lucide-react";
+import { Leaf, Users, Award, Shield, ArrowRight, Zap, Truck, Building2, Globe, GraduationCap, Lightbulb, CheckCircle2, Eye, Target } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
@@ -35,19 +35,19 @@ const stats = [
 
 const vision = [
   {
-    icon: Leaf,
-    // title: "Durabilité",
-    description: "Être un cabinet de référence en Afrique de l’Ouest dans les domaines de l’expertise environnementale, sociale et du développement durable, en proposant des solutions techniques fiables, innovantes et adaptées aux réalités des territoires",
+    icon: Eye,
+    title: "Notre Vision",
+    description: "Être un cabinet de référence en Afrique de l'Ouest dans les domaines de l'expertise environnementale, sociale et du développement durable, en proposant des solutions techniques fiables, innovantes et adaptées aux réalités des territoires.",
   },
   {
-    icon: Users,
-    // title: "Capital Humain",
+    icon: Target,
+    title: "Notre Mission",
     description: "Apporter aux acteurs publics et privés des solutions techniques de qualité favorisant la conformité réglementaire, la prévention des risques, la durabilité environnementale et la performance des projets de développement.",
   },
 ];
 
 const values = [
-   {
+  {
     icon: Award,
     title: "Excellence Technique",
     description: "Nous garantissons des prestations rigoureuses, conformes aux standards nationaux et internationaux.",
@@ -57,22 +57,29 @@ const values = [
     title: "Professionnalisme",
     description: "Chaque mission est conduite avec méthode, exigence et sens de responsabilité.",
   },
-    {
+  {
     icon: Shield,
     title: "Intégrité",
-    description: "Nous plaçons l’éthique, la transparence et la crédibilité au cœur de nos interventions.",
+    description: "Nous plaçons l'éthique, la transparence et la crédibilité au cœur de nos interventions.",
   },
   {
-    icon: bulb,
+    icon: Lightbulb,
     title: "Innovation et adaptation",
     description: "Nous développons des approches contextualisées répondant aux réalités du terrain et aux exigences des clients.",
   },
   {
-    icon: bulb,
+    icon: Lightbulb,
     title: "Engagement pour le développement durable",
     description: "Nous œuvrons pour un équilibre durable entre performance économique, protection environnementale et inclusion sociale.",
   },
+];
 
+const reasons = [
+  "Une expertise multidisciplinaire et expérimentée.",
+  "Une forte maîtrise des exigences réglementaires environnementales et sociales.",
+  "Une expérience confirmée dans les missions d'études, d'audit et de suivi.",
+  "Une approche participative et orientée résultats.",
+  "Un accompagnement technique personnalisé et de proximité.",
 ];
 
 const experiences = [
@@ -164,12 +171,13 @@ const About = () => {
                     Prestations de maîtrise d'œuvre
                   </h4>
                   <p className="text-sm text-muted-foreground">
-                    Études d’Impact Environnemental et Social (EIES), des audits environnementaux et sociaux,
-                    des Plans de Gestion Environnementale et Sociale (PGES), des Cadres de Gestion 
-                    Environnementale et Sociale (CGES), des Plans d’Action de Réinstallation (PAR), des 
-                    Plans d’Opération Interne (POI), des plans d’urgence, des études de conformité, ainsi 
-                    que des missions d’assistance technique, de suivi-évaluation et de renforcement des 
+                    Études d'Impact Environnemental et Social (EIES), des audits environnementaux et sociaux,
+                    des Plans de Gestion Environnementale et Sociale (PGES), des Cadres de Gestion
+                    Environnementale et Sociale (CGES), des Plans d'Action de Réinstallation (PAR), des
+                    Plans d'Opération Interne (POI), des plans d'urgence, des études de conformité, ainsi
+                    que des missions d'assistance technique, de suivi-évaluation et de renforcement des
                     capacités.
+                  </p>
                 </div>
                 {/* <div className="p-4 bg-muted rounded-lg border-l-4 border-primary">
                   <h4 className="font-heading font-bold text-foreground mb-2">
@@ -204,7 +212,7 @@ const About = () => {
             <p className="text-primary font-heading font-semibold text-sm uppercase tracking-widest mb-3">Nos Vision & Mission </p>
             {/* <h2 className="font-heading font-black text-3xl md:text-4xl text-foreground">Ce Qui Nous Guide</h2> */}
           </motion.div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {vision.map((v, i) => (
               <motion.div
                 key={v.title}
@@ -260,7 +268,46 @@ const About = () => {
         </div>
       </section>
 
-      {/* Values Headline */}
+      {/* Why Choose IVATIS Section */}
+      <section className="py-20 md:py-28 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="text-center mb-12">
+              <p className="text-primary font-heading font-semibold text-sm uppercase tracking-widest mb-3">Notre Différence</p>
+              <h2 className="font-heading font-black text-3xl md:text-4xl text-foreground">Pourquoi choisir IVATIS ?</h2>
+            </motion.div>
+            <div className="grid md:grid-cols-2 gap-4 mb-10">
+              {reasons.map((r, i) => (
+                <motion.div
+                  key={r}
+                  custom={i + 1}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeUp}
+                  className="flex items-start gap-3 p-5 bg-card rounded-lg border border-border shadow-sm"
+                >
+                  <CheckCircle2 className="w-6 h-6 text-primary shrink-0 mt-0.5" />
+                  <p className="text-card-foreground text-sm md:text-base leading-relaxed">{r}</p>
+                </motion.div>
+              ))}
+            </div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeUp}
+              custom={reasons.length + 1}
+              className="p-6 md:p-8 bg-primary/5 border-l-4 border-primary rounded-lg"
+            >
+              <p className="text-foreground text-base md:text-lg leading-relaxed italic">
+                Au Cabinet IVATIS, nous croyons qu'un projet durable est un projet techniquement solide,
+                socialement responsable et respectueux de l'environnement.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
       <section className="py-20 md:py-28 bg-secondary">
         <div className="container mx-auto px-4">
           <motion.div

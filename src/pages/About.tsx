@@ -212,7 +212,7 @@ const About = () => {
             <p className="text-primary font-heading font-semibold text-sm uppercase tracking-widest mb-3">Nos Vision & Mission </p>
             {/* <h2 className="font-heading font-black text-3xl md:text-4xl text-foreground">Ce Qui Nous Guide</h2> */}
           </motion.div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {vision.map((v, i) => (
               <motion.div
                 key={v.title}

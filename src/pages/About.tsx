@@ -33,6 +33,19 @@ const stats = [
   { value: "100%", label: "Conformité Garantie" },
 ];
 
+const vision = [
+  {
+    icon: Leaf,
+    // title: "Durabilité",
+    description: "Être un cabinet de référence en Afrique de l’Ouest dans les domaines de l’expertise environnementale, sociale et du développement durable, en proposant des solutions techniques fiables, innovantes et adaptées aux réalités des territoires",
+  },
+  {
+    icon: Users,
+    // title: "Capital Humain",
+    description: "Apporter aux acteurs publics et privés des solutions techniques de qualité favorisant la conformité réglementaire, la prévention des risques, la durabilité environnementale et la performance des projets de développement.",
+  },
+];
+
 const values = [
   {
     icon: Leaf,
@@ -124,15 +137,19 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
-              <h2 className="font-heading font-black text-3xl text-foreground mb-6">Un Parcours d'Excellence depuis 2009</h2>
+              <h2 className="font-heading font-black text-3xl text-foreground mb-6">Qui sommes-nous ?</h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Créé en 2009, IVATIS est abrité par un immeuble R+1 sis à Abomey-Calavi,
-                  Saint Louis dans la rue Général HOUNDEGNON.
+                 Le Cabinet IVATIS est un cabinet d’études, d’expertise et de conseils spécialisé dans les domaines de l’environnement, 
+                  du social, du développement durable, de la gestion des risques et de l’ingénierie territoriale.
                 </p>
                 <p>
-                  Leader dans les études environnementales au Bénin et en Afrique de l'Ouest, IVATIS dispose d'une
-                  équipe permanente d'experts et techniciens et assure :
+                  Depuis plusieurs années, nous accompagnons les administrations publiques, les collectivités territoriales, les entreprises privées, 
+                  les institutions de développement, les ONG ainsi que les partenaires techniques et financiers dans la conception, la mise en œuvre, 
+                  le suivi et l’évaluation de projets à fort impact environnemental et social.
+                </p>
+                <p>
+                 Notre cabinet intervient principalement dans la réalisation des:
                 </p>
               </div>
               <div className="space-y-4 mt-6">
@@ -141,11 +158,14 @@ const About = () => {
                     Prestations de maîtrise d'œuvre
                   </h4>
                   <p className="text-sm text-muted-foreground">
-                    Études techniques, études économiques, analyses environnementales,
-                    suivi environnemental, audits, management de la qualité, formation…
-                  </p>
+                    Études d’Impact Environnemental et Social (EIES), des audits environnementaux et sociaux,
+                    des Plans de Gestion Environnementale et Sociale (PGES), des Cadres de Gestion 
+                    Environnementale et Sociale (CGES), des Plans d’Action de Réinstallation (PAR), des 
+                    Plans d’Opération Interne (POI), des plans d’urgence, des études de conformité, ainsi 
+                    que des missions d’assistance technique, de suivi-évaluation et de renforcement des 
+                    capacités.
                 </div>
-                <div className="p-4 bg-muted rounded-lg border-l-4 border-primary">
+                {/* <div className="p-4 bg-muted rounded-lg border-l-4 border-primary">
                   <h4 className="font-heading font-bold text-foreground mb-2">
                     Assistance à maîtrise d'ouvrage
                   </h4>
@@ -154,7 +174,7 @@ const About = () => {
                     assistance pour l'évaluation des offres et la sélection des entreprises,
                     suivi et pilotage des études et des investigations.
                   </p>
-                </div>
+                </div> */}
               </div>
             </motion.div>
             <motion.div
@@ -168,6 +188,42 @@ const About = () => {
           </div>
         </div>
       </section>
+
+
+        {/* Vision and Mission Section */}
+{/* Vison and Mission */}
+      <section className="py-20 md:py-28 bg-muted">
+        <div className="container mx-auto px-4">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="text-center mb-16">
+            <p className="text-primary font-heading font-semibold text-sm uppercase tracking-widest mb-3">Nos Vision & Mission </p>
+            {/* <h2 className="font-heading font-black text-3xl md:text-4xl text-foreground">Ce Qui Nous Guide</h2> */}
+          </motion.div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {vision.map((v, i) => (
+              <motion.div
+                key={v.title}
+                custom={i + 1}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                className="bg-card rounded-lg p-6 text-center shadow-sm border border-border"
+              >
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <v.icon className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="font-heading font-bold text-lg text-card-foreground mb-2">{v.title}</h3>
+                <p className="text-muted-foreground text-sm">{v.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+{/* Vision and Mission section End */}
+
+
+
+        
 
       {/* Values Section */}
       <section className="py-20 md:py-28 bg-muted">

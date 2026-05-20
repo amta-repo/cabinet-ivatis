@@ -9,20 +9,12 @@ import energiePylone1 from "@/assets/activities/energie-pylone-1.jpg";
 import energiePylone2 from "@/assets/activities/energie-pylone-2.jpg";
 import environnement1 from "@/assets/activities/cprp.jpg";
 import environnement2 from "@/assets/activities/environnement-1.jpg"
-import audit1 from "@/assets/activities/audit-1.jpg";
-import audit2 from "@/assets/activities/audit-2.jpg";
-import audit3 from "@/assets/activities/audit-3.jpg";
-import audit4 from "@/assets/activities/audit-4.jpg";
-import auditGolden from "@/assets/activities/audit-golden.jpg";
 import biodiversite1 from "@/assets/activities/Conservation des milieux naturels et de la biodiversité.jpg"
 import eies1 from "@/assets/activities/eies-1.jpg";
 import humide1 from "@/assets/activities/protection-zone-humides.jpg"
 import coastal1 from "@/assets/activities/coastal-1.jpg";
 import coastal2 from "@/assets/activities/coastal-2.jpg";
 import coastal3 from "@/assets/activities/coastal-3.jpg";
-import transport1 from "@/assets/activities/transport-1.jpg";
-import transport2 from "@/assets/activities/transport-2.jpg";
-import transport3 from "@/assets/activities/transport-3.jpg";
 import batiment1 from "@/assets/activities/batiment-1.jpg";
 import batiment2 from "@/assets/activities/batiment-2.jpg";
 import batiment3 from "@/assets/activities/batiment-3.jpg";

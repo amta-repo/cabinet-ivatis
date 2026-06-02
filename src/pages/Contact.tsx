@@ -102,6 +102,7 @@ const Contact = () => {
               <div>
                 <h2 className="font-heading font-bold text-2xl text-foreground mb-6">Nos Coordonnées</h2>
                 <ul className="space-y-6">
+              {/* Phone — temporarily hidden
                   <li className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                       <Phone className="w-5 h-5 text-primary" />
@@ -113,6 +114,8 @@ const Contact = () => {
                       </a>
                     </div>
                   </li>
+                  */}
+                  {/* WhatsApp — temporarily hidden
                   <li className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                       <MessageCircle className="w-5 h-5 text-primary" />
@@ -124,6 +127,7 @@ const Contact = () => {
                       </a>
                     </div>
                   </li>
+                  */}
                   <li className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                       <Mail className="w-5 h-5 text-primary" />

@@ -41,7 +41,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     // Build a WhatsApp message that clearly indicates it was sent from the website
-    const waNumber = "2290197203303";
+    const waNumber = "22997925671";
     const lines = [
       "*Nouveau message — envoyé depuis le site web cabinetivatis.com*",
       "",
@@ -69,7 +69,7 @@ const Contact = () => {
     setIsSubmitting(false);
   };
 
-  const whatsappNumber = "2290197203303";
+  const whatsappNumber = "22997925671";
   const whatsappMessage = encodeURIComponent(
     "Bonjour CABINET IVATIS, je souhaite avoir plus d'informations sur vos services."
   );
@@ -79,7 +79,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <SeoHelmet
         title="Contactez CABINET IVATIS | Devis Gratuit EIES, Audit, Topographie — Abomey-Calavi, Bénin"
-        description="Contactez CABINET IVATIS pour vos projets d'ingénierie environnementale au Bénin et en Afrique de l'Ouest. Tél : +229 01 97 20 33 03. Email : ivatis.ivatis@gmail.com. Abomey-Calavi, Quartier Agori St Louis."
+        description="Contactez CABINET IVATIS pour vos projets d'ingénierie environnementale au Bénin et en Afrique de l'Ouest. Tél : +229 01 97 92 56 71. Email : ivatis.ivatis@gmail.com. Abomey-Calavi, Quartier Agori St Louis."
         canonical="/contact"
         keywords="contact CABINET IVATIS, devis EIES Bénin, bureau études Abomey-Calavi, téléphone IVATIS"
       />
@@ -102,20 +102,17 @@ const Contact = () => {
               <div>
                 <h2 className="font-heading font-bold text-2xl text-foreground mb-6">Nos Coordonnées</h2>
                 <ul className="space-y-6">
-              {/* Phone — temporarily hidden
                   <li className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                       <Phone className="w-5 h-5 text-primary" />
                     </div>
                     <div>
                       <p className="font-heading font-semibold text-foreground">Téléphone</p>
-                      <a href="tel:+2290197203303" className="text-muted-foreground text-sm hover:text-primary transition-colors">
-                        +229 01 97 20 33 03
+                      <a href="tel:+2290197925671" className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                        +229 01 97 92 56 71
                       </a>
                     </div>
                   </li>
-                  */}
-                  {/* WhatsApp — temporarily hidden
                   <li className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                       <MessageCircle className="w-5 h-5 text-primary" />
@@ -123,11 +120,10 @@ const Contact = () => {
                     <div>
                       <p className="font-heading font-semibold text-foreground">WhatsApp</p>
                       <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-muted-foreground text-sm hover:text-primary transition-colors">
-                        +229 01 97 20 33 03
+                        +229 97 92 56 71
                       </a>
                     </div>
                   </li>
-                  */}
                   <li className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                       <Mail className="w-5 h-5 text-primary" />

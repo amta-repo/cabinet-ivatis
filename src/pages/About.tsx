@@ -37,12 +37,17 @@ const vision = [
   {
     icon: Eye,
     title: "Notre Vision",
-    description: "Être un cabinet de référence en Afrique de l'Ouest dans les domaines de l'expertise environnementale, sociale et du développement durable, en proposant des solutions techniques fiables, innovantes et adaptées aux réalités des territoires.",
+    description: "Positionner le Bénin parmi les Top 10 du monde dans le domaine de l'ingénierie environnementale et sociale.",
   },
   {
     icon: Target,
     title: "Notre Mission",
-    description: "Apporter aux acteurs publics et privés des solutions techniques de qualité favorisant la conformité réglementaire, la prévention des risques, la durabilité environnementale et la performance des projets de développement.",
+    description: "Accompagner les acteurs publics et privés des solutions techniques de qualité favorisant la conformité nationale et internationale, en matière environnementale et sociale.",
+  },
+  {
+    icon: Award,
+    title: "Notre Devise",
+    description: "Travail – Cohérence – Excellence",
   },
 ];
 
@@ -55,7 +60,7 @@ const values = [
   {
     icon: Leaf,
     title: "Professionnalisme",
-    description: "Chaque mission est conduite avec méthode, exigence et sens de responsabilité.",
+    description: "Chaque mission est conduite avec méthode, rigueur et sens de responsabilité élevé.",
   },
   {
     icon: Shield,
@@ -70,7 +75,7 @@ const values = [
   {
     icon: CircleUser,
     title: "Engagement pour le développement durable",
-    description: "Nous œuvrons pour un équilibre durable entre performance économique, protection environnementale et inclusion sociale.",
+    description: "Nous œuvrons pour un équilibre durable entre performance économique d'une part, et performance environnementale et sociale d'autre part.",
   },
 ];
 
@@ -210,7 +215,7 @@ const About = () => {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="text-center mb-16">
             <p className="text-primary font-heading font-semibold text-sm uppercase tracking-widest mb-3">Nos Vision & Mission </p>
           </motion.div>
-          <div className="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {vision.map((v, i) => (
               <motion.div
                 key={v.title}
